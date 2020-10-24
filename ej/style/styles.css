@@ -1,3 +1,8 @@
+/**
+ * 01. TIPOGRAFIA Y COLOR
+ *
+ * -------------------------------------------------------------------
+ */
 *{
     padding: 0 0;
     margin: 0 0;
@@ -9,6 +14,11 @@ body{
     background-color: #f1f1f1;
 }
 
+/**
+ * 02. HEADER
+ *
+ * -------------------------------------------------------------------
+ */
 .header{
     background-color: grey;
     color: white;
@@ -50,6 +60,11 @@ body{
     margin-right: 5px; 
 }
 
+/**
+ * 03. MAIN
+ *
+ * -------------------------------------------------------------------
+ */
 .main{
     display: flex;
     flex-wrap: nowrap;
@@ -88,6 +103,11 @@ body{
     display: none;
 }
 
+/**
+ * 04. COLUMNA CENTRAL
+ *
+ * -------------------------------------------------------------------
+ */
 .column.mid{
     flex: 50%;
     background-color: #BDEBE9;
@@ -151,6 +171,11 @@ article::after{
     padding-bottom: 10px;
 }
 
+/**
+ * 05. LISTADO DE ESTUDIANTES
+ *
+ * -------------------------------------------------------------------
+ */
 .perfil{
     width: 100px;
     float: left;
@@ -189,6 +214,11 @@ article::after{
     display: inline-block;
 }
 
+/**
+ * 06. FORO
+ *
+ * -------------------------------------------------------------------
+ */
 .listaForo li{
     list-style: none;
     text-align: left;
@@ -210,6 +240,11 @@ article::after{
     font-size: 30px;
 }
 
+/**
+ * 07. CALIFICACIONES
+ *
+ * -------------------------------------------------------------------
+ */
 .tituloCalificaciones{
     padding-bottom: 20px;
     font-size: 30px;
@@ -234,6 +269,11 @@ tr:nth-child(1) {
     background-color: grey;
 }
 
+/**
+ * 08. PIE
+ *
+ * -------------------------------------------------------------------
+ */
 .pie{
     clear: both;
     text-align: center;
@@ -256,6 +296,11 @@ tr:nth-child(1) {
     border-right: none;
 }
 
+/**
+ * 09. TABLET
+ *
+ * -------------------------------------------------------------------
+ */
 @media screen and (max-width: 768px) {
     .headerComputer{
         display: none;
@@ -307,6 +352,11 @@ tr:nth-child(1) {
     }
 }
 
+/**
+ * 10. MOVIL
+ *
+ * -------------------------------------------------------------------
+ */
 @media screen and (max-width: 600px) {
     .main {
         flex-direction: column;
