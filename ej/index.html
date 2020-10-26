@@ -8,7 +8,7 @@
         <meta name="keywords" content="palabras clave"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="style/styles.css">
-        <script src="script/script.js"> </script>
+        <script src="script/script.js"></script>
     </head>
 
     <body>
@@ -19,9 +19,9 @@
                     <h1 class="title">Interfaces de Usuario</h1>
                     <nav class="menu">
                         <ul>
-                            <li><a href="./index.html">Inicio</a></li>
+                            <li><a href="#Inicio">Inicio</a></li>
                             <li><a href="#Noticias">Noticias</a></li>
-                            <li><a href="#Ajustes">Ajustes</a></li>
+                            <li><a href="#" onclick="cerrarSesion()">Cerrar sesion</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -38,13 +38,14 @@
         <div class="main">
             <aside class="column side I">
                 <div class="columnaIComputer">
-                    <h1 class="titulo1 n"> <a href="./index.html">Curso IU</a></h1>
+                    <h1 class="titulo1 n"> <a href="#" onclick="mostrar1()">Curso IU</a></h1>
                     <ul class="listaIzquierda">
-                        <li><a href="./listadoEstudiantes.html">Listado de Estudiantes</a></li>
-                        <li><a href="./foro.html">Foro de la Asignatura</a></li>
-                        <li><a href="./calificaciones.html">Calificaciones</a></li>
+                        <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
+                        <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
+                        <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
                         <li><a href="#Novedades">Últimas Novedades</a></li>
                         <li><a href="#Eventos">Próximos Eventos</a></li>
+                        
                     </ul>
                 </div>
 
@@ -53,11 +54,11 @@
                         <img class="boton" src="images/dropdown.png" alt="logo" width="50" height="50">
                         <div class="dropdown-content">
                             <nav>
-                                <a href="./listadoEstudiantes.html">Listado de Estudiantes</a>
-                                <a href="./foro.html">Foro de la Asignatura</a>
-                                <a href="./calificaciones.html">Calificaciones</a>
-                                <a href="#Novedades">Últimas Novedades</a>
-                                <a href="#Eventos">Próximos Eventos</a>
+                                <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
+                                <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
+                                <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
+                                <li><a href="#Novedades">Últimas Novedades</a></li>
+                                <li><a href="#Eventos">Próximos Eventos</a></li>
                             </nav>
                         </div>
                     </div>
@@ -65,7 +66,7 @@
                 </div>
             </aside>
         
-            <section class="column mid">
+            <section class="column mid" id="column_mid1">
                 <div class="tema">
                     <div>
                         <img src="images/html.png" alt="image" class="logoTema">
@@ -209,6 +210,177 @@
 
                 <div class="separador"></div>
                 
+            </section>
+
+            <section class="column mid" id="column_mid2">
+                <h1 class="tituloListado">Listado de Estudiantes</h1>
+                <div class="listaS">
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Iván Aguado Perulero - 100405871@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Jorge Serrano Pérez - 100405987@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">                          
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Ignacio López Ferragut - 100405125@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">                          
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Alberto Cacajo Díaz - 100395821@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Patricia Cuellas Valdizan - 100406312@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Rocío Hevia-aza Arce - 100401541@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">María Moscardó Navarrete - 100408514@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Iván Iglesias Jiménez - 100398562@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Lucía Sánchez García - 100436540@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                    <article>
+                        <img src="images/perfil.jpg" alt="logo" class="perfil">
+                        <p class="datosS">Lucas Ortiz López - 100400112@alumnos.uc3m.es</p>
+                        <img src="images/icono.png" alt="logo" class="icono">
+                    </article>
+                </div>
+            </section>
+
+            <section class="column mid" id="column_mid3">
+                <h1 class="tituloForo">Foro de la asignatura</h1>
+                <div class="tema">
+                    <div class="listaForo">
+                        <ul>
+                            <li>
+                                <h2 class="subtitulo">Clases viernes por la tarde</h2>
+                                <p>Mensajes enviados: 10</p>
+                                <time datetime="2020-09-13T23:20:00Z"> 23:20 - Último mensaje</time>
+                            </li>
+                            <li>
+                                <h2 class="subtitulo">Práctica próximo miércoles</h2>
+                                <p>Mensajes enviados: 12</p>
+                                <time datetime="2020-09-18T20:54:32Z"> 20:54 - Último mensaje</time>
+                            </li>
+                            <li>
+                                <h2 class="subtitulo">Forempleo 2020</h2>
+                                <p>Mensajes enviados: 3</p>
+                                <time datetime="2020-09-25T11:35:22Z"> 11:35 - Último mensaje</time>
+                            </li>
+                            <li>
+                                <h2 class="subtitulo">Práctica final</h2>
+                                <p>Mensajes enviados: 20</p>
+                                <time datetime="2020-09-26T12:59:54Z"> 12:59 - Último mensaje</time>
+                            </li>
+                            <li>
+                                <h2 class="subtitulo">Propuesta nuevo horario</h2>
+                                <p>Mensajes enviados: 8</p>
+                                <time datetime="2020-09-30T16:12:12Z"> 16:12 - Último mensaje</time>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="column mid" id="column_mid4">
+                <h1 class="tituloCalificaciones">Calificaciones</h1>
+                <div class="tabla">
+                    <table style="width:100%">
+                        <tr>
+                          <th>Estudiante</th>
+                          <th>Actividad 1</th>
+                          <th>Actividad 2</th>
+                          <th>Actividad 3</th>
+                        </tr>
+                        <tr>
+                          <td>Iván</td>
+                          <td>10</td>
+                          <td>10</td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Jorge</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Javier</td>
+                            <td>7</td>
+                            <td>5.5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Ignacio</td>
+                            <td>3.25</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>María</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>5.25</td>
+                        </tr>
+                        <tr>
+                            <td>Nacho</td>
+                            <td>9</td>
+                            <td>8.75</td>
+                            <td>7.5</td>
+                        </tr>
+                        <tr>
+                            <td>Cristina</td>
+                            <td>4.5</td>
+                            <td>5.5</td>
+                            <td>5.25</td>
+                        </tr>
+                        <tr>
+                            <td>Julia</td>
+                            <td>8</td>
+                            <td>8</td>
+                            <td>6.5</td>
+                        </tr>
+                        <tr>
+                            <td>Federico</td>
+                            <td>1</td>
+                            <td>2.25</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Manuel</td>
+                            <td>7</td>
+                            <td>6.75</td>
+                            <td>7.5</td>
+                        </tr>
+                        <tr>
+                            <td>Yolanda</td>
+                            <td>7.5</td>
+                            <td>8</td>
+                            <td>9.5</td>
+                        </tr>
+                    </table>
+                </div>
             </section>
 
             <aside class="column side D">

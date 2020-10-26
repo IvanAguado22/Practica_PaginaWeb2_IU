@@ -114,6 +114,18 @@ body{
     padding: 20px;
 }
 
+#column_mid2{
+    display: none;
+}
+
+#column_mid3{
+    display: none;
+}
+
+#column_mid4{
+    display: none;
+}
+
 .logoTema{
     width: 150px;
     float: left;
