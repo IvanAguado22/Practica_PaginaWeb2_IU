@@ -281,6 +281,15 @@ tr:nth-child(1) {
     background-color: grey;
 }
 
+#descargar{
+    display: block;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-size: 17px;
+}
+
 /**
  * 08. PIE
  *
