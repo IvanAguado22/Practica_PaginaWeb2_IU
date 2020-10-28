@@ -25,17 +25,28 @@ body{
     border: 3px  solid black;
     border-bottom: 0px;
     margin: 20px 55px 0px 55px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .headerTablet{
     display: none;
 }
 
-.logo{
+#logo{
     float: left;
     width: 50px;
     margin: 15px;
+    margin-right: 0px;
+}
+
+.login{
+    float: right;
+    margin: 15px;
+    text-align: center;
+}
+
+#logo2{
+    width: 50px;
 }
 
 .title{
@@ -66,6 +77,9 @@ body{
     color: black;
 }
 
+.active{
+    background-color: #727272;
+}
 /**
  * 03. MAIN
  *
