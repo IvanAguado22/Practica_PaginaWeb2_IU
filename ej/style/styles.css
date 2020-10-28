@@ -146,6 +146,26 @@ body{
     display: none;
 }
 
+#column_mid5{
+    display: none;
+}
+
+#column_mid6{
+    display: none;
+}
+
+#column_mid7{
+    display: none;
+}
+
+#column_mid8{
+    display: none;
+}
+
+#column_mid9{
+    display: none;
+}
+
 .logoTema{
     width: 150px;
     float: left;
@@ -270,6 +290,17 @@ article::after{
 .tituloForo{
     padding-bottom: 20px;
     font-size: 30px;
+}
+.perfilForo{
+    width: 50px;
+    float: left;
+    margin-top: 20px;  
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.parrafoForo{
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 /**
