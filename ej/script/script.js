@@ -136,30 +136,32 @@ function descargarExcel(){
     tmpElemento.click();
 }
 
-function commentBox(){
-	var name=document.getElementById('name').value;
-	var comment=document.getElementById('comment').value;
+function commentBox1(){
+	var name=document.getElementById('name1').value;
+	var comment=document.getElementById('comment1').value;
  
 	if(name =="" || comment ==""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
-		var parent=document.createElement('div');
+        var parent=document.createElement('div');
 		var el_name=document.createElement('h5');
 		var el_message=document.createElement('p');
 		var el_line=document.createElement('hr');
 		var txt_name=document.createTextNode(name);
 		var txt_message=document.createTextNode(comment);
-		el_name.appendChild(txt_name);
+        
+        el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
 		el_line.style.border='1px solid #000';
-		parent.appendChild(el_name);
+        
+        parent.appendChild(el_name);
 		parent.appendChild(el_line);
 		parent.appendChild(el_message);
-		parent.setAttribute('class', 'pane');
-		document.getElementById('result').appendChild(parent);
- 
-		document.getElementById('name').value="";
-		document.getElementById('comment').value="";
+        parent.setAttribute('class', 'pane');
+
+		document.getElementById('result1').appendChild(parent);
+		document.getElementById('name1').value="";
+		document.getElementById('comment1').value="";
 	}
 }
 
@@ -175,17 +177,106 @@ function commentBox2(){
 		var el_message=document.createElement('p');
 		var el_line=document.createElement('hr');
 		var txt_name=document.createTextNode(name);
-		var txt_message=document.createTextNode(comment);
+        var txt_message=document.createTextNode(comment);
+        
 		el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
-		el_line.style.border='1px solid #000';
+        el_line.style.border='1px solid #000';
+        
 		parent.appendChild(el_name);
 		parent.appendChild(el_line);
 		parent.appendChild(el_message);
-		parent.setAttribute('class', 'pane');
+        parent.setAttribute('class', 'pane');
+        
 		document.getElementById('result2').appendChild(parent);
- 
 		document.getElementById('name2').value="";
 		document.getElementById('comment2').value="";
+	}
+}
+
+function commentBox3(){
+	var name=document.getElementById('name3').value;
+	var comment=document.getElementById('comment3').value;
+ 
+	if(name =="" || comment ==""){
+		alert("Los campos marcados con * son obligatorios!");
+	}else{
+		var parent=document.createElement('div');
+		var el_name=document.createElement('h5');
+		var el_message=document.createElement('p');
+		var el_line=document.createElement('hr');
+		var txt_name=document.createTextNode(name);
+        var txt_message=document.createTextNode(comment);
+        
+		el_name.appendChild(txt_name);
+		el_message.appendChild(txt_message);
+        el_line.style.border='1px solid #000';
+        
+		parent.appendChild(el_name);
+		parent.appendChild(el_line);
+		parent.appendChild(el_message);
+        parent.setAttribute('class', 'pane');
+        
+		document.getElementById('result3').appendChild(parent);
+		document.getElementById('name3').value="";
+		document.getElementById('comment3').value="";
+	}
+}
+
+function commentBox4(){
+	var name=document.getElementById('name4').value;
+	var comment=document.getElementById('comment4').value;
+ 
+	if(name =="" || comment ==""){
+		alert("Los campos marcados con * son obligatorios!");
+	}else{
+		var parent=document.createElement('div');
+		var el_name=document.createElement('h5');
+		var el_message=document.createElement('p');
+		var el_line=document.createElement('hr');
+		var txt_name=document.createTextNode(name);
+        var txt_message=document.createTextNode(comment);
+        
+		el_name.appendChild(txt_name);
+		el_message.appendChild(txt_message);
+        el_line.style.border='1px solid #000';
+        
+		parent.appendChild(el_name);
+		parent.appendChild(el_line);
+		parent.appendChild(el_message);
+        parent.setAttribute('class', 'pane');
+        
+		document.getElementById('result4').appendChild(parent);
+		document.getElementById('name4').value="";
+		document.getElementById('comment4').value="";
+	}
+}
+
+function commentBox5(){
+	var name=document.getElementById('name5').value;
+	var comment=document.getElementById('comment5').value;
+ 
+	if(name =="" || comment ==""){
+		alert("Los campos marcados con * son obligatorios!");
+	}else{
+		var parent=document.createElement('div');
+		var el_name=document.createElement('h5');
+		var el_message=document.createElement('p');
+		var el_line=document.createElement('hr');
+		var txt_name=document.createTextNode(name);
+        var txt_message=document.createTextNode(comment);
+        
+		el_name.appendChild(txt_name);
+		el_message.appendChild(txt_message);
+        el_line.style.border='1px solid #000';
+        
+		parent.appendChild(el_name);
+		parent.appendChild(el_line);
+		parent.appendChild(el_message);
+        parent.setAttribute('class', 'pane');
+        
+		document.getElementById('result5').appendChild(parent);
+		document.getElementById('name5').value="";
+		document.getElementById('comment5').value="";
 	}
 }
