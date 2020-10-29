@@ -302,6 +302,21 @@ article::after{
     font-size: 15px;
     margin-bottom: 10px;
 }
+.datosForm{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.cuadroTxt{
+    margin-bottom: 6px;
+}
+
+.boton{
+    margin-top: 3px;
+}
+.subtituloF{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
 
 /**
  * 07. CALIFICACIONES
