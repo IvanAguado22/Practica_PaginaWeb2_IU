@@ -27,7 +27,7 @@
                 
                 <div class="tab-content">
                     <div id="signup">   
-                        <h1>Registro</h1>
+                        <h1 class="tituloInicio">Registro</h1>
                         <form action="/" method="post">
                             <div class="top-row">
                                 <div class="field-wrap">
@@ -60,7 +60,7 @@
                                     <label>
                                         DNI*
                                     </label>
-                                    <input type="text"required autocomplete="off"/>
+                                    <input type="text"required autocomplete="off" placeholder="DNI*"/>
                                 </div>
                             </div>
 
@@ -133,7 +133,7 @@
                     </div>
                   
                     <div id="login" style="display: none;">   
-                        <h1>¡Bienvenido de vuelta!</h1>
+                        <h1 class="tituloInicio">¡Bienvenido de vuelta!</h1>
                         <form action="/" method="post">
                             <div class="field-wrap">
                                 <input type="email"required autocomplete="off" placeholder="Email*"/>
@@ -170,13 +170,15 @@
                         </div>
                     </div>
                 </header>
+
+                <div class="separador"></div>
+
+                <nav class="menu">
+                    <a href="#Inicio">Inicio</a>
+                    <a href="#Noticias">Noticias</a>
+                    <a style="float:right" class="active" href="#" onclick="cerrarSesion()">Cerrar sesion</a>
+                </nav>
             </div>
-            
-            <nav class="menu">
-                <a href="#Inicio">Inicio</a>
-                <a href="#Noticias">Noticias</a>
-                <a style="float:right" class="active" href="#" onclick="cerrarSesion()">Cerrar sesion</a>
-            </nav>
 
             <div class="separador"></div>
 
@@ -801,7 +803,7 @@
                 </section>
 
                 <aside class="column side D">
-                    <h1 class="titulo1">Últimas Novedades</h1>
+                    <h1 class="titulo1"><a href="#">Últimas Novedades</a></h1>
                     <ul>
                         <li><time datetime="2020-09-10"> 10/09 - Agregados nuevos videos</time></li>
                         <li><time datetime="2020-09-09"> 09/09 - Añadido nuevo tema</time></li>

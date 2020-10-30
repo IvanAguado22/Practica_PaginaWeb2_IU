@@ -11,7 +11,8 @@
 }
 
 body{
-    background-color: #f1f1f1;
+    background: #c1bdba;
+    color: white;
 }
 
 #pagWeb{
@@ -24,12 +25,12 @@ body{
  * -------------------------------------------------------------------
  */
 .header{
-    background-color: grey;
-    color: white;
+    background: rgba(19, 35, 47, .9);
     border: 3px  solid black;
-    border-bottom: 0px;
-    margin: 20px 55px 0px 55px;
+    margin: 20px 55px;
     overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
 }
 
 .headerTablet{
@@ -61,28 +62,29 @@ body{
 
 .menu {
     overflow: hidden;
-    background-color: grey;
-    margin: 0 55px;
-    border: 3px solid black;
-    border-top: 0px;
+    background: rgba(19, 35, 47, .9);
 }
   
 .menu a {
-    float: left;
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+	text-decoration: none;
+	padding: 15px;
+	background: rgba(19, 35, 47, .9);
+	color: #a0b3b0;
+	font-size: 20px;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.5s ease;
 }
   
 .menu a:hover {
-    background-color: #f1f1f1;
-    color: black;
+    background: #179b77;
 }
 
-.active{
-    background-color: #727272;
+.menu .active{
+    background: #1ab188;
+    color: white;
 }
 /**
  * 03. MAIN
@@ -95,17 +97,19 @@ body{
     flex-direction: row;
     margin-left: 50px;
     margin-right: 50px;
-    background-color: #f1f1f1;
+    background: #c1bdba;
 }
 
 .column{
     border: 3px solid black;
     margin: 5px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
 }
 
 .column.side{
     flex: 25%;
-    background-color: #BDD6D5;
+    background: rgba(19, 35, 47, .9);
     padding: 20px;
 }
 
@@ -134,7 +138,7 @@ body{
  */
 .column.mid{
     flex: 50%;
-    background-color: #BDEBE9;
+    background: rgba(19, 35, 47, .9);
     padding: 20px;
 }
 
@@ -182,6 +186,7 @@ body{
     padding: 0 20px;
     font-size: 30px;
     text-decoration: underline;
+    color: #1ab188;
 }
 
 .parrafoTema{
@@ -206,6 +211,7 @@ article::after{
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
+    border-radius: 4px;
 }
 
 .tituloArticulo{
@@ -225,6 +231,7 @@ article::after{
 .titulo1{
     font-size: 35px;
     padding-bottom: 10px;
+    color: #1ab188;
 }
 
 /**
@@ -284,6 +291,7 @@ article::after{
 .tituloListado{
     padding-bottom: 20px;
     font-size: 30px;
+    color: #1ab188;
 }
 
 .subtitulo{
@@ -294,6 +302,7 @@ article::after{
 .tituloForo{
     padding-bottom: 20px;
     font-size: 30px;
+    color: #1ab188;
 }
 .perfilForo{
     width: 50px;
@@ -306,16 +315,30 @@ article::after{
     font-size: 15px;
     margin-bottom: 10px;
 }
+
 .datosForm{
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
 .cuadroTxt{
-    margin-bottom: 6px;
+    margin: 3px;
+    padding: 15px;
+    font-size: 10px;
+    background: #1ab188;
+    letter-spacing: 0.1em;
+    border: 0;
 }
 
 .boton{
-    margin-top: 3px;
+    margin: 3px;
+    padding: 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+    background: #1ab188;
+    letter-spacing: 0.1em;
+    border: 0;
+
 }
 .subtituloF{
     margin-top: 20px;
@@ -330,6 +353,7 @@ article::after{
 .tituloCalificaciones{
     padding-bottom: 20px;
     font-size: 30px;
+    color: #1ab188;
 }
 
 table {
@@ -344,11 +368,15 @@ td, th {
 }
   
 tr:nth-child(even) {
-    background-color: #f1f1f1;
+    background-color: rgba(255, 255, 255, .10);
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, .15);
 }
 
 tr:nth-child(1) {
-    background-color: grey;
+    background-color: rgba(255, 255, 255, .20);
 }
 
 #descargar{
@@ -356,8 +384,12 @@ tr:nth-child(1) {
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px;
+    padding: 15px;
     font-size: 17px;
+    text-transform: uppercase;
+    background: #1ab188;
+    letter-spacing: 0.1em;
+    border: 0;
 }
 
 /**
@@ -371,14 +403,15 @@ tr:nth-child(1) {
     padding: 20px;
     margin: 0px 0px;
     margin-top: 20px;
-    background-color: grey;
+    background: rgba(19, 35, 47, .9);
+    border-radius: 4px;
 }
 
 .pie li{
     list-style: none;
     text-align: center;
     display: inline-block;
-    border-right: 2px solid black;
+    border-right: 3px solid black;
     padding: 0px 7px;
     font-size: 17px;
 }
@@ -508,6 +541,7 @@ tr:nth-child(1) {
         text-align: left;
         padding: 5px;
         padding-left: 20px;
+        color: #1ab188;
     }
 
     .parrafoTema{
