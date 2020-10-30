@@ -8,7 +8,9 @@
         <meta name="keywords" content="palabras clave"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="style/styles.css">
+        <link rel="stylesheet" href="style/pagInicio.css">
         <script src="script/script.js"></script>
+        <script src="script/pagInicio.js"></script>
         <link rel="stylesheet" type="text/css" href="style/evo-calendar.css"/>
         <link rel="stylesheet" type="text/css" href="style/evo-calendar.midnight-blue.css"/>
         <script src="script/jquery-3.5.1.min.js"></script>
@@ -16,692 +18,833 @@
     </head>
 
     <body>
+        <div id="pagInicio">
+            <div class="form">
+                <ul class="tab-group">
+                    <li class="tab active"><a href="#signup">Sign Up</a></li>
+                    <li class="tab"><a href="#login">Log In</a></li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div id="signup">   
+                        <h1>Registro</h1>
+                        <form action="/" method="post">
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
+                                    Nombre<span class="req">*</span>
+                                    </label>
+                                    <input type="text" required autocomplete="off" />
+                                </div>
+                                <div class="field-wrap">
+                                    <label>
+                                    Apellido<span class="req">*</span>
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
+                            </div>
 
-        <div class="header">
-            <header>
-                <div class="headerComputer">
-                    <img src="images/logo.jpg" alt="logo" id="logo">
-                    <h1 class="title">Interfaces de Usuario</h1>
-                    <div class="login">
-                        <img src="images/perfil2.jpg" alt="logo" id="logo2">
-                        <p id="nombreUsuario">carlos97</p>
-                    </div>
-                </div>
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
+                                        Nombre usuario<span class="req">*</span>
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
 
-                <div class="headerTablet">
-                    <img src="images/logo.jpg" alt="logo" id="logo">
-                    <h1 class="title">Curso IU</h1>
-                    <div class="login">
-                        <img src="images/perfil2.jpg" alt="logo" id="logo2">
-                        <p id="nombreUsuario">carlos97</p>
+                                <div class="field-wrap">
+                                    <label>
+                                        NIA<span class="req">*</span>
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
+                            </div>
+
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
+                                        Fecha nacimiento<span class="req">*</span>
+                                    </label>
+                                    <input type="date"required autocomplete="off"/>
+                                </div>
+
+                                <div class="field-wrap">
+                                    <label>
+                                        DNI<span class="req">*</span>
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
+                            </div>
+
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
+                                        Rol<span class="req">*</span>
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
+
+                                <div class="field-wrap">
+                                    <label>
+                                        Grado<span class="req">*</span>
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
+                            </div>
+
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
+                                        Universidad<span class="req">*</span>
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
+
+                                <div class="field-wrap">
+                                    <label>
+                                        Idioma
+                                    </label>
+                                    <input type="text"required autocomplete="off"/>
+                                </div>
+                            </div>
+
+                            <div class="field-wrap">
+                                <label>
+                                    Email Address<span class="req">*</span>
+                                </label>
+                                <input type="email"required autocomplete="off"/>
+                            </div>
+                            
+                            <div class="field-wrap">
+                                <label>
+                                    Set A Password<span class="req">*</span>
+                                </label>
+                                <input type="password"required autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap">
+                                <label>
+                                    He leído y acepto las condiciones<span class="req">*</span>
+                                </label>
+                                <input type="checkbox"required autocomplete="off"/>
+                            </div>
+                            
+                            <button type="submit" class="button button-block"/>Get Started</button>
+                        </form>
                     </div>
-                </div>
-            </header>
+                  
+                <div id="login">   
+                    <h1>Welcome Back!</h1>
+                    <form action="/" method="post">
+                    
+                    <div class="field-wrap">
+                        <label>
+                        Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email"required autocomplete="off"/>
+                    </div>
+                    
+                    <div class="field-wrap">
+                        <label>
+                            Password<span class="req">*</span>
+                        </label>
+                        <input type="password"required autocomplete="off"/>
+                    </div>
+                    <p class="forgot"><a href="#">Forgot Password?</a></p>
+                    <button class="button button-block"/>Log In</button>
+                    </form>
+                  </div>
+                </div><!-- tab-content -->
+            </div> <!-- /form -->
         </div>
-        
-        <nav class="menu">
-            <a href="#Inicio">Inicio</a>
-            <a href="#Noticias">Noticias</a>
-            <a style="float:right" class="active" href="#" onclick="cerrarSesion()">Cerrar sesion</a>
-        </nav>
 
-        <div class="separador"></div>
-
-        <div class="main">
-            <aside class="column side I">
-                <div class="columnaIComputer">
-                    <h1 class="titulo1 n"> <a href="#" onclick="mostrar1()">Curso IU</a></h1>
-                    <ul class="listaIzquierda">
-                        <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
-                        <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
-                        <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
-                        <li><a href="#Novedades">Últimas Novedades</a></li>
-                        <li><a href="#Eventos">Próximos Eventos</a></li>
-                        
-                    </ul>
-                </div>
-
-                <div class="columnaIMovil">
-                    <div class="dropdown">
-                        <img class="boton" src="images/dropdown.png" alt="logo" width="50" height="50">
-                        <div class="dropdown-content">
-                            <nav>
-                                <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
-                                <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
-                                <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
-                                <li><a href="#Novedades">Últimas Novedades</a></li>
-                                <li><a href="#Eventos">Próximos Eventos</a></li>
-                            </nav>
+        <div id="pagWeb">
+            <div class="header">
+                <header>
+                    <div class="headerComputer">
+                        <img src="images/logo.jpg" alt="logo" id="logo">
+                        <h1 class="title">Interfaces de Usuario</h1>
+                        <div class="login">
+                            <img src="images/perfil2.jpg" alt="logo" id="logo2">
+                            <p id="nombreUsuario">carlos97</p>
                         </div>
                     </div>
-                    <h1 class="titulo1"><a href="./index.html">Curso IU</a></h1>
-                </div>
-            </aside>
-        
-            <section class="column mid" id="column_mid1">
-                <div class="tema">
-                    <div>
-                        <img src="images/html.png" alt="image" class="logoTema">
-                        <h1 class="tituloTema">Introducción a HTML</h1>
-                        <p class="parrafoTema">Comenzamos la asignatura con un tema introductorio sobre html, un lenguaje de programación empleado principalmente para desarrollar páginas web.</p>
+
+                    <div class="headerTablet">
+                        <img src="images/logo.jpg" alt="logo" id="logo">
+                        <h1 class="title">Curso IU</h1>
+                        <div class="login">
+                            <img src="images/perfil2.jpg" alt="logo" id="logo2">
+                            <p id="nombreUsuario">carlos97</p>
+                        </div>
                     </div>
-                
+                </header>
+            </div>
+            
+            <nav class="menu">
+                <a href="#Inicio">Inicio</a>
+                <a href="#Noticias">Noticias</a>
+                <a style="float:right" class="active" href="#" onclick="cerrarSesion()">Cerrar sesion</a>
+            </nav>
+
+            <div class="separador"></div>
+
+            <div class="main">
+                <aside class="column side I">
+                    <div class="columnaIComputer">
+                        <h1 class="titulo1 n"> <a href="#" onclick="mostrar1()">Curso IU</a></h1>
+                        <ul class="listaIzquierda">
+                            <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
+                            <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
+                            <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
+                            <li><a href="#Novedades">Últimas Novedades</a></li>
+                            <li><a href="#Eventos">Próximos Eventos</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="columnaIMovil">
+                        <div class="dropdown">
+                            <img class="boton" src="images/dropdown.png" alt="logo" width="50" height="50">
+                            <div class="dropdown-content">
+                                <nav>
+                                    <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
+                                    <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
+                                    <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
+                                    <li><a href="#Novedades">Últimas Novedades</a></li>
+                                    <li><a href="#Eventos">Próximos Eventos</a></li>
+                                </nav>
+                            </div>
+                        </div>
+                        <h1 class="titulo1"><a href="./index.html">Curso IU</a></h1>
+                    </div>
+                </aside>
+            
+                <section class="column mid" id="column_mid1">
+                    <div class="tema">
+                        <div>
+                            <img src="images/html.png" alt="image" class="logoTema">
+                            <h1 class="tituloTema">Introducción a HTML</h1>
+                            <p class="parrafoTema">Comenzamos la asignatura con un tema introductorio sobre html, un lenguaje de programación empleado principalmente para desarrollar páginas web.</p>
+                        </div>
+                    
+                        <div class="separador"></div>
+
+                        <article>
+                            <h2 class="tituloArticulo n">¿Quieres aprender HTML?</h2>
+                            <video width="320" height="240" controls class="videoArticulo">
+                                <source src="videos/video1.mp4" type="video/mp4">
+                                <source src="videos/video1.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">¿Quieres aprender HTML?</h2>
+                            <p class="parrafoArticulo">Aquí tienes distintas razones por las que aprender html es tan importante en el mundo en el que vivimos, ya que se trata de uno de los lenguajes de programación más utilizados a nivel mundial.<p>
+                        </article>
+
+                        <div class="separador"></div>
+
+                        <article>
+                            <h2 class="tituloArticulo n">Conceptos básicos de HTML</h2>
+                            <video width="320" height="180" controls class="videoArticulo">
+                                <source src="videos/video2.mp4" type="video/mp4">
+                                <source src="videos/video2.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">Conceptos básicos de HTML</h2>
+                            <p class="parrafoArticulo">Aquí te mostraremos los conceptos básicos más sencillos que te permitiran empezar a programar en html.</p>
+                        </article>
+
+                        <div class="separador"></div>
+
+                        <article>
+                            <h2 class="tituloArticulo n">Ejercicios de HTML</h2>
+                            <video width="320" height="180" controls class="videoArticulo">
+                                <source src="videos/video3.mp4" type="video/mp4">
+                                <source src="videos/video3.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">Ejercicios de HTML</h2>
+                            <p class="parrafoArticulo">Por último, aquí te dejamos distintos ejercicios muy fáciles que puedes usar para practicar y mejorar en el desarrollo de páginas web.</p>
+                        </article>
+                    </div>
+
                     <div class="separador"></div>
 
-                    <article>
-                        <h2 class="tituloArticulo n">¿Quieres aprender HTML?</h2>
-                        <video width="320" height="240" controls class="videoArticulo">
-                            <source src="videos/video1.mp4" type="video/mp4">
-                            <source src="videos/video1.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">¿Quieres aprender HTML?</h2>
-                        <p class="parrafoArticulo">Aquí tienes distintas razones por las que aprender html es tan importante en el mundo en el que vivimos, ya que se trata de uno de los lenguajes de programación más utilizados a nivel mundial.<p>
-                    </article>
+                    <div class="tema">
+                        <img src="images/css.png" alt="image" class="logoTema">
+                        <h1 class="tituloTema">Introducción a CSS</h1>
+                        <p class="parrafoTema">Continuamos ahora con una introducción sobre el lenguaje css, un complemento para html que se usa también para el desarrollo de páginas web. Se encarga de estilizar y mejorar el diseño de la web.</p>
+                    
+                        <div class="separador"></div>
+
+                        <article>
+                            <h2 class="tituloArticulo n">¿Qué es CSS?</h2>
+                            <video width="320" height="180" controls class="videoArticulo">
+                                <source src="videos/video4.mp4" type="video/mp4">
+                                <source src="videos/video4.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">¿Qué es CSS?</h2>
+                            <p class="parrafoArticulo">Empezamos explicando que es css, como funciona, temas de renderizado y de estilo, etc.</p>
+                        </article>
+
+                        <div class="separador"></div>
+                        
+                        <article>
+                            <h2 class="tituloArticulo n">HTML y CSS-¿Qué son y para qué sirven?</h2>
+                            <video width="320" height="180" controls class="videoArticulo">
+                                <source src="videos/video5.mp4" type="video/mp4">
+                                <source src="videos/video5.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">HTML y CSS-¿Qué son y para qué sirven?</h2>
+                            <p class="parrafoArticulo">Aquí os mostramos una breve definición y lo más importante, como se complementan estos dos lenguajes de programacionen entre ellos. Mostramos además distintos ejemplos de uso.</p>
+                        </article>
+
+                        <div class="separador"></div>
+
+                        <article>
+                            <h2 class="tituloArticulo n">Conceptos básicos de CSS</h2>
+                            <video width="320" height="180" controls class="videoArticulo">
+                                <source src="videos/video6.mp4" type="video/mp4">
+                                <source src="videos/video6.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">Conceptos básicos de CSS</h2>
+                            <p class="parrafoArticulo">Para finalizar este tema, introduciremos los conceptos básicos para empezar a programar en css y poder estilizar nuestra página web.</p>
+                        </article>
+                    </div>
 
                     <div class="separador"></div>
 
-                    <article>
-                        <h2 class="tituloArticulo n">Conceptos básicos de HTML</h2>
-                        <video width="320" height="180" controls class="videoArticulo">
-                            <source src="videos/video2.mp4" type="video/mp4">
-                            <source src="videos/video2.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">Conceptos básicos de HTML</h2>
-                        <p class="parrafoArticulo">Aquí te mostraremos los conceptos básicos más sencillos que te permitiran empezar a programar en html.</p>
-                    </article>
+                    <div class="tema">
+                        <img src="images/js.png" alt="image" class="logoTema">
+                        <h1 class="tituloTema">Introducción a JavaScript</h1>
+                        <p class="parrafoTema">Como último tema os enseñaremos el lenguaje de JavaScript, también muy utilizado en el desarrollo de páginas web. Este está más enfocado a las webs dinámicas y entretenidas.</p>
+                    
+                        <div class="separador"></div>
 
-                    <div class="separador"></div>
+                        <article>
+                            <h2 class="tituloArticulo n">¿Qué es JavaScript y para qué sirve?</h2>
+                            <video width="320" height="180" controls class="videoArticulo">
+                                <source src="videos/video7.mp4" type="video/mp4">
+                                <source src="videos/video7.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">¿Qué es JavaScript y para qué sirve?</h2>
+                            <p class="parrafoArticulo">Comenzamos explicando qué es JavaScript y cuál es el uso principal que se le da a día de hoy.</p>
+                        </article>
 
-                    <article>
-                        <h2 class="tituloArticulo n">Ejercicios de HTML</h2>
-                        <video width="320" height="180" controls class="videoArticulo">
-                            <source src="videos/video3.mp4" type="video/mp4">
-                            <source src="videos/video3.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">Ejercicios de HTML</h2>
-                        <p class="parrafoArticulo">Por último, aquí te dejamos distintos ejercicios muy fáciles que puedes usar para practicar y mejorar en el desarrollo de páginas web.</p>
-                    </article>
-                </div>
+                        <div class="separador"></div>
 
-                <div class="separador"></div>
+                        <article>
+                            <h2 class="tituloArticulo n">5 razones para aprender JavaScript</h2>
+                            <video width="218" height="230" controls class="videoArticulo">
+                                <source src="videos/video8.mp4" type="video/mp4">
+                                <source src="videos/video8.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">5 razones para aprender JavaScript</h2>
+                            <p class="parrafoArticulo">Aquí os diremos por qué JavaScript es tan importante y porque recomendamos ser expertos en este lenguaje de programación tan utilizado a día de hoy.</p>
+                        </article>
 
-                <div class="tema">
-                    <img src="images/css.png" alt="image" class="logoTema">
-                    <h1 class="tituloTema">Introducción a CSS</h1>
-                    <p class="parrafoTema">Continuamos ahora con una introducción sobre el lenguaje css, un complemento para html que se usa también para el desarrollo de páginas web. Se encarga de estilizar y mejorar el diseño de la web.</p>
-                
-                    <div class="separador"></div>
+                        <div class="separador"></div>
 
-                    <article>
-                        <h2 class="tituloArticulo n">¿Qué es CSS?</h2>
-                        <video width="320" height="180" controls class="videoArticulo">
-                            <source src="videos/video4.mp4" type="video/mp4">
-                            <source src="videos/video4.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">¿Qué es CSS?</h2>
-                        <p class="parrafoArticulo">Empezamos explicando que es css, como funciona, temas de renderizado y de estilo, etc.</p>
-                    </article>
+                        <article>
+                            <h2 class="tituloArticulo n">Conceptos básicos de JavaScript</h2>
+                            <video width="320" height="180" controls class="videoArticulo">
+                                <source src="videos/video9.mp4" type="video/mp4">
+                                <source src="videos/video9.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                            </video>
+                            <h2 class="tituloArticulo">Conceptos básicos de JavaScript</h2>
+                            <p class="parrafoArticulo">Para finalizar este tema, os enseñaremos los conceptos básicos para aprender JavaScript correctamente y poder comenzar a desarrollar webs más dinámicas.</p>
+                        </article>
+                    </div>
 
                     <div class="separador"></div>
                     
-                    <article>
-                        <h2 class="tituloArticulo n">HTML y CSS-¿Qué son y para qué sirven?</h2>
-                        <video width="320" height="180" controls class="videoArticulo">
-                            <source src="videos/video5.mp4" type="video/mp4">
-                            <source src="videos/video5.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">HTML y CSS-¿Qué son y para qué sirven?</h2>
-                        <p class="parrafoArticulo">Aquí os mostramos una breve definición y lo más importante, como se complementan estos dos lenguajes de programacionen entre ellos. Mostramos además distintos ejemplos de uso.</p>
-                    </article>
+                </section>
 
-                    <div class="separador"></div>
-
-                    <article>
-                        <h2 class="tituloArticulo n">Conceptos básicos de CSS</h2>
-                        <video width="320" height="180" controls class="videoArticulo">
-                            <source src="videos/video6.mp4" type="video/mp4">
-                            <source src="videos/video6.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">Conceptos básicos de CSS</h2>
-                        <p class="parrafoArticulo">Para finalizar este tema, introduciremos los conceptos básicos para empezar a programar en css y poder estilizar nuestra página web.</p>
-                    </article>
-                </div>
-
-                <div class="separador"></div>
-
-                <div class="tema">
-                    <img src="images/js.png" alt="image" class="logoTema">
-                    <h1 class="tituloTema">Introducción a JavaScript</h1>
-                    <p class="parrafoTema">Como último tema os enseñaremos el lenguaje de JavaScript, también muy utilizado en el desarrollo de páginas web. Este está más enfocado a las webs dinámicas y entretenidas.</p>
-                
-                    <div class="separador"></div>
-
-                    <article>
-                        <h2 class="tituloArticulo n">¿Qué es JavaScript y para qué sirve?</h2>
-                        <video width="320" height="180" controls class="videoArticulo">
-                            <source src="videos/video7.mp4" type="video/mp4">
-                            <source src="videos/video7.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">¿Qué es JavaScript y para qué sirve?</h2>
-                        <p class="parrafoArticulo">Comenzamos explicando qué es JavaScript y cuál es el uso principal que se le da a día de hoy.</p>
-                    </article>
-
-                    <div class="separador"></div>
-
-                    <article>
-                        <h2 class="tituloArticulo n">5 razones para aprender JavaScript</h2>
-                        <video width="218" height="230" controls class="videoArticulo">
-                            <source src="videos/video8.mp4" type="video/mp4">
-                            <source src="videos/video8.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">5 razones para aprender JavaScript</h2>
-                        <p class="parrafoArticulo">Aquí os diremos por qué JavaScript es tan importante y porque recomendamos ser expertos en este lenguaje de programación tan utilizado a día de hoy.</p>
-                    </article>
-
-                    <div class="separador"></div>
-
-                    <article>
-                        <h2 class="tituloArticulo n">Conceptos básicos de JavaScript</h2>
-                        <video width="320" height="180" controls class="videoArticulo">
-                            <source src="videos/video9.mp4" type="video/mp4">
-                            <source src="videos/video9.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                        </video>
-                        <h2 class="tituloArticulo">Conceptos básicos de JavaScript</h2>
-                        <p class="parrafoArticulo">Para finalizar este tema, os enseñaremos los conceptos básicos para aprender JavaScript correctamente y poder comenzar a desarrollar webs más dinámicas.</p>
-                    </article>
-                </div>
-
-                <div class="separador"></div>
-                
-            </section>
-
-            <section class="column mid" id="column_mid2">
-                <h1 class="tituloListado">Listado de Estudiantes</h1>
-                <div class="listaS">
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Iván Aguado Perulero - 100405871@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Jorge Serrano Pérez - 100405987@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">                          
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Ignacio López Ferragut - 100405125@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">                          
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Alberto Cacajo Díaz - 100395821@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Patricia Cuellas Valdizan - 100406312@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Rocío Hevia-aza Arce - 100401541@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">María Moscardó Navarrete - 100408514@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Iván Iglesias Jiménez - 100398562@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Lucía Sánchez García - 100436540@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                    <article>
-                        <img src="images/perfil.jpg" alt="logo" class="perfil">
-                        <p class="datosS">Lucas Ortiz López - 100400112@alumnos.uc3m.es</p>
-                        <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
-                    </article>
-                </div>
-            </section>
-
-            <section class="column mid" id="column_mid3">
-                <h1 class="tituloForo">Foro de la asignatura</h1>
-                <div class="tema">
-                    <div class="listaForo">
-                        <ul>
-                            <li>
-                                <h2 class="subtitulo"><a href="#" onclick="mostrar5()">Clases viernes por la tarde</a> </h2>                        
-                                <p>Mensajes enviados: 10</p>
-                                <time datetime="2020-09-13T23:20:00Z"> 23:20 - Último mensaje</time>
-                            </li>
-                            <li>
-                                <h2 class="subtitulo"><a href="#" onclick="mostrar6()">Práctica próximo miércoles</a> </h2>
-                                <p>Mensajes enviados: 12</p>
-                                <time datetime="2020-09-18T20:54:32Z"> 20:54 - Último mensaje</time>
-                            </li>
-                            <li>
-                                <h2 class="subtitulo"><a href="#" onclick="mostrar7()">Forempleo 2020</a></h2>
-                                <p>Mensajes enviados: 3</p>
-                                <time datetime="2020-09-25T11:35:22Z"> 11:35 - Último mensaje</time>
-                            </li>
-                            <li>
-                                <h2 class="subtitulo"><a href="#" onclick="mostrar8()">Práctica final</a></h2>
-                                <p>Mensajes enviados: 20</p>
-                                <time datetime="2020-09-26T12:59:54Z"> 12:59 - Último mensaje</time>
-                            </li>
-                            <li>
-                                <h2 class="subtitulo"><a href="#" onclick="mostrar9()">Propuesta nuevo horario</a></h2>
-                                <p>Mensajes enviados: 8</p>
-                                <time datetime="2020-09-30T16:12:12Z"> 16:12 - Último mensaje</time>
-                            </li>
-                        </ul>
+                <section class="column mid" id="column_mid2">
+                    <h1 class="tituloListado">Listado de Estudiantes</h1>
+                    <div class="listaS">
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Iván Aguado Perulero - 100405871@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Jorge Serrano Pérez - 100405987@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">                          
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Ignacio López Ferragut - 100405125@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">                          
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Alberto Cacajo Díaz - 100395821@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Patricia Cuellas Valdizan - 100406312@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Rocío Hevia-aza Arce - 100401541@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">María Moscardó Navarrete - 100408514@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Iván Iglesias Jiménez - 100398562@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Lucía Sánchez García - 100436540@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
+                        <article>
+                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <p class="datosS">Lucas Ortiz López - 100400112@alumnos.uc3m.es</p>
+                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                        </article>
                     </div>
-                </div>
-            </section>
+                </section>
 
-    <!--Cosas del foro-->
-            <section class="column mid" id="column_mid5">
-                <h1 class="tituloForo">Foro de la asignatura</h1>
-                <div class="tema">
-                    <h2 class="subtitulo">Clases viernes por la tarde</h2>
-                    <div class="listaForo">
-                        <ul>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Iván Aguado Perulero</p>
-                                    <p class="parrafoForo">"Buenas noches, creo que son presenciales"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">13/09/2020 - 23:20</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Jorge Serrano Pérez</p>
-                                    <p class="parrafoForo">"¿Las clases serán presenciales u online?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">13/09/2020 - 23:15</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Lucía Sánchez García</p>
-                                    <p class="parrafoForo">"¿Este viernes hay clase?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">08/09/2020 - 09:12</time>
-                                </article>
-                            </li>
-<!--Caja de comentarios-->
-                            <li>
-                                <article>
-                                    <h1 class="subtituloF">Comentarios</h1>
-                                            <div id="result1">
-                                            </div>
-                                                
-                                                <form> 
-                                                    <p class="datosForm">Nombre*</p>
-                                                    <input class="cuadroTxt" type="text" id="name1">
-                                                    <p class="datosForm">Comentario*</p>
-                                                    <textarea id="comment1" class="cuadroTxt"></textarea>
-                                                    <div class="boton">
-                                                    <button type="button" class="boton" onclick="commentBox1();">Enviar</button>
-                                                    </div>
-                                                </form>
-                                </article>
-                            </li>
-<!--Fin caja comentarios-->
-                        </ul>
+                <section class="column mid" id="column_mid3">
+                    <h1 class="tituloForo">Foro de la asignatura</h1>
+                    <div class="tema">
+                        <div class="listaForo">
+                            <ul>
+                                <li>
+                                    <h2 class="subtitulo"><a href="#" onclick="mostrar5()">Clases viernes por la tarde</a> </h2>                        
+                                    <p>Mensajes enviados: 10</p>
+                                    <time datetime="2020-09-13T23:20:00Z"> 23:20 - Último mensaje</time>
+                                </li>
+                                <li>
+                                    <h2 class="subtitulo"><a href="#" onclick="mostrar6()">Práctica próximo miércoles</a> </h2>
+                                    <p>Mensajes enviados: 12</p>
+                                    <time datetime="2020-09-18T20:54:32Z"> 20:54 - Último mensaje</time>
+                                </li>
+                                <li>
+                                    <h2 class="subtitulo"><a href="#" onclick="mostrar7()">Forempleo 2020</a></h2>
+                                    <p>Mensajes enviados: 3</p>
+                                    <time datetime="2020-09-25T11:35:22Z"> 11:35 - Último mensaje</time>
+                                </li>
+                                <li>
+                                    <h2 class="subtitulo"><a href="#" onclick="mostrar8()">Práctica final</a></h2>
+                                    <p>Mensajes enviados: 20</p>
+                                    <time datetime="2020-09-26T12:59:54Z"> 12:59 - Último mensaje</time>
+                                </li>
+                                <li>
+                                    <h2 class="subtitulo"><a href="#" onclick="mostrar9()">Propuesta nuevo horario</a></h2>
+                                    <p>Mensajes enviados: 8</p>
+                                    <time datetime="2020-09-30T16:12:12Z"> 16:12 - Último mensaje</time>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="column mid" id="column_mid6">
-                <h1 class="tituloForo">Foro de la asignatura</h1>
-                <div class="tema">
-                    <h2 class="subtitulo">Práctica próximo miércoles</h2>
-                    <div class="listaForo">
-                        <ul>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Iván Aguado Perulero</p>
-                                    <p class="parrafoForo">"¿Se puede retrasar la entrega? Tenemos muchos examenes..."</p>
-                                    <time datetime="2020-09-13T23:20:00Z">02/09/2020 - 20:54</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Jorge Serrano Pérez</p>
-                                    <p class="parrafoForo">"La memoria hay que entregala en pdf."</p>
-                                    <time datetime="2020-09-13T23:20:00Z">13/08/2020 - 23:15</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Lucía Sánchez García</p>
-                                    <p class="parrafoForo">"¿Cuál es el formato de la memoria?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">08/08/2020 - 09:12</time>
-                                </article>
-                            </li>
-<!--Caja de comentarios-->
-                            <li>
-                                <article>
-                                    <h1 class="subtituloF">Comentarios</h1>
-                                            <div id="result2">
-                                            </div> 
-                                                <form> 
-                                                    <p class="datosForm">Nombre*</p>
-                                                    <input class="cuadroTxt" type="text" id="name2">
-                                                    <p class="datosForm">Comentario*</p>
-                                                    <textarea id="comment2" class="cuadroTxt"></textarea>
-                                                    <div class="boton">
-                                                    <button type="button" class="boton" onclick="commentBox2();">Enviar</button>
-                                                    </div>
-                                                </form>
-                                </article>
-                            </li>
-<!--Fin caja comentarios-->
-                        </ul>
+        <!--Cosas del foro-->
+                <section class="column mid" id="column_mid5">
+                    <h1 class="tituloForo">Foro de la asignatura</h1>
+                    <div class="tema">
+                        <h2 class="subtitulo">Clases viernes por la tarde</h2>
+                        <div class="listaForo">
+                            <ul>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Iván Aguado Perulero</p>
+                                        <p class="parrafoForo">"Buenas noches, creo que son presenciales"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">13/09/2020 - 23:20</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Jorge Serrano Pérez</p>
+                                        <p class="parrafoForo">"¿Las clases serán presenciales u online?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">13/09/2020 - 23:15</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Lucía Sánchez García</p>
+                                        <p class="parrafoForo">"¿Este viernes hay clase?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">08/09/2020 - 09:12</time>
+                                    </article>
+                                </li>
+    <!--Caja de comentarios-->
+                                <li>
+                                    <article>
+                                        <h1 class="subtituloF">Comentarios</h1>
+                                                <div id="result1">
+                                                </div>
+                                                    
+                                                    <form> 
+                                                        <p class="datosForm">Nombre*</p>
+                                                        <input class="cuadroTxt" type="text" id="name1">
+                                                        <p class="datosForm">Comentario*</p>
+                                                        <textarea id="comment1" class="cuadroTxt"></textarea>
+                                                        <div class="boton">
+                                                        <button type="button" class="boton" onclick="commentBox1();">Enviar</button>
+                                                        </div>
+                                                    </form>
+                                    </article>
+                                </li>
+    <!--Fin caja comentarios-->
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="column mid" id="column_mid7">
-                <h1 class="tituloForo">Foro de la asignatura</h1>
-                <div class="tema">
-                    <h2 class="subtitulo">Forempleo 2020</h2>
-                    <div class="listaForo">
-                        <ul>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Iván Aguado Perulero</p>
-                                    <p class="parrafoForo">"Esta actividad es muy interesante."</p>
-                                    <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 11:35</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Jorge Serrano Pérez</p>
-                                    <p class="parrafoForo">"¿Cuál es la fecha del evento?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 23:15</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Lucía Sánchez García</p>
-                                    <p class="parrafoForo">"¿Cómo puedo inscribirme?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">01/10/2020 - 09:12</time>
-                                </article>
-                            </li>
-<!--Caja de comentarios-->
-                            <li>
-                                <article>
-                                    <h1 class="subtituloF">Comentarios</h1>
-                                            <div id="result3">
-                                            </div>
-                                                
-                                                <form> 
-                                                    <p class="datosForm">Nombre*</p>
-                                                    <input class="cuadroTxt" type="text" id="name3">
-                                                    <p class="datosForm">Comentario*</p>
-                                                    <textarea id="comment3" class="cuadroTxt"></textarea>
-                                                    <div class="boton">
-                                                    <button type="button" class="boton" onclick="commentBox3();">Enviar</button>
-                                                    </div>
-                                                </form>
-                                </article>
-                            </li>
-<!--Fin caja comentarios-->
-
-                        </ul>
+                <section class="column mid" id="column_mid6">
+                    <h1 class="tituloForo">Foro de la asignatura</h1>
+                    <div class="tema">
+                        <h2 class="subtitulo">Práctica próximo miércoles</h2>
+                        <div class="listaForo">
+                            <ul>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Iván Aguado Perulero</p>
+                                        <p class="parrafoForo">"¿Se puede retrasar la entrega? Tenemos muchos examenes..."</p>
+                                        <time datetime="2020-09-13T23:20:00Z">02/09/2020 - 20:54</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Jorge Serrano Pérez</p>
+                                        <p class="parrafoForo">"La memoria hay que entregala en pdf."</p>
+                                        <time datetime="2020-09-13T23:20:00Z">13/08/2020 - 23:15</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Lucía Sánchez García</p>
+                                        <p class="parrafoForo">"¿Cuál es el formato de la memoria?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">08/08/2020 - 09:12</time>
+                                    </article>
+                                </li>
+    <!--Caja de comentarios-->
+                                <li>
+                                    <article>
+                                        <h1 class="subtituloF">Comentarios</h1>
+                                                <div id="result2">
+                                                </div> 
+                                                    <form> 
+                                                        <p class="datosForm">Nombre*</p>
+                                                        <input class="cuadroTxt" type="text" id="name2">
+                                                        <p class="datosForm">Comentario*</p>
+                                                        <textarea id="comment2" class="cuadroTxt"></textarea>
+                                                        <div class="boton">
+                                                        <button type="button" class="boton" onclick="commentBox2();">Enviar</button>
+                                                        </div>
+                                                    </form>
+                                    </article>
+                                </li>
+    <!--Fin caja comentarios-->
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="column mid" id="column_mid8">
-                <h1 class="tituloForo">Foro de la asignatura</h1>
-                <div class="tema">
-                    <h2 class="subtitulo">Práctica final</h2>
-                    <div class="listaForo">
-                        <ul>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Iván Aguado Perulero</p>
-                                    <p class="parrafoForo">"¿Cuál es la fecha de entrega?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 12:59</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Jorge Serrano Pérez</p>
-                                    <p class="parrafoForo">"¿Se puede hacer en parejas?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 23:15</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Lucía Sánchez García</p>
-                                    <p class="parrafoForo">"¿Dónde podemos encontrar documentación sobre css?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">01/10/2020 - 09:12</time>
-                                </article>
-                            </li>
-<!--Caja de comentarios-->
-                            <li>
-                                <article>
-                                    <h1 class="subtituloF">Comentarios</h1>
-                                            <div id="result4">
-                                            </div>
-                                                
-                                                <form> 
-                                                    <p class="datosForm">Nombre*</p>
-                                                    <input class="cuadroTxt" type="text" id="name4">
-                                                    <p class="datosForm">Comentario*</p>
-                                                    <textarea id="comment4" class="cuadroTxt"></textarea>
-                                                    <div class="boton">
-                                                    <button type="button" class="boton" onclick="commentBox4();">Enviar</button>
-                                                    </div>
-                                                </form>
-                                </article>
-                            </li>
-<!--Fin caja comentarios-->
-                        </ul>
+                <section class="column mid" id="column_mid7">
+                    <h1 class="tituloForo">Foro de la asignatura</h1>
+                    <div class="tema">
+                        <h2 class="subtitulo">Forempleo 2020</h2>
+                        <div class="listaForo">
+                            <ul>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Iván Aguado Perulero</p>
+                                        <p class="parrafoForo">"Esta actividad es muy interesante."</p>
+                                        <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 11:35</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Jorge Serrano Pérez</p>
+                                        <p class="parrafoForo">"¿Cuál es la fecha del evento?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 23:15</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Lucía Sánchez García</p>
+                                        <p class="parrafoForo">"¿Cómo puedo inscribirme?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">01/10/2020 - 09:12</time>
+                                    </article>
+                                </li>
+    <!--Caja de comentarios-->
+                                <li>
+                                    <article>
+                                        <h1 class="subtituloF">Comentarios</h1>
+                                                <div id="result3">
+                                                </div>
+                                                    
+                                                    <form> 
+                                                        <p class="datosForm">Nombre*</p>
+                                                        <input class="cuadroTxt" type="text" id="name3">
+                                                        <p class="datosForm">Comentario*</p>
+                                                        <textarea id="comment3" class="cuadroTxt"></textarea>
+                                                        <div class="boton">
+                                                        <button type="button" class="boton" onclick="commentBox3();">Enviar</button>
+                                                        </div>
+                                                    </form>
+                                    </article>
+                                </li>
+    <!--Fin caja comentarios-->
+
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="column mid" id="column_mid9">
-                <h1 class="tituloForo">Foro de la asignatura</h1>
-                <div class="tema">
-                    <h2 class="subtitulo">Propuesta nuevo horario</h2>
-                    <div class="listaForo">
-                        <ul>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Iván Aguado Perulero</p>
-                                    <p class="parrafoForo">"¿No creéis que es mejor los lunes?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 16:12</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Jorge Serrano Pérez</p>
-                                    <p class="parrafoForo">"El martes me vendría bien."</p>
-                                    <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 23:15</time>
-                                </article>
-                            </li>
-                            <li>
-                                <article>
-                                    <img src="images/perfil.jpg" alt="logo" class="perfilForo">
-                                    <p class="datosS">Lucía Sánchez García</p>
-                                    <p class="parrafoForo">"¿El horario debe ser de tarde?"</p>
-                                    <time datetime="2020-09-13T23:20:00Z">01/10/2020 - 09:12</time>
-                                </article>
-                            </li>
-<!--Caja de comentarios-->
-                            <li>
-                                <article>
-                                    <h1 class="subtituloF">Comentarios</h1>
-                                            <div id="result5">
-                                            </div>
-                                                
-                                                <form> 
-                                                    <p class="datosForm">Nombre*</p>
-                                                    <input class="cuadroTxt" type="text" id="name5">
-                                                    <p class="datosForm">Comentario*</p>
-                                                    <textarea id="comment5" class="cuadroTxt"></textarea>
-                                                    <div class="boton">
-                                                    <button type="button" class="boton" onclick="commentBox5();">Enviar</button>
-                                                    </div>
-                                                </form>                                      
-                                </article>
-                            </li>
-<!--Fin caja comentarios-->
-                        </ul>
+                <section class="column mid" id="column_mid8">
+                    <h1 class="tituloForo">Foro de la asignatura</h1>
+                    <div class="tema">
+                        <h2 class="subtitulo">Práctica final</h2>
+                        <div class="listaForo">
+                            <ul>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Iván Aguado Perulero</p>
+                                        <p class="parrafoForo">"¿Cuál es la fecha de entrega?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 12:59</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Jorge Serrano Pérez</p>
+                                        <p class="parrafoForo">"¿Se puede hacer en parejas?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 23:15</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Lucía Sánchez García</p>
+                                        <p class="parrafoForo">"¿Dónde podemos encontrar documentación sobre css?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">01/10/2020 - 09:12</time>
+                                    </article>
+                                </li>
+    <!--Caja de comentarios-->
+                                <li>
+                                    <article>
+                                        <h1 class="subtituloF">Comentarios</h1>
+                                                <div id="result4">
+                                                </div>
+                                                    
+                                                    <form> 
+                                                        <p class="datosForm">Nombre*</p>
+                                                        <input class="cuadroTxt" type="text" id="name4">
+                                                        <p class="datosForm">Comentario*</p>
+                                                        <textarea id="comment4" class="cuadroTxt"></textarea>
+                                                        <div class="boton">
+                                                        <button type="button" class="boton" onclick="commentBox4();">Enviar</button>
+                                                        </div>
+                                                    </form>
+                                    </article>
+                                </li>
+    <!--Fin caja comentarios-->
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="column mid" id="column_mid4">
-                <h1 class="tituloCalificaciones">Calificaciones</h1>
-                <div class="tabla">
-                    <table style="width:100%" id="tabla">
-                        <tr>
-                            <th>Estudiante</th>
-                            <th>Actividad 1</th>
-                            <th>Actividad 2</th>
-                            <th>Actividad 3</th>
-                        </tr>
-                        <tr>
-                            <td>Iván</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>Jorge</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>Javier</td>
-                            <td>7</td>
-                            <td>5,5</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>Ignacio</td>
-                            <td>3,25</td>
-                            <td>4</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>María</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>5,25</td>
-                        </tr>
-                        <tr>
-                            <td>Nacho</td>
-                            <td>9</td>
-                            <td>8,75</td>
-                            <td>7,5</td>
-                        </tr>
-                        <tr>
-                            <td>Cristina</td>
-                            <td>4,5</td>
-                            <td>5,5</td>
-                            <td>5,25</td>
-                        </tr>
-                        <tr>
-                            <td>Julia</td>
-                            <td>8</td>
-                            <td>8</td>
-                            <td>6,5</td>
-                        </tr>
-                        <tr>
-                            <td>Federico</td>
-                            <td>1</td>
-                            <td>2,25</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>Manuel</td>
-                            <td>7</td>
-                            <td>6,75</td>
-                            <td>7,5</td>
-                        </tr>
-                        <tr>
-                            <td>Yolanda</td>
-                            <td>7,5</td>
-                            <td>8</td>
-                            <td>9,5</td>
-                        </tr>
-                    </table>
-                    <button id="descargar" onclick="descargarExcel()">Descargar</button>
-                </div>
-            </section>
+                <section class="column mid" id="column_mid9">
+                    <h1 class="tituloForo">Foro de la asignatura</h1>
+                    <div class="tema">
+                        <h2 class="subtitulo">Propuesta nuevo horario</h2>
+                        <div class="listaForo">
+                            <ul>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Iván Aguado Perulero</p>
+                                        <p class="parrafoForo">"¿No creéis que es mejor los lunes?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 16:12</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Jorge Serrano Pérez</p>
+                                        <p class="parrafoForo">"El martes me vendría bien."</p>
+                                        <time datetime="2020-09-13T23:20:00Z">02/10/2020 - 23:15</time>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <p class="datosS">Lucía Sánchez García</p>
+                                        <p class="parrafoForo">"¿El horario debe ser de tarde?"</p>
+                                        <time datetime="2020-09-13T23:20:00Z">01/10/2020 - 09:12</time>
+                                    </article>
+                                </li>
+    <!--Caja de comentarios-->
+                                <li>
+                                    <article>
+                                        <h1 class="subtituloF">Comentarios</h1>
+                                                <div id="result5">
+                                                </div>
+                                                    
+                                                    <form> 
+                                                        <p class="datosForm">Nombre*</p>
+                                                        <input class="cuadroTxt" type="text" id="name5">
+                                                        <p class="datosForm">Comentario*</p>
+                                                        <textarea id="comment5" class="cuadroTxt"></textarea>
+                                                        <div class="boton">
+                                                        <button type="button" class="boton" onclick="commentBox5();">Enviar</button>
+                                                        </div>
+                                                    </form>                                      
+                                    </article>
+                                </li>
+    <!--Fin caja comentarios-->
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-            <aside class="column side D">
-                <h1 class="titulo1">Últimas Novedades</h1>
+                <section class="column mid" id="column_mid4">
+                    <h1 class="tituloCalificaciones">Calificaciones</h1>
+                    <div class="tabla">
+                        <table style="width:100%" id="tabla">
+                            <tr>
+                                <th>Estudiante</th>
+                                <th>Actividad 1</th>
+                                <th>Actividad 2</th>
+                                <th>Actividad 3</th>
+                            </tr>
+                            <tr>
+                                <td>Iván</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Jorge</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Javier</td>
+                                <td>7</td>
+                                <td>5,5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Ignacio</td>
+                                <td>3,25</td>
+                                <td>4</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>María</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>5,25</td>
+                            </tr>
+                            <tr>
+                                <td>Nacho</td>
+                                <td>9</td>
+                                <td>8,75</td>
+                                <td>7,5</td>
+                            </tr>
+                            <tr>
+                                <td>Cristina</td>
+                                <td>4,5</td>
+                                <td>5,5</td>
+                                <td>5,25</td>
+                            </tr>
+                            <tr>
+                                <td>Julia</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>6,5</td>
+                            </tr>
+                            <tr>
+                                <td>Federico</td>
+                                <td>1</td>
+                                <td>2,25</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Manuel</td>
+                                <td>7</td>
+                                <td>6,75</td>
+                                <td>7,5</td>
+                            </tr>
+                            <tr>
+                                <td>Yolanda</td>
+                                <td>7,5</td>
+                                <td>8</td>
+                                <td>9,5</td>
+                            </tr>
+                        </table>
+                        <button id="descargar" onclick="descargarExcel()">Descargar</button>
+                    </div>
+                </section>
+
+                <aside class="column side D">
+                    <h1 class="titulo1">Últimas Novedades</h1>
+                    <ul>
+                        <li><time datetime="2020-09-10"> 10/09 - Agregados nuevos videos</time></li>
+                        <li><time datetime="2020-09-09"> 09/09 - Añadido nuevo tema</time></li>
+                        <li><time datetime="2020-09-09"> 09/09 - Nuevos mensajes en el foro</time></li>
+                    </ul>
+
+                    <h1 class="titulo1"><a href="#" id="pop">Próximos Eventos</a></h1>
+                    <ul>
+                        <li><time datetime="2020-09-20"> 20/09 - Fecha límite práctica 2</time></li>
+                        <li><time datetime="2020-09-15"> 15/09 - Clase de laboratorio</time></li>
+                    </ul>
+
+                    <div id="holder" style="display: none;">
+                        <div id="calendar"></div>
+                    </div>
+
+                    <script>
+                        $(document).ready(function() {
+                            $('#calendar').evoCalendar()
+                                $("#pop").click(function(){
+                                    $("#holder").toggle("slow");
+                            });
+                        })
+                    </script>
+                </aside>
+            </div>
+
+            <footer class="pie">
                 <ul>
-                    <li><time datetime="2020-09-10"> 10/09 - Agregados nuevos videos</time></li>
-                    <li><time datetime="2020-09-09"> 09/09 - Añadido nuevo tema</time></li>
-                    <li><time datetime="2020-09-09"> 09/09 - Nuevos mensajes en el foro</time></li>
+                    <li><a href="https://www.uc3m.es/">Web de la Universidad</a></li>
+                    <li><a href="#Copyright">© All rights reserved</a></li>
+                    <li><a href="#Privacidad">Política de privacidad</a></li>
                 </ul>
-
-                <h1 class="titulo1"><a href="#" id="pop">Próximos Eventos</a></h1>
-                <ul>
-                    <li><time datetime="2020-09-20"> 20/09 - Fecha límite práctica 2</time></li>
-                    <li><time datetime="2020-09-15"> 15/09 - Clase de laboratorio</time></li>
-                </ul>
-
-                <div id="holder" style="display: none;">
-                    <div id="calendar"></div>
-                </div>
-
-                <script>
-                    $(document).ready(function() {
-                        $('#calendar').evoCalendar()
-                            $("#pop").click(function(){
-                                $("#holder").toggle("slow");
-                        });
-                    })
-                </script>
-            </aside>
-        </div>
-
-        <footer class="pie">
-            <ul>
-                <li><a href="https://www.uc3m.es/">Web de la Universidad</a></li>
-                <li><a href="#Copyright">© All rights reserved</a></li>
-                <li><a href="#Privacidad">Política de privacidad</a></li>
-            </ul>
-        </footer>
+            </footer>
+    </div>
     </body>
 </html>
