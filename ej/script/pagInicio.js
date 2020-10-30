@@ -46,7 +46,8 @@ function verificarPassword(){
         alert("no_letter");
         return("no_letter");
     }
-    alert("oukey!!");
+    document.getElementById("pagInicio").style.display = "none";
+    document.getElementById("pagWeb").style.display = "block";
     return("ok");
 }
 

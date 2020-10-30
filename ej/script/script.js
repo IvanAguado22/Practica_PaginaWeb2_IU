@@ -110,11 +110,11 @@ function mostrar9() {
 function cerrarSesion() {
     var txt;
     if (confirm("Seguro que quieres cerrar sesión?")) {
-        
+        document.getElementById("pagWeb").style.display = "none";
+        document.getElementById("pagInicio").style.display = "block";
     } else {
       txt = "You pressed Cancel!";
     }
-    document.getElementById("demo").innerHTML = txt;
 }
 
 function enviarEmail(){
