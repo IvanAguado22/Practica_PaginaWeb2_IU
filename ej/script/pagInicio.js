@@ -41,3 +41,19 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
     $(target).fadeIn(600);
     
   });
+
+  function verificarPassword(){
+  var inputPassword = document.getElementById('pass').value;
+    if (inputPassword.length < 8) {
+        alert("too_short");
+        return("too_short"); 
+    } else if (inputPassword.search(/\d/) == -1) {
+        alert("no_num");
+        return("no_num");
+    } else if (inputPassword.search(/[a-z]/) == -1) {
+        alert("no_letter");
+        return("no_letter");
+    }
+  alert("oukey!!");
+  return("ok");
+}

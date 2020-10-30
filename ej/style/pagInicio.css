@@ -107,7 +107,7 @@ label.highlight {
 	color: #fff;
 }
 
-input{
+input, select{
 	font-size: 22px;
 	display: block;
 	width: 100%;
@@ -121,17 +121,9 @@ input{
 	transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-select{
-	font-size: 22px;
-	display: block;
-	width: 100%;
-	height: 100%;
-	padding: 5px 10px;
-	background: none;
+option{
 	background-color: rgba(19, 35, 47, .9);
 	color: white;
-	border: 1px solid #a0b3b0;
-	transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 input:focus, select:focus {
