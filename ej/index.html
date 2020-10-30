@@ -81,30 +81,40 @@
                                     <label>
                                         Rol<span class="req">*</span>
                                     </label>
-                                    <input type="text"required autocomplete="off"/>
+                                    <select name="rol">
+                                        <option value="1">Administrador</option>
+                                        <option value="2">Profesor</option>
+                                        <option value="3">Estudiante</option>
+                                    </select>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
                                         Grado<span class="req">*</span>
                                     </label>
-                                    <input type="text"required autocomplete="off"/>
+                                    <select name="grado">
+                                        <option value="1">Ingeniería Informática</option>
+                                        <option value="2">Derecho</option>
+                                        <option value="3">Ingeniería Industrial</option>
+                                    </select>
                                 </div>
                             </div>
 
                             <div class="top-row">
                                 <div class="field-wrap">
-                                    <label>
-                                        Universidad<span class="req">*</span>
-                                    </label>
-                                    <input type="text"required autocomplete="off"/>
+                                    <input type="text" value="UC3M" readonly="readonly"/>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
                                         Idioma
                                     </label>
-                                    <input type="text"required autocomplete="off"/>
+                                    <select name="idiama">
+                                        <option value="1">Español</option>
+                                        <option value="2">Inglés</option>
+                                        <option value="3">Alemán</option>
+                                        <option value="3">Francés</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -129,7 +139,9 @@
                                 <input type="checkbox"required autocomplete="off"/>
                             </div>
                             
-                            <button type="submit" class="button button-block"/>Get Started</button>
+                            <button type="submit" class="button button-block"/>Guardar</button>
+                            <button type="submit" class="button button-block"/>Borrar</button>
+                            
                         </form>
                     </div>
                   
