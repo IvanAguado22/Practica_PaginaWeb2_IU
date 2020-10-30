@@ -1,52 +1,44 @@
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
   
-    var $this = $(this),
-        label = $this.prev('label');
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
   
-        if (e.type === 'keyup') {
-              if ($this.val() === '') {
-            label.removeClass('active highlight');
-          } else {
-            label.addClass('active highlight');
-          }
-      } else if (e.type === 'blur') {
-          if( $this.val() === '' ) {
-              label.removeClass('active highlight'); 
-              } else {
-              label.removeClass('highlight');   
-              }   
-      } else if (e.type === 'focus') {
-        
-        if( $this.val() === '' ) {
-              label.removeClass('highlight'); 
-              } 
-        else if( $this.val() !== '' ) {
-              label.addClass('highlight');
-              }
-      }
-  
-  });
-  
-  $('.tab a').on('click', function (e) {
-    
-    e.preventDefault();
-    
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-    
-    target = $(this).attr('href');
-  
-    $('.tab-content > div').not(target).hide();
-    
-    $(target).fadeIn(600);
-    
-  });
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter your name:","");
+        if (user != "" && user != null) {
+            setCookie("username", user, 30);
+        }
+    }
+}
 
-  function verificarPassword(){
-  var inputPassword = document.getElementById('pass').value;
+//***************************************************************************************************************** */
+function verificarPassword(){
+    var inputPassword = document.getElementById('pass').value;
     if (inputPassword.length < 8) {
         alert("too_short");
-        return("too_short"); 
+        return("too_short");
     } else if (inputPassword.search(/\d/) == -1) {
         alert("no_num");
         return("no_num");
@@ -54,6 +46,16 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
         alert("no_letter");
         return("no_letter");
     }
-  alert("oukey!!");
-  return("ok");
+    alert("oukey!!");
+    return("ok");
+}
+
+function cambiarLogIn(){
+    document.getElementById("signup").style.display = "none";
+    document.getElementById("login").style.display = "block";
+}
+
+function cambiarSignIn(){
+    document.getElementById("signup").style.display = "block";
+    document.getElementById("login").style.display = "none";
 }

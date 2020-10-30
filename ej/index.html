@@ -21,56 +21,44 @@
         <div id="pagInicio">
             <div class="form">
                 <ul class="tab-group">
-                    <li class="tab active"><a href="#signup">Sign Up</a></li>
-                    <li class="tab"><a href="#login">Log In</a></li>
+                    <li class="tab active"><a href="#signup" onclick="cambiarSignIn()">Sign Up</a></li>
+                    <li class="tab"><a href="#login" onclick="cambiarLogIn()">Log In</a></li>
                 </ul>
                 
                 <div class="tab-content">
                     <div id="signup">   
                         <h1>Registro</h1>
-                        <form action="/" method="post">
+                        <form action="/ej/registro.php" method="post">
                             <div class="top-row">
                                 <div class="field-wrap">
-                                    <label>
-                                    Nombre<span class="req">*</span>
-                                    </label>
-                                    <input type="text" required autocomplete="off" />
+                                    <input type="text" required autocomplete="off" placeholder="Nombre*"/>
                                 </div>
                                 <div class="field-wrap">
-                                    <label>
-                                    Apellido<span class="req">*</span>
-                                    </label>
-                                    <input type="text"required autocomplete="off"/>
+                                    <input type="text"required autocomplete="off" placeholder="Apellido*"/>
+                                </div>
+                            </div>
+
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <input type="text"required autocomplete="off" placeholder="Nombre usuario*"/>
+                                </div>
+
+                                <div class="field-wrap">
+                                    <input type="text"required autocomplete="off" placeholder="NIA*"/>
                                 </div>
                             </div>
 
                             <div class="top-row">
                                 <div class="field-wrap">
                                     <label>
-                                        Nombre usuario<span class="req">*</span>
-                                    </label>
-                                    <input type="text"required autocomplete="off"/>
-                                </div>
-
-                                <div class="field-wrap">
-                                    <label>
-                                        NIA<span class="req">*</span>
-                                    </label>
-                                    <input type="text"required autocomplete="off"/>
-                                </div>
-                            </div>
-
-                            <div class="top-row">
-                                <div class="field-wrap">
-                                    <label>
-                                        Fecha nacimiento<span class="req">*</span>
+                                        Fecha nacimiento*
                                     </label>
                                     <input type="date"required autocomplete="off"/>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
-                                        DNI<span class="req">*</span>
+                                        DNI*
                                     </label>
                                     <input type="text"required autocomplete="off"/>
                                 </div>
@@ -79,29 +67,34 @@
                             <div class="top-row">
                                 <div class="field-wrap">
                                     <label>
-                                        Rol<span class="req">*</span>
+                                        Rol*
                                     </label>
-                                    <select name="rol">
-                                        <option value="1">Administrador</option>
-                                        <option value="2">Profesor</option>
-                                        <option value="3">Estudiante</option>
+                                    <select name="rol" required>
+                                        <option value="" selected>Elige una opción</option>
+                                        <option value="Administrador">Administrador</option>
+                                        <option value="Profesor">Profesor</option>
+                                        <option value="Estudiante">Estudiante</option>
                                     </select>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
-                                        Grado<span class="req">*</span>
+                                        Grado*
                                     </label>
-                                    <select name="grado">
-                                        <option value="1">Ingeniería Informática</option>
-                                        <option value="2">Derecho</option>
-                                        <option value="3">Ingeniería Industrial</option>
+                                    <select name="grado" required>
+                                        <option value="" selected>Elige una opción</option>
+                                        <option value="Ingeniería Informática">Ingeniería Informática</option>
+                                        <option value="Derecho">Derecho</option>
+                                        <option value="Ingeniería Industrial">Ingeniería Industrial</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="top-row">
                                 <div class="field-wrap">
+                                    <label>
+                                        Universidad*
+                                    </label>
                                     <input type="text" value="UC3M" readonly="readonly"/>
                                 </div>
 
@@ -109,63 +102,49 @@
                                     <label>
                                         Idioma
                                     </label>
-                                    <select name="idiama">
-                                        <option value="1">Español</option>
-                                        <option value="2">Inglés</option>
-                                        <option value="3">Alemán</option>
-                                        <option value="3">Francés</option>
+                                    <select name="idiama" required>
+                                        <option value="" selected>Elige una opción</option>
+                                        <option value="Español">Español</option>
+                                        <option value="Inglés">Inglés</option>
+                                        <option value="Alemán">Alemán</option>
+                                        <option value="Francés">Francés</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="field-wrap">
-                                <label>
-                                    Email Address<span class="req">*</span>
-                                </label>
-                                <input type="email"required autocomplete="off"/>
+                                <input type="email"required autocomplete="off" placeholder="Email*"/>
                             </div>
                             
                             <div class="field-wrap">
-                                <label>
-                                    Set A Password<span class="req">*</span>
-                                </label>
-                                <input type="password" id="pass" required autocomplete="off"/>
+                                <input type="password" id="pass" required autocomplete="off" placeholder="Contraseña*"/>
                             </div>
 
                             <div class="field-wrap">
                                 <label>
                                     He leído y acepto las condiciones<span class="req">*</span>
                                 </label>
-                                <input type="checkbox"required autocomplete="off"/>
+                                <input type="radio" required autocomplete="off"/>
                             </div>
                             
-                            <button type="submit" class="button button-block" onclick="verificarPassword()"/>Guardar</button>
-                            <button type="submit" class="button button-block"/>Borrar</button>
-                            
+                            <input type="submit" class="button button-block" value="Guardar" onclick="verificarPassword()">
+                            <input type="reset" class="button button-block" value="Borrar">
                         </form>
                     </div>
                   
-                <div id="login">   
-                    <h1>Welcome Back!</h1>
-                    <form action="/" method="post">
-                    
-                    <div class="field-wrap">
-                        <label>
-                        Email Address<span class="req">*</span>
-                        </label>
-                        <input type="email"required autocomplete="off"/>
+                    <div id="login" style="display: none;">   
+                        <h1>¡Bienvenido de vuelta!</h1>
+                        <form action="/" method="post">
+                            <div class="field-wrap">
+                                <input type="email"required autocomplete="off" placeholder="Email*"/>
+                            </div>
+                            
+                            <div class="field-wrap">
+                                <input type="password"required autocomplete="off" placeholder="Contraseña*"/>
+                            </div>
+                            <button class="button button-block"/>Log In</button>
+                        </form>
                     </div>
-                    
-                    <div class="field-wrap">
-                        <label>
-                            Password<span class="req">*</span>
-                        </label>
-                        <input type="password"required autocomplete="off"/>
-                    </div>
-                    <p class="forgot"><a href="#">Forgot Password?</a></p>
-                    <button class="button button-block"/>Log In</button>
-                    </form>
-                  </div>
                 </div><!-- tab-content -->
             </div> <!-- /form -->
         </div>

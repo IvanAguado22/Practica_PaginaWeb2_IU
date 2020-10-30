@@ -78,29 +78,22 @@ h1 {
 }
 
 label {
-	position: absolute;
 	transform: translateY(6px);
 	left: 13px;
-	color: rgba(255, 255, 255, .5);
+	color: rgba(255, 255, 255, .6);
 	transition: all 0.25s ease;
-	backface-visibility: hidden;
 	pointer-events: none;
 	font-size: 22px;
 }
 
-label .req {
-	margin: 2px;
-	color: #1ab188;
+::placeholder{
+	color: rgba(255, 255, 255, .6);
 }
 
 label.active {
 	transform: translateY(50px);
 	left: 2px;
 	font-size: 14px;
-}
-
-label.active .req {
-	opacity: 0;
 }
 
 label.highlight {
@@ -175,9 +168,4 @@ input:focus, select:focus {
 	display: block;
     width: 100%;
     margin-bottom: 15px;
-}
-
-.forgot {
-	margin-top: -20px;
-	text-align: right;
 }
