@@ -1,109 +1,109 @@
-function mostrar1() {
-    document.getElementById("column_mid1").style.display = "block";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "none";
+function showIni() {
+    document.getElementById("column_mid_ini").style.display = "block";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar2() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "block";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "none";
+function showStudentsList() {
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "block";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar3() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "block";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "none";
+function showForum() {
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "block";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar4() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "block";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "none";
+function showGrades() {
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "block";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
 function mostrar5() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "block";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "none";
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "block";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
 function mostrar6() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "block";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "none";
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "block";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
 function mostrar7() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "block";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "none";
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "block";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
 function mostrar8() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "block";
-    document.getElementById("column_mid9").style.display = "none";
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "block";
+    document.getElementById("column_mid_forum4").style.display = "none";
 }
 
 function mostrar9() {
-    document.getElementById("column_mid1").style.display = "none";
-    document.getElementById("column_mid2").style.display = "none";
-    document.getElementById("column_mid3").style.display = "none";
-    document.getElementById("column_mid4").style.display = "none";
-    document.getElementById("column_mid5").style.display = "none";
-    document.getElementById("column_mid6").style.display = "none";
-    document.getElementById("column_mid7").style.display = "none";
-    document.getElementById("column_mid8").style.display = "none";
-    document.getElementById("column_mid9").style.display = "block";
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "block";
 }
 
 

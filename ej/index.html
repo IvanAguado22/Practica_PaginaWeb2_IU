@@ -18,13 +18,14 @@
     </head>
 
     <body>
+        <!-------------------------------------------- PAGINA DE INICIO ----------------------------------------------------->
         <div id="pagInicio">
             <div class="form">
-                <ul class="tab-group">
+                <nav class="tab-group">
                     <li class="tab active"><a href="#signup" onclick="cambiarSignIn()">Sign Up</a></li>
                     <li class="tab"><a href="#login" onclick="cambiarLogIn()">Log In</a></li>
-                </ul>
-                
+                </nav>
+                <!-------------------------------------------- REGISTRO ----------------------------------------------------->
                 <div class="tab-content">
                     <div id="signup">   
                         <h1 class="tituloInicio">Registro</h1>
@@ -131,7 +132,7 @@
                             <input type="reset" class="button button-block" value="Borrar">
                         </form>
                     </div>
-                  
+                    <!-------------------------------------------- LOG IN ----------------------------------------------------->
                     <div id="login" style="display: none;">   
                         <h1 class="tituloInicio">¡Bienvenido de vuelta!</h1>
                         <form action="/" method="post">
@@ -145,19 +146,20 @@
                             <button class="button button-block"/>Log In</button>
                         </form>
                     </div>
-                </div><!-- tab-content -->
-            </div> <!-- /form -->
+                </div>
+            </div>
         </div>
-
+        <!-------------------------------------------- PAGINA WEB ----------------------------------------------------->
         <div id="pagWeb">
             <div class="header">
+                <!-------------------------------------------- HEADER ----------------------------------------------------->
                 <header>
                     <div class="headerComputer">
                         <img src="images/logo.jpg" alt="logo" id="logo">
                         <h1 class="title">Interfaces de Usuario</h1>
                         <div class="login">
                             <img src="images/perfil2.jpg" alt="logo" id="logo2">
-                            <p id="nombreUsuario">carlos97</p>
+                            <p id="userName">Carlos97</p>
                         </div>
                     </div>
 
@@ -166,12 +168,12 @@
                         <h1 class="title">Curso IU</h1>
                         <div class="login">
                             <img src="images/perfil2.jpg" alt="logo" id="logo2">
-                            <p id="nombreUsuario">carlos97</p>
+                            <p id="userName">Carlos97</p>
                         </div>
                     </div>
                 </header>
 
-                <div class="separador"></div>
+                <div id="separator"></div>
 
                 <nav class="menu">
                     <a href="#Inicio">Inicio</a>
@@ -180,49 +182,52 @@
                 </nav>
             </div>
 
-            <div class="separador"></div>
+            <div id="separator"></div>
 
-            <div class="main">
+            <!-------------------------------------------- MAIN ----------------------------------------------------->
+            <div id="main">
+                <!-------------------------------------------- COLUMNA IZQUIERDA ----------------------------------------------------->
                 <aside class="column side I">
-                    <div class="columnaIComputer">
-                        <h1 class="titulo1 n"> <a href="#" onclick="mostrar1()">Curso IU</a></h1>
-                        <ul class="listaIzquierda">
-                            <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
-                            <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
-                            <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
+                    <div id="columnLeftComputer">
+                        <h1 class="titulo1 n"> <a href="#" onclick="showIni()">Curso IU</a></h1>
+                        <nav class="leftList">
+                            <li><a href="#" onclick="showStudentsList()">Listado de Estudiantes</a></li>
+                            <li><a href="#" onclick="showForum()">Foro de la Asignatura</a></li>
+                            <li><a href="#" onclick="showGrades()">Calificaciones</a></li>
                             <li><a href="#Novedades">Últimas Novedades</a></li>
                             <li><a href="#Eventos">Próximos Eventos</a></li>
-                            
-                        </ul>
+                        </nav>
                     </div>
 
-                    <div class="columnaIMovil">
+                    <div id="columnLeftPhone">
                         <div class="dropdown">
                             <img class="boton" src="images/dropdown.png" alt="logo" width="50" height="50">
                             <div class="dropdown-content">
                                 <nav>
-                                    <li><a href="#" onclick="mostrar2()">Listado de Estudiantes</a></li>
-                                    <li><a href="#" onclick="mostrar3()">Foro de la Asignatura</a></li>
-                                    <li><a href="#" onclick="mostrar4()">Calificaciones</a></li>
+                                    <li><a href="#" onclick="showStudentsList()">Listado de Estudiantes</a></li>
+                                    <li><a href="#" onclick="showForum()">Foro de la Asignatura</a></li>
+                                    <li><a href="#" onclick="showGrades()">Calificaciones</a></li>
                                     <li><a href="#Novedades">Últimas Novedades</a></li>
                                     <li><a href="#Eventos">Próximos Eventos</a></li>
                                 </nav>
                             </div>
                         </div>
-                        <h1 class="titulo1"><a href="./index.html">Curso IU</a></h1>
+                        <h1 class="titulo1"><a href="#" onclick="showIni()">Curso IU</a></h1>
                     </div>
                 </aside>
             
-                <section class="column mid" id="column_mid1">
+                <!-------------------------------------------- COLUMNA CENTRAL ----------------------------------------------------->
+                <section class="column mid" id="column_mid_ini">
+                    <!-------------------------------------------- TEMA 1 ----------------------------------------------------->
                     <div class="tema">
                         <div>
-                            <img src="images/html.png" alt="image" class="logoTema">
-                            <h1 class="tituloTema">Introducción a HTML</h1>
-                            <p class="parrafoTema">Comenzamos la asignatura con un tema introductorio sobre html, un lenguaje de programación empleado principalmente para desarrollar páginas web.</p>
+                            <img src="images/html.png" alt="image" class="topicLogo">
+                            <h1 class="topicTitle">Introducción a HTML</h1>
+                            <p class="topicParagraph">Comenzamos la asignatura con un tema introductorio sobre html, un lenguaje de programación empleado principalmente para desarrollar páginas web.</p>
                         </div>
                     
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 1 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">¿Quieres aprender HTML?</h2>
                             <video width="320" height="240" controls class="videoArticulo">
@@ -234,8 +239,8 @@
                             <p class="parrafoArticulo">Aquí tienes distintas razones por las que aprender html es tan importante en el mundo en el que vivimos, ya que se trata de uno de los lenguajes de programación más utilizados a nivel mundial.<p>
                         </article>
 
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 2 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Conceptos básicos de HTML</h2>
                             <video width="320" height="180" controls class="videoArticulo">
@@ -247,8 +252,8 @@
                             <p class="parrafoArticulo">Aquí te mostraremos los conceptos básicos más sencillos que te permitiran empezar a programar en html.</p>
                         </article>
 
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 3 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Ejercicios de HTML</h2>
                             <video width="320" height="180" controls class="videoArticulo">
@@ -261,15 +266,15 @@
                         </article>
                     </div>
 
-                    <div class="separador"></div>
-
+                    <div id="separator"></div>
+                    <!-------------------------------------------- TEMA 2 ----------------------------------------------------->
                     <div class="tema">
-                        <img src="images/css.png" alt="image" class="logoTema">
-                        <h1 class="tituloTema">Introducción a CSS</h1>
-                        <p class="parrafoTema">Continuamos ahora con una introducción sobre el lenguaje css, un complemento para html que se usa también para el desarrollo de páginas web. Se encarga de estilizar y mejorar el diseño de la web.</p>
+                        <img src="images/css.png" alt="image" class="topicLogo">
+                        <h1 class="topicTitle">Introducción a CSS</h1>
+                        <p class="topicParagraph">Continuamos ahora con una introducción sobre el lenguaje css, un complemento para html que se usa también para el desarrollo de páginas web. Se encarga de estilizar y mejorar el diseño de la web.</p>
                     
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 1 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">¿Qué es CSS?</h2>
                             <video width="320" height="180" controls class="videoArticulo">
@@ -281,8 +286,8 @@
                             <p class="parrafoArticulo">Empezamos explicando que es css, como funciona, temas de renderizado y de estilo, etc.</p>
                         </article>
 
-                        <div class="separador"></div>
-                        
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 2 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">HTML y CSS-¿Qué son y para qué sirven?</h2>
                             <video width="320" height="180" controls class="videoArticulo">
@@ -294,8 +299,8 @@
                             <p class="parrafoArticulo">Aquí os mostramos una breve definición y lo más importante, como se complementan estos dos lenguajes de programacionen entre ellos. Mostramos además distintos ejemplos de uso.</p>
                         </article>
 
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 3 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Conceptos básicos de CSS</h2>
                             <video width="320" height="180" controls class="videoArticulo">
@@ -308,15 +313,15 @@
                         </article>
                     </div>
 
-                    <div class="separador"></div>
-
+                    <div id="separator"></div>
+                    <!-------------------------------------------- TEMA 3 ----------------------------------------------------->
                     <div class="tema">
-                        <img src="images/js.png" alt="image" class="logoTema">
-                        <h1 class="tituloTema">Introducción a JavaScript</h1>
-                        <p class="parrafoTema">Como último tema os enseñaremos el lenguaje de JavaScript, también muy utilizado en el desarrollo de páginas web. Este está más enfocado a las webs dinámicas y entretenidas.</p>
+                        <img src="images/js.png" alt="image" class="topicLogo">
+                        <h1 class="topicTitle">Introducción a JavaScript</h1>
+                        <p class="topicParagraph">Como último tema os enseñaremos el lenguaje de JavaScript, también muy utilizado en el desarrollo de páginas web. Este está más enfocado a las webs dinámicas y entretenidas.</p>
                     
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 1 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">¿Qué es JavaScript y para qué sirve?</h2>
                             <video width="320" height="180" controls class="videoArticulo">
@@ -328,8 +333,8 @@
                             <p class="parrafoArticulo">Comenzamos explicando qué es JavaScript y cuál es el uso principal que se le da a día de hoy.</p>
                         </article>
 
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 2 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">5 razones para aprender JavaScript</h2>
                             <video width="218" height="230" controls class="videoArticulo">
@@ -341,8 +346,8 @@
                             <p class="parrafoArticulo">Aquí os diremos por qué JavaScript es tan importante y porque recomendamos ser expertos en este lenguaje de programación tan utilizado a día de hoy.</p>
                         </article>
 
-                        <div class="separador"></div>
-
+                        <div id="separator"></div>
+                        <!-------------------------------------------- ARTICULO 3 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Conceptos básicos de JavaScript</h2>
                             <video width="320" height="180" controls class="videoArticulo">
@@ -355,67 +360,66 @@
                         </article>
                     </div>
 
-                    <div class="separador"></div>
-                    
+                    <div id="separator"></div>
                 </section>
-
-                <section class="column mid" id="column_mid2">
+                <!-------------------------------------------- LISTADO DE ESTUDIANTES ----------------------------------------------------->
+                <section class="column mid" id="column_mid_studentsList">
                     <h1 class="tituloListado">Listado de Estudiantes</h1>
                     <div class="listaS">
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Iván Aguado Perulero - 100405871@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Jorge Serrano Pérez - 100405987@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">                          
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">                          
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Ignacio López Ferragut - 100405125@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">                          
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">                          
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Alberto Cacajo Díaz - 100395821@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Patricia Cuellas Valdizan - 100406312@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Rocío Hevia-aza Arce - 100401541@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">María Moscardó Navarrete - 100408514@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Iván Iglesias Jiménez - 100398562@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Lucía Sánchez García - 100436540@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                         <article>
-                            <img src="images/perfil.jpg" alt="logo" class="perfil">
+                            <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Lucas Ortiz López - 100400112@alumnos.uc3m.es</p>
-                            <img src="images/icono.png" alt="logo" class="icono" onclick="enviarEmail()" onmouseover="this.style.cursor= 'pointer';">
+                            <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
                     </div>
                 </section>
-
-                <section class="column mid" id="column_mid3">
+                <!-------------------------------------------- FORO ----------------------------------------------------->
+                <section class="column mid" id="column_mid_forum">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <div class="listaForo">
@@ -450,8 +454,7 @@
                     </div>
                 </section>
 
-        <!--Cosas del foro-->
-                <section class="column mid" id="column_mid5">
+                <section class="column mid" id="column_mid_forum1">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Clases viernes por la tarde</h2>
@@ -505,7 +508,7 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid6">
+                <section class="column mid" id="column_mid_forum2">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Práctica próximo miércoles</h2>
@@ -558,7 +561,7 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid7">
+                <section class="column mid" id="column_mid_forum3">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Forempleo 2020</h2>
@@ -613,7 +616,7 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid8">
+                <section class="column mid" id="column_mid_forum3">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Práctica final</h2>
@@ -667,7 +670,7 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid9">
+                <section class="column mid" id="column_mid_forum4">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Propuesta nuevo horario</h2>
@@ -721,7 +724,8 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid4">
+                <!-------------------------------------------- CALIFICACIONES ----------------------------------------------------->
+                <section class="column mid" id="column_mid_grades">
                     <h1 class="tituloCalificaciones">Calificaciones</h1>
                     <div class="tabla">
                         <table style="width:100%" id="tabla">
@@ -801,7 +805,7 @@
                         <button id="descargar" onclick="descargarExcel()">Descargar</button>
                     </div>
                 </section>
-
+                <!-------------------------------------------- COLUMNA DERECHA ----------------------------------------------------->
                 <aside class="column side D">
                     <h1 class="titulo1"><a href="#">Últimas Novedades</a></h1>
                     <ul>
@@ -830,14 +834,14 @@
                     </script>
                 </aside>
             </div>
-
-            <footer class="pie">
+            <!-------------------------------------------- PIE ----------------------------------------------------->
+            <footer class="footer">
                 <ul>
                     <li><a href="https://www.uc3m.es/">Web de la Universidad</a></li>
                     <li><a href="#Copyright">© All rights reserved</a></li>
                     <li><a href="#Privacidad">Política de privacidad</a></li>
                 </ul>
             </footer>
-    </div>
+        </div>
     </body>
 </html>

@@ -91,7 +91,7 @@ body{
  *
  * -------------------------------------------------------------------
  */
-.main{
+#main{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -119,15 +119,15 @@ body{
     font-size: 17px;
 }
 
-.listaIzquierda li:nth-last-child(2){
+.leftList li:nth-last-child(2){
     display: none;
 }
 
-.listaIzquierda li:nth-last-child(1){
+.leftList li:nth-last-child(1){
     display: none;
 }
 
-.columnaIMovil{
+#columnLeftPhone{
     display: none;
 }
 
@@ -142,39 +142,39 @@ body{
     padding: 20px;
 }
 
-#column_mid2{
+#column_mid_studentsList{
     display: none;
 }
 
-#column_mid3{
+#column_mid_forum{
     display: none;
 }
 
-#column_mid4{
+#column_mid_grades{
     display: none;
 }
 
-#column_mid5{
+#column_mid_forum1{
     display: none;
 }
 
-#column_mid6{
+#column_mid_forum2{
     display: none;
 }
 
-#column_mid7{
+#column_mid_forum3{
     display: none;
 }
 
-#column_mid8{
+#column_mid_forum3{
     display: none;
 }
 
-#column_mid9{
+#column_mid_forum4{
     display: none;
 }
 
-.logoTema{
+.topicLogo{
     width: 150px;
     float: left;
     margin-right: 20px;
@@ -182,19 +182,19 @@ body{
     overflow: auto;
 }
 
-.tituloTema{
+.topicTitle{
     padding: 0 20px;
     font-size: 30px;
     text-decoration: underline;
     color: #1ab188;
 }
 
-.parrafoTema{
+.topicParagraph{
     padding: 20px;
     font-size: 17px;
 }
 
-.separador{
+#separator{
     content: "";
     clear: both;
     display: table;
@@ -239,7 +239,7 @@ article::after{
  *
  * -------------------------------------------------------------------
  */
-.perfil{
+.profile{
     width: 100px;
     float: left;
     margin-top: 20px;  
@@ -250,9 +250,10 @@ article::after{
     padding: 25px 20px;
 }
 
-.icono{
+.icon{
     width: 50px;
     float: left;
+    cursor: pointer;
 }
 
 .listaS{
@@ -397,7 +398,7 @@ tr:nth-child(1) {
  *
  * -------------------------------------------------------------------
  */
-.pie{
+.footer{
     clear: both;
     text-align: center;
     padding: 20px;
@@ -407,7 +408,7 @@ tr:nth-child(1) {
     border-radius: 4px;
 }
 
-.pie li{
+.footer li{
     list-style: none;
     text-align: center;
     display: inline-block;
@@ -416,7 +417,7 @@ tr:nth-child(1) {
     font-size: 17px;
 }
 
-.pie li:last-child{
+.footer li:last-child{
     border-right: none;
 }
 
@@ -462,11 +463,11 @@ tr:nth-child(1) {
         width: 100%;
     }
 
-    .logoTema{
+    .topicLogo{
         display: none;
     }
 
-    .perfil{
+    .profile{
         width: 100%;
         margin: 20px 0;
     }
@@ -482,7 +483,7 @@ tr:nth-child(1) {
  * -------------------------------------------------------------------
  */
 @media screen and (max-width: 600px) {
-    .main {
+    #main {
         flex-direction: column;
     }
 
@@ -498,11 +499,11 @@ tr:nth-child(1) {
         display: none;
     }
 
-    .columnaIComputer{
+    #columnLeftComputer{
         display: none;
     }
 
-    .columnaIMovil{
+    #columnLeftPhone{
         display: block;
     }
 
@@ -544,7 +545,7 @@ tr:nth-child(1) {
         color: #1ab188;
     }
 
-    .parrafoTema{
+    .topicParagraph{
         display: none;
     }
 
