@@ -81,6 +81,7 @@ body{
   
 .menu a:hover {
     background: #179b77;
+    color: white;
 }
 
 .menu .active{
@@ -200,12 +201,6 @@ body{
     clear: both;
     display: table;
     margin-top: 20px;
-}
-
-article::after{
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .videoArticulo{
@@ -403,7 +398,7 @@ tr:nth-child(1) {
     clear: both;
     text-align: center;
     padding: 20px;
-    margin: 0px 0px;
+    margin: 0px;
     margin-top: 20px;
     background: rgba(19, 35, 47, .9);
     border-radius: 4px;
@@ -413,7 +408,7 @@ tr:nth-child(1) {
     list-style: none;
     text-align: center;
     display: inline-block;
-    border-right: 3px solid black;
+    border-right: 3px solid white;
     padding: 0px 7px;
     font-size: 17px;
 }
@@ -470,7 +465,7 @@ tr:nth-child(1) {
 
     .profile{
         width: 100%;
-        margin: 20px 0;
+        margin: 30px 0;
     }
 
     .datosS{

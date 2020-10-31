@@ -58,12 +58,12 @@ a:hover {
 
 .tab-group li a:hover {
 	background: #179b77;
-	color: #fff;
+	color: white;
 }
 
 .tab-group .active a {
 	background: #1ab188;
-	color: #fff;
+	color: white;
 }
 
 .tituloInicio{
