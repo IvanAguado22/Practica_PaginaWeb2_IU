@@ -6,8 +6,8 @@ function showIni() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showStudentsList() {
@@ -18,8 +18,8 @@ function showStudentsList() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showForum() {
@@ -30,8 +30,8 @@ function showForum() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showGrades() {
@@ -42,8 +42,8 @@ function showGrades() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showForum1() {
@@ -54,8 +54,8 @@ function showForum1() {
     document.getElementById("column_mid_forum1").style.display = "block";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showForum2() {
@@ -66,8 +66,8 @@ function showForum2() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "block";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showForum3() {
@@ -78,8 +78,8 @@ function showForum3() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "block";
-    document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showForum4() {
@@ -90,8 +90,8 @@ function showForum4() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "block";
-    document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "block";
+    document.getElementById("column_mid_forum5").style.display = "none";
 }
 
 function showForum5() {
@@ -102,8 +102,8 @@ function showForum5() {
     document.getElementById("column_mid_forum1").style.display = "none";
     document.getElementById("column_mid_forum2").style.display = "none";
     document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum4").style.display = "block";
+    document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "block";
 }
 
 
