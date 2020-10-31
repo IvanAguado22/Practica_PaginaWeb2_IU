@@ -37,7 +37,7 @@ body{
     display: none;
 }
 
-#logo{
+.logo{
     float: left;
     width: 50px;
     margin: 15px;
@@ -50,7 +50,7 @@ body{
     text-align: center;
 }
 
-#logo2{
+.logo2{
     width: 50px;
 }
 
@@ -61,7 +61,8 @@ body{
 }
 
 .menu {
-    overflow: hidden;
+    overflow: auto;
+    width: 100%;
     background: rgba(19, 35, 47, .9);
 }
   
@@ -166,11 +167,11 @@ body{
     display: none;
 }
 
-#column_mid_forum3{
+#column_mid_forum4{
     display: none;
 }
 
-#column_mid_forum4{
+#column_mid_forum5{
     display: none;
 }
 

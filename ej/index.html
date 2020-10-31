@@ -35,17 +35,17 @@
                                     <input type="text" required autocomplete="off" placeholder="Nombre*"/>
                                 </div>
                                 <div class="field-wrap">
-                                    <input type="text"required autocomplete="off" placeholder="Apellido*"/>
+                                    <input type="text" required autocomplete="off" placeholder="Apellido*"/>
                                 </div>
                             </div>
 
                             <div class="top-row">
                                 <div class="field-wrap">
-                                    <input type="text"required autocomplete="off" placeholder="Nombre usuario*"/>
+                                    <input type="text" required autocomplete="off" placeholder="Nombre usuario*"/>
                                 </div>
 
                                 <div class="field-wrap">
-                                    <input type="text"required autocomplete="off" placeholder="NIA*"/>
+                                    <input type="text" required autocomplete="off" placeholder="NIA*"/>
                                 </div>
                             </div>
 
@@ -54,14 +54,14 @@
                                     <label>
                                         Fecha nacimiento*
                                     </label>
-                                    <input type="date"required autocomplete="off"/>
+                                    <input type="date" required autocomplete="off"/>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
                                         DNI*
                                     </label>
-                                    <input type="text"required autocomplete="off" placeholder="DNI*"/>
+                                    <input type="text" required autocomplete="off" placeholder="DNI*"/>
                                 </div>
                             </div>
 
@@ -114,7 +114,7 @@
                             </div>
 
                             <div class="field-wrap">
-                                <input type="email"required autocomplete="off" placeholder="Email*"/>
+                                <input type="email" required autocomplete="off" placeholder="Email*"/>
                             </div>
                             
                             <div class="field-wrap">
@@ -125,7 +125,7 @@
                                 <label>
                                     He leído y acepto las condiciones<span class="req">*</span>
                                 </label>
-                                <input type="radio" required autocomplete="off"/>
+                                <input type="radio" required>
                             </div>
                             
                             <input type="submit" class="button button-block" value="Guardar" onclick="verificarPassword()">
@@ -137,13 +137,13 @@
                         <h1 class="tituloInicio">¡Bienvenido de vuelta!</h1>
                         <form action="/" method="post">
                             <div class="field-wrap">
-                                <input type="email"required autocomplete="off" placeholder="Email*"/>
+                                <input type="email" required autocomplete="off" placeholder="Email*"/>
                             </div>
                             
                             <div class="field-wrap">
-                                <input type="password"required autocomplete="off" placeholder="Contraseña*"/>
+                                <input type="password" required autocomplete="off" placeholder="Contraseña*"/>
                             </div>
-                            <button class="button button-block"/>Log In</button>
+                            <button class="button button-block">Log In</button>
                         </form>
                     </div>
                 </div>
@@ -155,25 +155,25 @@
                 <!-------------------------------------------- HEADER ----------------------------------------------------->
                 <header>
                     <div class="headerComputer">
-                        <img src="images/logo.jpg" alt="logo" id="logo">
+                        <img src="images/logo.jpg" alt="logo" class="logo">
                         <h1 class="title">Interfaces de Usuario</h1>
                         <div class="login">
-                            <img src="images/perfil2.jpg" alt="logo" id="logo2">
-                            <p id="userName">Carlos97</p>
+                            <img src="images/perfil2.jpg" alt="logo" class="logo2">
+                            <p class="userName">Carlos97</p>
                         </div>
                     </div>
 
                     <div class="headerTablet">
-                        <img src="images/logo.jpg" alt="logo" id="logo">
+                        <img src="images/logo.jpg" alt="logo" class="logo">
                         <h1 class="title">Curso IU</h1>
                         <div class="login">
-                            <img src="images/perfil2.jpg" alt="logo" id="logo2">
-                            <p id="userName">Carlos97</p>
+                            <img src="images/perfil2.jpg" alt="logo" class="logo2">
+                            <p class="userName">Carlos97</p>
                         </div>
                     </div>
                 </header>
 
-                <div id="separator"></div>
+                <div class="separator"></div>
 
                 <nav class="menu">
                     <a href="#Inicio">Inicio</a>
@@ -182,7 +182,7 @@
                 </nav>
             </div>
 
-            <div id="separator"></div>
+            <div class="separator"></div>
 
             <!-------------------------------------------- MAIN ----------------------------------------------------->
             <div id="main">
@@ -226,7 +226,7 @@
                             <p class="topicParagraph">Comenzamos la asignatura con un tema introductorio sobre html, un lenguaje de programación empleado principalmente para desarrollar páginas web.</p>
                         </div>
                     
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 1 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">¿Quieres aprender HTML?</h2>
@@ -239,7 +239,7 @@
                             <p class="parrafoArticulo">Aquí tienes distintas razones por las que aprender html es tan importante en el mundo en el que vivimos, ya que se trata de uno de los lenguajes de programación más utilizados a nivel mundial.<p>
                         </article>
 
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 2 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Conceptos básicos de HTML</h2>
@@ -252,7 +252,7 @@
                             <p class="parrafoArticulo">Aquí te mostraremos los conceptos básicos más sencillos que te permitiran empezar a programar en html.</p>
                         </article>
 
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 3 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Ejercicios de HTML</h2>
@@ -266,14 +266,14 @@
                         </article>
                     </div>
 
-                    <div id="separator"></div>
+                    <div class="separator"></div>
                     <!-------------------------------------------- TEMA 2 ----------------------------------------------------->
                     <div class="tema">
                         <img src="images/css.png" alt="image" class="topicLogo">
                         <h1 class="topicTitle">Introducción a CSS</h1>
                         <p class="topicParagraph">Continuamos ahora con una introducción sobre el lenguaje css, un complemento para html que se usa también para el desarrollo de páginas web. Se encarga de estilizar y mejorar el diseño de la web.</p>
                     
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 1 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">¿Qué es CSS?</h2>
@@ -286,7 +286,7 @@
                             <p class="parrafoArticulo">Empezamos explicando que es css, como funciona, temas de renderizado y de estilo, etc.</p>
                         </article>
 
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 2 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">HTML y CSS-¿Qué son y para qué sirven?</h2>
@@ -299,7 +299,7 @@
                             <p class="parrafoArticulo">Aquí os mostramos una breve definición y lo más importante, como se complementan estos dos lenguajes de programacionen entre ellos. Mostramos además distintos ejemplos de uso.</p>
                         </article>
 
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 3 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Conceptos básicos de CSS</h2>
@@ -313,14 +313,14 @@
                         </article>
                     </div>
 
-                    <div id="separator"></div>
+                    <div class="separator"></div>
                     <!-------------------------------------------- TEMA 3 ----------------------------------------------------->
                     <div class="tema">
                         <img src="images/js.png" alt="image" class="topicLogo">
                         <h1 class="topicTitle">Introducción a JavaScript</h1>
                         <p class="topicParagraph">Como último tema os enseñaremos el lenguaje de JavaScript, también muy utilizado en el desarrollo de páginas web. Este está más enfocado a las webs dinámicas y entretenidas.</p>
                     
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 1 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">¿Qué es JavaScript y para qué sirve?</h2>
@@ -333,7 +333,7 @@
                             <p class="parrafoArticulo">Comenzamos explicando qué es JavaScript y cuál es el uso principal que se le da a día de hoy.</p>
                         </article>
 
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 2 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">5 razones para aprender JavaScript</h2>
@@ -346,7 +346,7 @@
                             <p class="parrafoArticulo">Aquí os diremos por qué JavaScript es tan importante y porque recomendamos ser expertos en este lenguaje de programación tan utilizado a día de hoy.</p>
                         </article>
 
-                        <div id="separator"></div>
+                        <div class="separator"></div>
                         <!-------------------------------------------- ARTICULO 3 ----------------------------------------------------->
                         <article>
                             <h2 class="tituloArticulo n">Conceptos básicos de JavaScript</h2>
@@ -360,8 +360,9 @@
                         </article>
                     </div>
 
-                    <div id="separator"></div>
+                    <div class="separator"></div>
                 </section>
+
                 <!-------------------------------------------- LISTADO DE ESTUDIANTES ----------------------------------------------------->
                 <section class="column mid" id="column_mid_studentsList">
                     <h1 class="tituloListado">Listado de Estudiantes</h1>
@@ -418,6 +419,7 @@
                         </article>
                     </div>
                 </section>
+
                 <!-------------------------------------------- FORO ----------------------------------------------------->
                 <section class="column mid" id="column_mid_forum">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
@@ -425,27 +427,27 @@
                         <div class="listaForo">
                             <ul>
                                 <li>
-                                    <h2 class="subtitulo"><a href="#" onclick="mostrar5()">Clases viernes por la tarde</a> </h2>                        
+                                    <h2 class="subtitulo"><a href="#" onclick="showForum1()">Clases viernes por la tarde</a> </h2>                        
                                     <p>Mensajes enviados: 10</p>
                                     <time datetime="2020-09-13T23:20:00Z"> 23:20 - Último mensaje</time>
                                 </li>
                                 <li>
-                                    <h2 class="subtitulo"><a href="#" onclick="mostrar6()">Práctica próximo miércoles</a> </h2>
+                                    <h2 class="subtitulo"><a href="#" onclick="showForum2()">Práctica próximo miércoles</a> </h2>
                                     <p>Mensajes enviados: 12</p>
                                     <time datetime="2020-09-18T20:54:32Z"> 20:54 - Último mensaje</time>
                                 </li>
                                 <li>
-                                    <h2 class="subtitulo"><a href="#" onclick="mostrar7()">Forempleo 2020</a></h2>
+                                    <h2 class="subtitulo"><a href="#" onclick="showForum3()">Forempleo 2020</a></h2>
                                     <p>Mensajes enviados: 3</p>
                                     <time datetime="2020-09-25T11:35:22Z"> 11:35 - Último mensaje</time>
                                 </li>
                                 <li>
-                                    <h2 class="subtitulo"><a href="#" onclick="mostrar8()">Práctica final</a></h2>
+                                    <h2 class="subtitulo"><a href="#" onclick="showForum4()">Práctica final</a></h2>
                                     <p>Mensajes enviados: 20</p>
                                     <time datetime="2020-09-26T12:59:54Z"> 12:59 - Último mensaje</time>
                                 </li>
                                 <li>
-                                    <h2 class="subtitulo"><a href="#" onclick="mostrar9()">Propuesta nuevo horario</a></h2>
+                                    <h2 class="subtitulo"><a href="#" onclick="showForum5()">Propuesta nuevo horario</a></h2>
                                     <p>Mensajes enviados: 8</p>
                                     <time datetime="2020-09-30T16:12:12Z"> 16:12 - Último mensaje</time>
                                 </li>
@@ -453,7 +455,7 @@
                         </div>
                     </div>
                 </section>
-
+                <!-------------------------------------------- FORO 1 ----------------------------------------------------->
                 <section class="column mid" id="column_mid_forum1">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
@@ -484,26 +486,21 @@
                                         <time datetime="2020-09-13T23:20:00Z">08/09/2020 - 09:12</time>
                                     </article>
                                 </li>
-    <!--Caja de comentarios-->
-                                <li>
-                                    <article>
-                                        <h1 class="subtituloF">Comentarios</h1>
-                                                <div id="result1">
-                                                </div>
-                                                    
-                                                    <form> 
-                                                        <p class="datosForm">Nombre*</p>
-                                                        <input class="cuadroTxt" type="text" id="name1">
-                                                        <p class="datosForm">Comentario*</p>
-                                                        <textarea id="comment1" class="cuadroTxt"></textarea>
-                                                        <div class="boton">
-                                                        <button type="button" class="boton" onclick="commentBox1();">Enviar</button>
-                                                        </div>
-                                                    </form>
-                                    </article>
-                                </li>
-    <!--Fin caja comentarios-->
                             </ul>
+                        </div>
+                        <!-------------------------------------------- CAJA DE COMENTARIOS ----------------------------------------------------->
+                        <div>
+                            <h1 class="subtituloF">Comentarios</h1>
+                                <div id="result1"></div>
+                                <form> 
+                                    <p class="datosForm">Nombre*</p>
+                                    <input class="cuadroTxt" type="text" id="name1">
+                                    <p class="datosForm">Comentario*</p>
+                                    <textarea id="comment1" class="cuadroTxt"></textarea>
+                                    <div class="boton">
+                                        <button type="button" class="boton" onclick="commentBox1();">Enviar</button>
+                                    </div>
+                                </form>
                         </div>
                     </div>
                 </section>
@@ -616,7 +613,7 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid_forum3">
+                <section class="column mid" id="column_mid_forum4">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Práctica final</h2>
@@ -670,7 +667,7 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid_forum4">
+                <section class="column mid" id="column_mid_forum5">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Propuesta nuevo horario</h2>

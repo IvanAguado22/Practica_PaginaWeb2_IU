@@ -46,7 +46,7 @@ function showGrades() {
     document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar5() {
+function showForum1() {
     document.getElementById("column_mid_ini").style.display = "none";
     document.getElementById("column_mid_studentsList").style.display = "none";
     document.getElementById("column_mid_forum").style.display = "none";
@@ -58,7 +58,7 @@ function mostrar5() {
     document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar6() {
+function showForum2() {
     document.getElementById("column_mid_ini").style.display = "none";
     document.getElementById("column_mid_studentsList").style.display = "none";
     document.getElementById("column_mid_forum").style.display = "none";
@@ -70,7 +70,7 @@ function mostrar6() {
     document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar7() {
+function showForum3() {
     document.getElementById("column_mid_ini").style.display = "none";
     document.getElementById("column_mid_studentsList").style.display = "none";
     document.getElementById("column_mid_forum").style.display = "none";
@@ -82,7 +82,7 @@ function mostrar7() {
     document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar8() {
+function showForum4() {
     document.getElementById("column_mid_ini").style.display = "none";
     document.getElementById("column_mid_studentsList").style.display = "none";
     document.getElementById("column_mid_forum").style.display = "none";
@@ -94,7 +94,7 @@ function mostrar8() {
     document.getElementById("column_mid_forum4").style.display = "none";
 }
 
-function mostrar9() {
+function showForum5() {
     document.getElementById("column_mid_ini").style.display = "none";
     document.getElementById("column_mid_studentsList").style.display = "none";
     document.getElementById("column_mid_forum").style.display = "none";
