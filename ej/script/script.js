@@ -136,24 +136,34 @@ function descargarExcel(){
     tmpElemento.click();
 }
 
+function mostrar_imagen(id) {
+    img = document.getElementById(id);
+    img.innerHTML = '<img src="http://static.php.net/www.php.net/images/php.gif" />';
+ }
+
 function commentBox1(){
 	var name=document.getElementById('name1').value;
-	var comment=document.getElementById('comment1').value;
+    var comment=document.getElementById('comment1').value;
+    var img = document.getElementById("im1");
  
 	if(name =="" || comment ==""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
         var parent=document.createElement('div');
+        var image=document.createElement('img');
 		var el_name=document.createElement('h5');
 		var el_message=document.createElement('p');
-		var el_line=document.createElement('hr');
+        var el_line=document.createElement('hr');
+        var img_perfil=document.createTextNode(img);
 		var txt_name=document.createTextNode(name);
 		var txt_message=document.createTextNode(comment);
         
+        image.appendChild(img_perfil);
         el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
 		el_line.style.border='1px solid #000';
         
+        parent.appendChild(img_perfil);
         parent.appendChild(el_name);
 		parent.appendChild(el_line);
 		parent.appendChild(el_message);

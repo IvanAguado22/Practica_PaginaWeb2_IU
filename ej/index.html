@@ -22,14 +22,14 @@
         <div id="pagInicio">
             <div class="form">
                 <nav class="tab-group">
-                    <a href="#signup" id="signUp" class="active" onclick="cambiarSignIn()">Sign Up</a>
-                    <a href="#login" id="logIn" class="" onclick="cambiarLogIn()">Log In</a>
+                    <a href="#signup" id="signUp" class="active" onclick="cambiarSignIn()">Registrarse</a>
+                    <a href="#login" id="logIn" class="" onclick="cambiarLogIn()">Iniciar sesión</a>
                 </nav>
                 <!-------------------------------------------- REGISTRO ----------------------------------------------------->
                 <div class="tab-content">
                     <div id="signup">   
                         <h1 class="tituloInicio">Registro</h1>
-                        <form action="/" method="post">
+                        <form method="post" onsubmit="storeValues(this)">
                             <div class="top-row">
                                 <div class="field-wrap">
                                     <input type="text" required autocomplete="off" placeholder="Nombre*"/>
@@ -41,7 +41,7 @@
 
                             <div class="top-row">
                                 <div class="field-wrap">
-                                    <input type="text" required autocomplete="off" placeholder="Nombre usuario*"/>
+                                    <input type="text" name="usrname" required autocomplete="off" placeholder="Nombre usuario*"/>
                                 </div>
 
                                 <div class="field-wrap">
@@ -128,8 +128,16 @@
                                 <input type="radio" required>
                             </div>
                             
-                            <input type="submit" class="button button-block" value="Guardar" onclick="verificarPassword()">
+                            <input type="submit" class="button button-block" value="Guardar" onclick="verificarPassword()";>
+                            <input type="button" class="button button-block" value="Show" onclick="alertCookie()";>
+                            <input type="button" class="button button-block" value="1" onclick="saveCookie()";>
                             <input type="reset" class="button button-block" value="Borrar">
+
+                            <script>
+                                function saveCookie(){
+                                    document.cookie = "name=lol";
+                                }
+                            </script>
                         </form>
                     </div>
                     <!-------------------------------------------- LOG IN ----------------------------------------------------->
@@ -470,7 +478,7 @@
                                 </li>
                                 <li>
                                     <article>
-                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo">
+                                        <img src="images/perfil.jpg" alt="logo" class="perfilForo" id="im1">
                                         <p class="datosS">Jorge Serrano Pérez</p>
                                         <p class="parrafoForo">"¿Las clases serán presenciales u online?"</p>
                                         <time datetime="2020-09-13T23:20:00Z">13/09/2020 - 23:15</time>
