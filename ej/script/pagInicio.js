@@ -54,9 +54,13 @@ function verificarPassword(){
 function cambiarLogIn(){
     document.getElementById("signup").style.display = "none";
     document.getElementById("login").style.display = "block";
+    document.getElementById("logIn").className = "active";
+    document.getElementById("signUp").className = "";
 }
 
 function cambiarSignIn(){
     document.getElementById("signup").style.display = "block";
     document.getElementById("login").style.display = "none";
+    document.getElementById("logIn").className = "";
+    document.getElementById("signUp").className = "active";
 }
