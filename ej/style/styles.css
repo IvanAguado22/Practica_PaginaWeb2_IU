@@ -249,10 +249,6 @@ body{
     margin-right: 20px;
 }
 
-.datosS{
-    padding: 25px 20px;
-}
-
 .icon{
     width: 50px;
     float: left;
@@ -292,6 +288,12 @@ body{
     display: block;
 }
 
+.listaForo li::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .tituloListado{
     padding-bottom: 20px;
     font-size: 30px;
@@ -308,46 +310,51 @@ body{
     font-size: 30px;
     color: #1ab188;
 }
+
 .perfilForo{
-    width: 50px;
+    width: 70px;
     float: left;
     margin-top: 20px;  
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
+.datosS{
+    padding-top: 20px;
+}
+
 .parrafoForo{
     font-size: 15px;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .datosForm{
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: 10px;
 }
 
 .cuadroTxt{
+    color: white;
     margin: 3px;
     padding: 15px;
-    font-size: 10px;
+    font-size: 15px;
     background: #1ab188;
     letter-spacing: 0.1em;
     border: 0;
+    min-width: 100%;
 }
 
 .boton{
+    margin-top: 10px;
     margin: 3px;
     padding: 15px;
-    font-size: 17px;
+    font-size: 15px;
     text-transform: uppercase;
     background: #1ab188;
     letter-spacing: 0.1em;
     border: 0;
     cursor: pointer;
 }
-.subtituloF{
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
+
 
 /**
  * 07. CALIFICACIONES
@@ -394,6 +401,7 @@ tr:nth-child(1) {
     background: #1ab188;
     letter-spacing: 0.1em;
     border: 0;
+    cursor: pointer;
 }
 
 /**
@@ -474,10 +482,6 @@ tr:nth-child(1) {
         width: 100%;
         margin: 30px 0;
     }
-
-    .datosS{
-        padding: 0;
-    }
 }
 
 /**
@@ -540,7 +544,7 @@ tr:nth-child(1) {
     .dropdown:hover .dropdown-content {
         display: block;
     }
-    
+
     .titulo1{
         float: left;
         text-align: left;

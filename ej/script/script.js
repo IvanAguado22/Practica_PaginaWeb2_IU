@@ -140,161 +140,192 @@ function showDropdown(){
     document.getElementById("dropdown-content").style.display = "block";
 }
 
-function mostrar_imagen(id) {
-    img = document.getElementById(id);
-    img.innerHTML = '<img src="http://static.php.net/www.php.net/images/php.gif" />';
- }
-
 function commentBox1(){
-	var name=document.getElementById('name1').value;
-    var comment=document.getElementById('comment1').value;
+	var name = document.getElementById("name1").value;
+    var comment = document.getElementById("comment1").value;
     var imagen = document.createElement("img"); 
     var today = new Date();
-    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date+' - '+time;
-    var hoy = document.createElement("p");
-    imagen.setAttribute("src", "images/perfil.jpg"); 
-    imagen.setAttribute("class", "perfilForo"); 
-    hoy.setAttribute("datetime", "dateTime");
+    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var dateTime = date + " - " + time;
 
-	if(name =="" || comment ==""){
+	if(name == "" || comment == ""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
-        var parent=document.createElement('div');
-		var el_name=document.createElement('h5');
-		var el_message=document.createElement('p');
+        var parent=document.createElement("li");
+		var el_name=document.createElement("p");
+        var el_message=document.createElement("p");
+        var la_date=document.createElement("p");
 		var txt_name=document.createTextNode(name);
 		var txt_message=document.createTextNode(comment);
-        
+        var hoy = document.createTextNode(dateTime);
+
         parent.appendChild(imagen);
         el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
-        
+        la_date.appendChild(hoy);
+
         parent.appendChild(el_name);
         parent.appendChild(el_message);
-        parent.appendChild(hoy);
-        el_name.setAttribute('class', 'datosS');
-        el_message.setAttribute('class', 'parrafoForo');
+        parent.appendChild(la_date);
 
-		document.getElementById('result1').appendChild(parent);
-		document.getElementById('name1').value="";
-		document.getElementById('comment1').value="";
+        el_name.setAttribute("class", "datosS");
+        el_message.setAttribute("class", "parrafoForo");
+        imagen.setAttribute("src", "images/perfil.jpg"); 
+        imagen.setAttribute("class", "perfilForo"); 
+
+		document.getElementById("result1").appendChild(parent);
 	}
 }
 
 function commentBox2(){
-	var name=document.getElementById('name2').value;
-	var comment=document.getElementById('comment2').value;
- 
-	if(name =="" || comment ==""){
+	var name = document.getElementById("name2").value;
+    var comment = document.getElementById("comment2").value;
+    var imagen = document.createElement("img"); 
+    var today = new Date();
+    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var dateTime = date + " - " + time;
+
+	if(name == "" || comment == ""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
-		var parent=document.createElement('div');
-		var el_name=document.createElement('h5');
-		var el_message=document.createElement('p');
-		var el_line=document.createElement('hr');
+        var parent=document.createElement("li");
+		var el_name=document.createElement("p");
+        var el_message=document.createElement("p");
+        var la_date=document.createElement("p");
 		var txt_name=document.createTextNode(name);
-        var txt_message=document.createTextNode(comment);
-        
-		el_name.appendChild(txt_name);
+		var txt_message=document.createTextNode(comment);
+        var hoy = document.createTextNode(dateTime);
+
+        parent.appendChild(imagen);
+        el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
-        el_line.style.border='1px solid #000';
-        
-		parent.appendChild(el_name);
-		parent.appendChild(el_line);
-		parent.appendChild(el_message);
-        parent.setAttribute('class', 'pane');
-        
-		document.getElementById('result2').appendChild(parent);
-		document.getElementById('name2').value="";
-		document.getElementById('comment2').value="";
+        la_date.appendChild(hoy);
+
+        parent.appendChild(el_name);
+        parent.appendChild(el_message);
+        parent.appendChild(la_date);
+
+        el_name.setAttribute("class", "datosS");
+        el_message.setAttribute("class", "parrafoForo");
+        imagen.setAttribute("src", "images/perfil.jpg"); 
+        imagen.setAttribute("class", "perfilForo"); 
+
+		document.getElementById("result2").appendChild(parent);
 	}
 }
 
 function commentBox3(){
-	var name=document.getElementById('name3').value;
-	var comment=document.getElementById('comment3').value;
- 
-	if(name =="" || comment ==""){
+	var name = document.getElementById("name3").value;
+    var comment = document.getElementById("comment3").value;
+    var imagen = document.createElement("img"); 
+    var today = new Date();
+    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var dateTime = date + " - " + time;
+
+	if(name == "" || comment == ""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
-		var parent=document.createElement('div');
-		var el_name=document.createElement('h5');
-		var el_message=document.createElement('p');
-		var el_line=document.createElement('hr');
+        var parent=document.createElement("li");
+		var el_name=document.createElement("p");
+        var el_message=document.createElement("p");
+        var la_date=document.createElement("p");
 		var txt_name=document.createTextNode(name);
-        var txt_message=document.createTextNode(comment);
-        
-		el_name.appendChild(txt_name);
+		var txt_message=document.createTextNode(comment);
+        var hoy = document.createTextNode(dateTime);
+
+        parent.appendChild(imagen);
+        el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
-        el_line.style.border='1px solid #000';
-        
-		parent.appendChild(el_name);
-		parent.appendChild(el_line);
-		parent.appendChild(el_message);
-        parent.setAttribute('class', 'pane');
-        
-		document.getElementById('result3').appendChild(parent);
-		document.getElementById('name3').value="";
-		document.getElementById('comment3').value="";
+        la_date.appendChild(hoy);
+
+        parent.appendChild(el_name);
+        parent.appendChild(el_message);
+        parent.appendChild(la_date);
+
+        el_name.setAttribute("class", "datosS");
+        el_message.setAttribute("class", "parrafoForo");
+        imagen.setAttribute("src", "images/perfil.jpg"); 
+        imagen.setAttribute("class", "perfilForo"); 
+
+		document.getElementById("result3").appendChild(parent);
 	}
 }
 
 function commentBox4(){
-	var name=document.getElementById('name4').value;
-	var comment=document.getElementById('comment4').value;
- 
-	if(name =="" || comment ==""){
+	var name = document.getElementById("name4").value;
+    var comment = document.getElementById("comment4").value;
+    var imagen = document.createElement("img"); 
+    var today = new Date();
+    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var dateTime = date + " - " + time;
+
+	if(name == "" || comment == ""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
-		var parent=document.createElement('div');
-		var el_name=document.createElement('h5');
-		var el_message=document.createElement('p');
-		var el_line=document.createElement('hr');
+        var parent=document.createElement("li");
+		var el_name=document.createElement("p");
+        var el_message=document.createElement("p");
+        var la_date=document.createElement("p");
 		var txt_name=document.createTextNode(name);
-        var txt_message=document.createTextNode(comment);
-        
-		el_name.appendChild(txt_name);
+		var txt_message=document.createTextNode(comment);
+        var hoy = document.createTextNode(dateTime);
+
+        parent.appendChild(imagen);
+        el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
-        el_line.style.border='1px solid #000';
-        
-		parent.appendChild(el_name);
-		parent.appendChild(el_line);
-		parent.appendChild(el_message);
-        parent.setAttribute('class', 'pane');
-        
-		document.getElementById('result4').appendChild(parent);
-		document.getElementById('name4').value="";
-		document.getElementById('comment4').value="";
+        la_date.appendChild(hoy);
+
+        parent.appendChild(el_name);
+        parent.appendChild(el_message);
+        parent.appendChild(la_date);
+
+        el_name.setAttribute("class", "datosS");
+        el_message.setAttribute("class", "parrafoForo");
+        imagen.setAttribute("src", "images/perfil.jpg"); 
+        imagen.setAttribute("class", "perfilForo"); 
+
+		document.getElementById("result4").appendChild(parent);
 	}
 }
 
 function commentBox5(){
-	var name=document.getElementById('name5').value;
-	var comment=document.getElementById('comment5').value;
- 
-	if(name =="" || comment ==""){
+	var name = document.getElementById("name5").value;
+    var comment = document.getElementById("comment5").value;
+    var imagen = document.createElement("img"); 
+    var today = new Date();
+    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var dateTime = date + " - " + time;
+
+	if(name == "" || comment == ""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
-		var parent=document.createElement('div');
-		var el_name=document.createElement('h5');
-		var el_message=document.createElement('p');
-		var el_line=document.createElement('hr');
+        var parent=document.createElement("li");
+		var el_name=document.createElement("p");
+        var el_message=document.createElement("p");
+        var la_date=document.createElement("p");
 		var txt_name=document.createTextNode(name);
-        var txt_message=document.createTextNode(comment);
-        
-		el_name.appendChild(txt_name);
+		var txt_message=document.createTextNode(comment);
+        var hoy = document.createTextNode(dateTime);
+
+        parent.appendChild(imagen);
+        el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
-        el_line.style.border='1px solid #000';
-        
-		parent.appendChild(el_name);
-		parent.appendChild(el_line);
-		parent.appendChild(el_message);
-        parent.setAttribute('class', 'pane');
-        
-		document.getElementById('result5').appendChild(parent);
-		document.getElementById('name5').value="";
-		document.getElementById('comment5').value="";
+        la_date.appendChild(hoy);
+
+        parent.appendChild(el_name);
+        parent.appendChild(el_message);
+        parent.appendChild(la_date);
+
+        el_name.setAttribute("class", "datosS");
+        el_message.setAttribute("class", "parrafoForo");
+        imagen.setAttribute("src", "images/perfil.jpg"); 
+        imagen.setAttribute("class", "perfilForo"); 
+
+		document.getElementById("result5").appendChild(parent);
 	}
 }
