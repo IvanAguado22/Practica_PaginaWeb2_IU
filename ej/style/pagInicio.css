@@ -140,6 +140,7 @@ input:focus, select:focus {
 	color: white;
 	transition: all 0.5s ease;
 	-webkit-appearance: none;
+	cursor: pointer;
 }
 
 .button:hover, .button:focus {

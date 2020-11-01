@@ -342,7 +342,7 @@ body{
     background: #1ab188;
     letter-spacing: 0.1em;
     border: 0;
-
+    cursor: pointer;
 }
 .subtituloF{
     margin-top: 20px;
@@ -540,7 +540,7 @@ tr:nth-child(1) {
     .dropdown:hover .dropdown-content {
         display: block;
     }
-
+    
     .titulo1{
         float: left;
         text-align: left;
