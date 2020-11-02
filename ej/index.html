@@ -8,7 +8,6 @@
         <meta name="keywords" content="palabras clave"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="style/styles.css">
-        <link rel="stylesheet" href="style/pagInicio.css">
         <script src="script/script.js"></script>
         <script src="script/pagInicio.js"></script>
         <link rel="stylesheet" type="text/css" href="style/evo-calendar.css"/>
@@ -145,7 +144,6 @@
                                 <input type="password" id="passLogin" required autocomplete="off" placeholder="Contraseña*"/>
                             </div>
                             <input type="button" class="button button-block" value="Iniciar sesión" onclick="checkCookie()">
-                            <input type="button" class="button button-block" value="Show" onclick="alert(getCookie('usrname'))";>
                         </form>
                     </div>
                 </div>
@@ -158,18 +156,18 @@
                 <header>
                     <div class="headerComputer">
                         <img src="images/logo.jpg" alt="logo" class="logo">
-                        <h1 class="title">Interfaces de Usuario</h1>
+                        <h1 class="title">Aula Global</h1>
                         <div class="login">
-                            <img src="images/perfil2.jpg" alt="logo" class="logo2">
+                            <img src="images/perfil.jpg" alt="logo" class="logo 2">
                             <p id="userNameComputer"></p>
                         </div>
                     </div>
 
                     <div class="headerTablet">
                         <img src="images/logo.jpg" alt="logo" class="logo">
-                        <h1 class="title">Curso IU</h1>
+                        <h1 class="title">Curso</h1>
                         <div class="login">
-                            <img src="images/perfil2.jpg" alt="logo" class="logo2">
+                            <img src="images/perfil.jpg" alt="logo" class="logo 2">
                             <p id="userNameTablet"></p>
                         </div>
                     </div>
@@ -389,9 +387,9 @@
                 </section>
 
                 <!-------------------------------------------- LISTADO DE ESTUDIANTES ----------------------------------------------------->
-                <section class="column mid" id="column_mid_studentsList">
+                <section class="column mid" id="column_mid_studentsList" style="display: none;">
                     <h1 class="tituloListado">Listado de Estudiantes</h1>
-                    <div class="listaS">
+                    <div class="listaEstudiantes">
                         <article>
                             <img src="images/perfil.jpg" alt="logo" class="profile">
                             <p class="datosS">Iván Aguado Perulero - 100405871@alumnos.uc3m.es</p>
@@ -445,10 +443,10 @@
                     </div>
                 </section>
 
-                <section class="column mid" id="column_mid_subjectsList">
+                <section class="column mid" id="column_mid_subjectsList" style="display: none;">
                     <h1 class="tituloListado">Listado de Asignaturas</h1>
-                    <div>
-                        <ul class="subject">
+                    <div  class="subject">
+                        <ul>
                             <li>
                                 <p class="datosS">Interfaces de usuario (MAGISTRAL)</p>
                             </li>
@@ -484,7 +482,7 @@
                 </section>
 
                 <!-------------------------------------------- FORO ----------------------------------------------------->
-                <section class="column mid" id="column_mid_forum">
+                <section class="column mid" id="column_mid_forum" style="display: none;">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <div class="listaForo">
@@ -519,7 +517,7 @@
                     </div>
                 </section>
                 <!-------------------------------------------- FORO 1 ----------------------------------------------------->
-                <section class="column mid" id="column_mid_forum1">
+                <section class="column mid" id="column_mid_forum1" style="display: none;">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Clases viernes por la tarde</h2>
@@ -566,7 +564,7 @@
                     </div>
                 </section>
                 <!-------------------------------------------- FORO 2 ----------------------------------------------------->
-                <section class="column mid" id="column_mid_forum2">
+                <section class="column mid" id="column_mid_forum2" style="display: none;">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Práctica próximo miércoles</h2>
@@ -629,7 +627,7 @@
                     </div>
                 </section>
                 <!-------------------------------------------- FORO 3 ----------------------------------------------------->
-                <section class="column mid" id="column_mid_forum3">
+                <section class="column mid" id="column_mid_forum3" style="display: none;">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Forempleo 2020</h2>
@@ -684,7 +682,7 @@
                     </div>
                 </section>
                 <!-------------------------------------------- FORO 4 ----------------------------------------------------->
-                <section class="column mid" id="column_mid_forum4">
+                <section class="column mid" id="column_mid_forum4" style="display: none;">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Práctica final</h2>
@@ -763,7 +761,7 @@
                     </div>
                 </section>
                 <!-------------------------------------------- FORO 5 ----------------------------------------------------->
-                <section class="column mid" id="column_mid_forum5">
+                <section class="column mid" id="column_mid_forum5" style="display: none;">
                     <h1 class="tituloForo">Foro de la asignatura</h1>
                     <div class="tema">
                         <h2 class="subtitulo">Propuesta nuevo horario</h2>
@@ -835,10 +833,10 @@
                 </section>
 
                 <!-------------------------------------------- CALIFICACIONES ----------------------------------------------------->
-                <section class="column mid" id="column_mid_grades">
+                <section class="column mid" id="column_mid_grades" style="display: none;">
                     <h1 class="tituloCalificaciones">Calificaciones</h1>
                     <div class="tabla">
-                        <table style="width:100%" id="tabla">
+                        <table style="width:100%" id="table1">
                             <tr>
                                 <th>Estudiante</th>
                                 <th>Actividad 1</th>
@@ -912,14 +910,14 @@
                                 <td>9,5</td>
                             </tr>
                         </table>
-                        <button id="descargar" onclick="descargarExcel()">Descargar</button>
+                        <button class="download" onclick="descargarExcel1()">Descargar</button>
                     </div>
                 </section>
                 <!-------------------------------------------- CALIFICACIONES ESTUDIANTE ----------------------------------------------------->
                 <section class="column mid" id="column_mid_grades_student" style="display: none;">
                     <h1 class="tituloCalificaciones">Calificaciones</h1>
                     <div class="tabla">
-                        <table style="width:100%" id="tabla">
+                        <table style="width:100%" id="table2">
                             <tr>
                                 <th>Estudiante</th>
                                 <th>Actividad 1</th>
@@ -933,16 +931,16 @@
                                 <td>10</td>
                             </tr>
                         </table>
-                        <button id="descargar" onclick="descargarExcel()">Descargar</button>
+                        <button class="download" onclick="descargarExcel2()">Descargar</button>
                     </div>
                 </section>
                 <!-------------------------------------------- COLUMNA DERECHA ----------------------------------------------------->
                 <aside class="column side D" id="rightColumn">
                     <h1 class="titulo1"><a href="#">Últimas Novedades</a></h1>
                     <ul>
-                        <li><time datetime="2020-09-10"> 10/09 - Agregados nuevos videos</time></li>
-                        <li><time datetime="2020-09-09"> 09/09 - Añadido nuevo tema</time></li>
-                        <li><time datetime="2020-09-09"> 09/09 - Nuevos mensajes en el foro</time></li>
+                        <li><time datetime="2020-11-05"> 05/11 - Agregados nuevos videos</time></li>
+                        <li><time datetime="2020-11-02"> 02/11 - Añadido nuevo tema</time></li>
+                        <li><time datetime="2020-11-02"> 02/11 - Nuevos mensajes en el foro</time></li>
                     </ul>
 
                     <h1 class="titulo1"><a href="#" id="pop">Próximos Eventos</a></h1>

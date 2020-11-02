@@ -7,7 +7,7 @@ function checkCookie(){
         if(inputPass == cookiePass){
             if(getCookie("rol") == "Estudiante"){
                 changeWeb();
-                window.onload = showStudent();
+                showStudent();
             } else{
                 changeWeb();
             }
@@ -27,22 +27,28 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 function saveCookies(){
-    setCookie("name", document.getElementById("name").value, 30);
-    setCookie("surname", document.getElementById("surname").value, 30);
-    setCookie("usrname", document.getElementById("usrname").value, 30);
-    setCookie("nia", document.getElementById("nia").value, 30);
-    setCookie("bornDate", document.getElementById("bornDate").value, 30);
-    setCookie("dni", document.getElementById("dni").value, 30);
-    setCookie("rol", document.getElementById("rol").value, 30);
-    setCookie("grade", document.getElementById("grade").value, 30);
-    setCookie("lenguage", document.getElementById("lenguage").value, 30);
-    if(document.getElementById("email").value == getCookie("email")){
-        alert("Ya existe una cuenta asociada al correo electrónico introducido, por favor introduzca uno válido");
+    if(document.getElementById("name").value == "" || document.getElementById("surname").value == "" || document.getElementById("usrname").value == "" 
+    || document.getElementById("nia").value == "" || document.getElementById("bornDate").value == "" || document.getElementById("dni").value == "" 
+    || document.getElementById("rol").value == "" || document.getElementById("lenguage").value == "" 
+    || document.getElementById("email").value == "" || document.getElementById("pass").value == ""){
+        alert("¡Debe rellenar todos los campos!");
     } else{
-        setCookie("email", document.getElementById("email").value, 30);
+        setCookie("name", document.getElementById("name").value, 30);
+        setCookie("surname", document.getElementById("surname").value, 30);
+        setCookie("usrname", document.getElementById("usrname").value, 30);
+        setCookie("nia", document.getElementById("nia").value, 30);
+        setCookie("bornDate", document.getElementById("bornDate").value, 30);
+        setCookie("dni", document.getElementById("dni").value, 30);
+        setCookie("rol", document.getElementById("rol").value, 30);
+        setCookie("grade", document.getElementById("grade").value, 30);
+        setCookie("lenguage", document.getElementById("lenguage").value, 30);
+        if(document.getElementById("email").value == getCookie("email")){
+            alert("Ya existe una cuenta asociada al correo electrónico introducido, por favor introduzca uno válido");
+        } else{
+            setCookie("email", document.getElementById("email").value, 30);
+        }
+        setCookie("pass", document.getElementById("pass").value, 30);
     }
-    setCookie("pass", document.getElementById("pass").value, 30);
-    
 }
 
 function getCookie(cname) {
@@ -63,6 +69,11 @@ function getCookie(cname) {
 function showStudent(){
     document.getElementById("columnLeftComputerStudent").style.display = "block";
     document.getElementById("columnLeftComputer").style.display = "none";
+    if(screen.innerWidth < 600){
+        document.getElementById("columnLeftPhoneStudent").style.display = "block";
+        document.getElementById("columnLeftPhone").style.display = "none";
+    }
+    
 }
 
 function showGrade(){
@@ -83,8 +94,6 @@ function changeWeb(){
 function alertCookie() {
     alert(document.cookie);
 }
-
-//***************************************************************************************************************** */
 
 function cambiarLogIn(){
     document.getElementById("signup").style.display = "none";
