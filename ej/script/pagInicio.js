@@ -6,7 +6,7 @@ function checkCookie(){
     if(inputEmail == cookieEmail){
         if(inputPass == cookiePass){
             if(getCookie("rol") == "Estudiante"){
-                verificarPassword();
+                changeWeb();
             } else{
 
             }
@@ -45,6 +45,7 @@ function saveCookies(){
         setCookie("email", document.getElementById("email").value, 30);
     }
     setCookie("pass", document.getElementById("pass").value, 30);
+    
 }
 
 function getCookie(cname) {
@@ -77,28 +78,26 @@ function creatUserName(){
     para.setAttribute("class", "userName");
 }
 
+function showGrade(){
+    if(document.getElementById("rol").value == "Estudiante"){
+        document.getElementById("divGrade").style.display = "block";
+    } else{
+        document.getElementById("divGrade").style.display = "none";
+    }
+}
+
+function changeWeb(){
+    document.getElementById("pagInicio").style.display = "none";
+    document.getElementById("pagWeb").style.display = "block";
+    window.onload = showStudent();
+    //window.onload = creatUserName();
+}
+
 function alertCookie() {
     alert(document.cookie);
 }
 
 //***************************************************************************************************************** */
-function verificarPassword(){
-    var inputPassword = document.getElementById('passLogin').value;
-    if (inputPassword.length < 8) {
-        alert("too_short");
-        return("too_short");
-    } else if (inputPassword.search(/\d/) == -1) {
-        alert("no_num");
-        return("no_num");
-    } else if (inputPassword.search(/[a-z]/) == -1) {
-        alert("no_letter");
-        return("no_letter");
-    }
-    document.getElementById("pagInicio").style.display = "none";
-    document.getElementById("pagWeb").style.display = "block";
-    window.onload = showStudent();
-    window.onload = creatUserName();
-}
 
 function cambiarLogIn(){
     document.getElementById("signup").style.display = "none";

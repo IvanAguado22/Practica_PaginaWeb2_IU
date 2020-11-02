@@ -45,7 +45,7 @@
                                 </div>
 
                                 <div class="field-wrap">
-                                    <input type="text" id="nia" required autocomplete="off" placeholder="NIA*"/>
+                                    <input type="text" id="nia" required autocomplete="off" placeholder="NIA*" pattern="^(?=\w*\d)\S{9}$"/>
                                 </div>
                             </div>
 
@@ -65,20 +65,20 @@
                                 </div>
                             </div>
 
-                            <div class="top-row">
-                                <div class="field-wrap">
-                                    <label>
-                                        Rol*
-                                    </label>
-                                    <select name="rol" id="rol" required>
-                                        <option value="" selected>Elige una opción</option>
-                                        <option value="Administrador">Administrador</option>
-                                        <option value="Profesor">Profesor</option>
-                                        <option value="Estudiante">Estudiante</option>
-                                    </select>
-                                </div>
+                            <div class="field-wrap">
+                                <label>
+                                    Rol*
+                                </label>
+                                <select name="rol" id="rol" required onclick="showGrade()">
+                                    <option value="" selected>Elige una opción</option>
+                                    <option value="Administrador">Administrador</option>
+                                    <option value="Profesor">Profesor</option>
+                                    <option value="Estudiante">Estudiante</option>
+                                </select>
+                            </div>
 
-                                <div class="field-wrap">
+                            <div class="field-wrap">
+                                <div id="divGrade" style="display: none;">
                                     <label>
                                         Grado*
                                     </label>
@@ -118,7 +118,7 @@
                             </div>
                             
                             <div class="field-wrap">
-                                <input type="password" id="pass" required autocomplete="off" placeholder="Contraseña*"/>
+                                <input type="password" id="pass" required autocomplete="off" placeholder="Contraseña*" pattern="^(?=\w*\d)(?=\w*[a-z])\S{8,}$"/>
                             </div>
 
                             <div class="field-wrap">
@@ -128,7 +128,7 @@
                                 </label>
                             </div>
                             
-                            <input type="submit" class="button button-block" value="Guardar" onclick="saveCookies()";>
+                            <input type="submit" class="button button-block" value="Guardar" onclick="saveCookies()">
                             <input type="button" class="button button-block" value="Show" onclick="alertCookie()";>
                             <input type="button" class="button button-block" value="1" onclick="deleteCookie()";>
                             <input type="reset" class="button button-block" value="Borrar">
