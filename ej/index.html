@@ -22,14 +22,14 @@
         <div id="pagInicio">
             <div class="form">
                 <nav class="tab-group">
-                    <a href="#signup" id="signUp" class="active" onclick="cambiarSignIn()">Registrarse</a>
-                    <a href="#login" id="logIn" class="" onclick="cambiarLogIn()">Iniciar sesión</a>
+                    <a href="#signup" id="signUp" class="" onclick="cambiarSignIn()">Registrarse</a>
+                    <a href="#login" id="logIn" class="active" onclick="cambiarLogIn()">Iniciar sesión</a>
                 </nav>
                 <!-------------------------------------------- REGISTRO ----------------------------------------------------->
                 <div class="tab-content">
-                    <div id="signup">   
+                    <div id="signup"  style="display: none;">   
                         <h1 class="tituloInicio">Registro</h1>
-                        <form method="post" onsubmit="storeValues(this)">
+                        <form method="post">
                             <div class="top-row">
                                 <div class="field-wrap">
                                     <input type="text" required autocomplete="off" placeholder="Nombre*"/>
@@ -141,9 +141,9 @@
                         </form>
                     </div>
                     <!-------------------------------------------- LOG IN ----------------------------------------------------->
-                    <div id="login" style="display: none;">   
+                    <div id="login">   
                         <h1 class="tituloInicio">¡Bienvenido de vuelta!</h1>
-                        <form action="/" method="post">
+                        <form method="post">
                             <div class="field-wrap">
                                 <input type="email" required autocomplete="off" placeholder="Email*"/>
                             </div>
@@ -151,7 +151,7 @@
                             <div class="field-wrap">
                                 <input type="password" required autocomplete="off" placeholder="Contraseña*"/>
                             </div>
-                            <button class="button button-block">Log In</button>
+                            <button class="button button-block">Iniciar sesión</button>
                         </form>
                     </div>
                 </div>
