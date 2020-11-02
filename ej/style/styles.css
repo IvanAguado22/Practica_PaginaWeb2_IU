@@ -121,6 +121,15 @@ input, select{
 	transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+input[type=checkbox]{
+    position: absolute;
+    width: 0%;
+}
+
+#conditions{
+    margin-left: 20px;
+}
+
 option{
 	background-color: rgba(19, 35, 47, .9);
 	color: white;
@@ -246,6 +255,10 @@ input:focus, select:focus {
     background: #1ab188;
     color: white;
 }
+
+.userName{
+    color: white;
+}
 /**
  * 03. MAIN
  *
@@ -310,6 +323,10 @@ input:focus, select:focus {
 }
 
 #column_mid_studentsList{
+    display: none;
+}
+
+#column_mid_subjectsList{
     display: none;
 }
 

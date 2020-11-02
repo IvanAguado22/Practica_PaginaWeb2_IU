@@ -5,7 +5,11 @@ function checkCookie(){
     var cookiePass = getCookie("pass");
     if(inputEmail == cookieEmail){
         if(inputPass == cookiePass){
-            verificarPassword();
+            if(getCookie("rol") == "Estudiante"){
+                verificarPassword();
+            } else{
+
+            }
         } else{
             alert("La contraseña es incorrecta");
         }
@@ -35,7 +39,11 @@ function saveCookies(){
     setCookie("rol", document.getElementById("rol").value, 30);
     setCookie("grade", document.getElementById("grade").value, 30);
     setCookie("lenguage", document.getElementById("lenguage").value, 30);
-    setCookie("email", document.getElementById("email").value, 30);
+    if(document.getElementById("email").value == getCookie("email")){
+        alert("Ya existe una cuenta asociada al correo electrónico introducido, por favor introduzca uno válido");
+    } else{
+        setCookie("email", document.getElementById("email").value, 30);
+    }
     setCookie("pass", document.getElementById("pass").value, 30);
 }
 
@@ -52,6 +60,21 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+function showStudent(){
+    document.getElementById("columnLeftComputerStudent").style.display = "block";
+    document.getElementById("columnLeftComputer").style.display = "none";
+}
+
+function creatUserName(){
+    var para=document.createElement("p");
+    var node=document.createTextNode(document.getCookie('usrname').value);
+    para.appendChild(node);
+
+    var element=document.getElementById("loginUserName");
+    element.appendChild(para);
+    para.setAttribute("class", "userName");
 }
 
 function alertCookie() {
@@ -73,6 +96,8 @@ function verificarPassword(){
     }
     document.getElementById("pagInicio").style.display = "none";
     document.getElementById("pagWeb").style.display = "block";
+    window.onload = showStudent();
+    window.onload = creatUserName();
 }
 
 function cambiarLogIn(){

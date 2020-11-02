@@ -122,22 +122,16 @@
                             </div>
 
                             <div class="field-wrap">
-                                <label>
+                                <input type="checkbox" required>
+                                <label id="conditions">
                                     He leído y acepto las condiciones*
                                 </label>
-                                <input type="radio" required>
                             </div>
                             
                             <input type="submit" class="button button-block" value="Guardar" onclick="saveCookies()";>
                             <input type="button" class="button button-block" value="Show" onclick="alertCookie()";>
                             <input type="button" class="button button-block" value="1" onclick="deleteCookie()";>
                             <input type="reset" class="button button-block" value="Borrar">
-
-                            <script>
-                                function saveCookie(){
-                                    document.cookie = "email=yo@gmail.com";
-                                }
-                            </script>
                         </form>
                     </div>
                     <!-------------------------------------------- LOG IN ----------------------------------------------------->
@@ -165,9 +159,8 @@
                     <div class="headerComputer">
                         <img src="images/logo.jpg" alt="logo" class="logo">
                         <h1 class="title">Interfaces de Usuario</h1>
-                        <div class="login">
+                        <div class="login" id="loginUserName">
                             <img src="images/perfil2.jpg" alt="logo" class="logo2">
-                            <p class="userName">Carlos97</p>
                         </div>
                     </div>
 
@@ -176,7 +169,7 @@
                         <h1 class="title">Curso IU</h1>
                         <div class="login">
                             <img src="images/perfil2.jpg" alt="logo" class="logo2">
-                            <p class="userName">Carlos97</p>
+                            <p class="userName"></p>
                         </div>
                     </div>
                 </header>
@@ -194,9 +187,6 @@
 
             <!-------------------------------------------- MAIN ----------------------------------------------------->
             <div id="main">
-                <div id="holder" style="display: none;">
-                    <div id="calendar"></div>
-                </div>
                 <!-------------------------------------------- COLUMNA IZQUIERDA ----------------------------------------------------->
                 <aside class="column side I" id="leftColumn">
                     <div id="columnLeftComputer">
@@ -210,6 +200,17 @@
                         </nav>
                     </div>
 
+                    <div id="columnLeftComputerStudent" style="display: none;">
+                        <h1 class="titulo1 n"> <a href="#" onclick="showIni()">Curso IU</a></h1>
+                        <nav class="leftList">
+                            <a href="#" onclick="showSubjectsList()">Mis asignaturas</a>
+                            <a href="#" onclick="showForum()">Foro de la Asignatura</a>
+                            <a href="#" onclick="showGradesStudent()">Calificaciones</a>
+                            <a href="#Novedades">Últimas Novedades</a>
+                            <a href="#Eventos">Próximos Eventos</a>
+                        </nav>
+                    </div>
+
                     <div id="columnLeftPhone">
                         <div class="dropdown">
                             <img class="boton" src="images/dropdown.png" alt="logo" width="50" height="50" id="drop">
@@ -217,6 +218,20 @@
                                 <a href="#" onclick="showStudentsList()">Listado de Estudiantes</a>
                                 <a href="#" onclick="showForum()">Foro de la Asignatura</a>
                                 <a href="#" onclick="showGrades()">Calificaciones</a>
+                                <a href="#Novedades">Últimas Novedades</a>
+                                <a href="#Eventos">Próximos Eventos</a>
+                            </div>
+                        </div>
+                        <h1 class="titulo1"><a href="#" onclick="showIni()">Curso IU</a></h1>
+                    </div>
+
+                    <div id="columnLeftPhoneStudent" style="display: none;">
+                        <div class="dropdown">
+                            <img class="boton" src="images/dropdown.png" alt="logo" width="50" height="50" id="drop">
+                            <div class="dropdown-content">
+                                <a href="#" onclick="showSubjectsList()">Mis asignaturas</a>
+                                <a href="#" onclick="showForum()">Foro de la Asignatura</a>
+                                <a href="#" onclick="showGradesStudent()">Calificaciones</a>
                                 <a href="#Novedades">Últimas Novedades</a>
                                 <a href="#Eventos">Próximos Eventos</a>
                             </div>
@@ -426,6 +441,44 @@
                             <p class="datosS">Lucas Ortiz López - 100400112@alumnos.uc3m.es</p>
                             <img src="images/icono.png" alt="logo" class="icon" onclick="enviarEmail()">
                         </article>
+                    </div>
+                </section>
+
+                <section class="column mid" id="column_mid_subjectsList">
+                    <h1 class="tituloListado">Listado de Asignaturas</h1>
+                    <div class="listaS">
+                        <ul>
+                            <li>
+                                <p class="datosS">Interfaces de usuario (MAGISTRAL)</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Interfaces de usuario</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Ingeniería del software (MAGISTRAL)</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Ingeniería del software</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Heurística y optimización (MAGISTRAL)</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Heurística y optimización</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Redes de ordenadores (MAGISTRAL)</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Redes de ordenadores</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Arquitectura de computadores (MAGISTRAL)</p>
+                            </li>
+                            <li>
+                                <p class="datosS">Arquitectura de computadores</p>
+                            </li>
+                        </ul>
                     </div>
                 </section>
 
@@ -871,6 +924,27 @@
                         <button id="descargar" onclick="descargarExcel()">Descargar</button>
                     </div>
                 </section>
+                <!-------------------------------------------- CALIFICACIONES ESTUDIANTE ----------------------------------------------------->
+                <section class="column mid" id="column_mid_grades_student" style="display: none;">
+                    <h1 class="tituloCalificaciones">Calificaciones</h1>
+                    <div class="tabla">
+                        <table style="width:100%" id="tabla">
+                            <tr>
+                                <th>Estudiante</th>
+                                <th>Actividad 1</th>
+                                <th>Actividad 2</th>
+                                <th>Actividad 3</th>
+                            </tr>
+                            <tr>
+                                <td>Iván</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                        <button id="descargar" onclick="descargarExcel()">Descargar</button>
+                    </div>
+                </section>
                 <!-------------------------------------------- COLUMNA DERECHA ----------------------------------------------------->
                 <aside class="column side D" id="rightColumn">
                     <h1 class="titulo1"><a href="#">Últimas Novedades</a></h1>
@@ -885,6 +959,10 @@
                         <li><time datetime="2020-09-20"> 03/11 - Fecha límite práctica 2</time></li>
                         <li><time datetime="2020-09-15"> 05/11 - Problema Evaluable Heurística</time></li>
                     </ul>
+
+                    <div id="holder" style="display: none;">
+                        <div id="calendar"></div>
+                    </div>
 
                     <script>
                         $(document).ready(function() {
@@ -944,9 +1022,6 @@
                             })
                             $("#pop").click(function(){
                                 $("#holder").toggle("slow");
-                                $("#leftColumn").toggle("slow");
-                                $("#column_mid_ini").toggle("slow");
-
                             });
                         })
                     </script>

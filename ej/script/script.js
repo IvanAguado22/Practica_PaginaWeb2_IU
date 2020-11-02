@@ -8,6 +8,8 @@ function showIni() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
 }
 
 function showStudentsList() {
@@ -20,6 +22,9 @@ function showStudentsList() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
 }
 
 function showForum() {
@@ -32,6 +37,9 @@ function showForum() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
 }
 
 function showGrades() {
@@ -44,6 +52,23 @@ function showGrades() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
+}
+
+function showGradesStudent(){
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "block";
 }
 
 function showForum1() {
@@ -56,6 +81,9 @@ function showForum1() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
 }
 
 function showForum2() {
@@ -68,6 +96,9 @@ function showForum2() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
 }
 
 function showForum3() {
@@ -80,6 +111,9 @@ function showForum3() {
     document.getElementById("column_mid_forum3").style.display = "block";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
 }
 
 function showForum4() {
@@ -92,6 +126,9 @@ function showForum4() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "block";
     document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
 }
 
 function showForum5() {
@@ -104,6 +141,24 @@ function showForum5() {
     document.getElementById("column_mid_forum3").style.display = "none";
     document.getElementById("column_mid_forum4").style.display = "none";
     document.getElementById("column_mid_forum5").style.display = "block";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
+}
+
+function showSubjectsList() {
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "block";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
 }
 
 
@@ -165,11 +220,11 @@ function commentBox1(){
 		var txt_message=document.createTextNode(comment);
         var hoy = document.createTextNode(dateTime);
 
-        parent.appendChild(imagen);
         el_name.appendChild(txt_name);
 		el_message.appendChild(txt_message);
         la_date.appendChild(hoy);
 
+        parent.appendChild(imagen);
         parent.appendChild(el_name);
         parent.appendChild(el_message);
         parent.appendChild(la_date);
