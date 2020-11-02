@@ -7,8 +7,9 @@ function checkCookie(){
         if(inputPass == cookiePass){
             if(getCookie("rol") == "Estudiante"){
                 changeWeb();
+                window.onload = showStudent();
             } else{
-
+                changeWeb();
             }
         } else{
             alert("La contraseña es incorrecta");
@@ -16,10 +17,6 @@ function checkCookie(){
     } else{
         alert("Este correo electrónico no está dado de alta");
     }
-}
-
-function deleteCookie(){
-    document.cookie = "name= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
 }
 
 function setCookie(cname, cvalue, exdays) {
@@ -69,13 +66,7 @@ function showStudent(){
 }
 
 function creatUserName(){
-    var para=document.createElement("p");
-    var node=document.createTextNode(document.getCookie('usrname').value);
-    para.appendChild(node);
-
-    var element=document.getElementById("loginUserName");
-    element.appendChild(para);
-    para.setAttribute("class", "userName");
+    document.getElementById("userName").innerHTML = getCookie('usrname').value;
 }
 
 function showGrade(){
@@ -89,8 +80,7 @@ function showGrade(){
 function changeWeb(){
     document.getElementById("pagInicio").style.display = "none";
     document.getElementById("pagWeb").style.display = "block";
-    window.onload = showStudent();
-    //window.onload = creatUserName();
+    window.onload = creatUserName();
 }
 
 function alertCookie() {
