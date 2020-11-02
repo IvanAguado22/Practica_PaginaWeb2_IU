@@ -146,7 +146,12 @@ function commentBox1(){
     var imagen = document.createElement("img"); 
     var today = new Date();
     var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    var time = today.getHours() + ":" + today.getMinutes();
+    if(today.getMinutes < 10){
+        var time = today.getHours() + ":" + "0" + today.getMinutes();
+    }
+    else{
+        var time = today.getHours() + ":" + today.getMinutes();
+    }
     var dateTime = date + " - " + time;
 
 	if(name == "" || comment == ""){
@@ -184,7 +189,12 @@ function commentBox2(){
     var imagen = document.createElement("img"); 
     var today = new Date();
     var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    var time = today.getHours() + ":" + today.getMinutes();
+    if(today.getMinutes < 10){
+        var time = today.getHours() + ":" + "0" + today.getMinutes();
+    }
+    else{
+        var time = today.getHours() + ":" + today.getMinutes();
+    }
     var dateTime = date + " - " + time;
 
 	if(name == "" || comment == ""){
@@ -222,7 +232,12 @@ function commentBox3(){
     var imagen = document.createElement("img"); 
     var today = new Date();
     var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    var time = today.getHours() + ":" + today.getMinutes();
+    if(today.getMinutes < 10){
+        var time = today.getHours() + ":" + "0" + today.getMinutes();
+    }
+    else{
+        var time = today.getHours() + ":" + today.getMinutes();
+    }
     var dateTime = date + " - " + time;
 
 	if(name == "" || comment == ""){
@@ -260,7 +275,12 @@ function commentBox4(){
     var imagen = document.createElement("img"); 
     var today = new Date();
     var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    var time = today.getHours() + ":" + today.getMinutes();
+    if(today.getMinutes < 10){
+        var time = today.getHours() + ":" + "0" + today.getMinutes();
+    }
+    else{
+        var time = today.getHours() + ":" + today.getMinutes();
+    }
     var dateTime = date + " - " + time;
 
 	if(name == "" || comment == ""){
@@ -298,7 +318,12 @@ function commentBox5(){
     var imagen = document.createElement("img"); 
     var today = new Date();
     var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    var time = today.getHours() + ":" + today.getMinutes();
+    if(today.getMinutes < 10){
+        var time = today.getHours() + ":" + "0" + today.getMinutes();
+    }
+    else{
+        var time = today.getHours() + ":" + today.getMinutes();
+    }
     var dateTime = date + " - " + time;
 
 	if(name == "" || comment == ""){
