@@ -452,6 +452,10 @@ input:focus, select:focus {
     display: inline-block;
 }
 
+.subject{
+    margin-left: 15px;
+}
+
 /**
  * 06. FORO
  *
