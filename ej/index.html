@@ -35,7 +35,7 @@
                                     <input type="text" id="name" required autocomplete="off" placeholder="Nombre*"/>
                                 </div>
                                 <div class="field-wrap">
-                                    <input type="text" id="surname" required autocomplete="off" placeholder="Apellido*"/>
+                                    <input type="text" id="surname" required autocomplete="off" placeholder="Apellidos*"/>
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@
                                     <label>
                                         Grado*
                                     </label>
-                                    <select name="grado" id="grade" required>
+                                    <select name="grado" id="grade">
                                         <option value="" selected>Elige una opción</option>
                                         <option value="Ingeniería Informática">Ingeniería Informática</option>
                                         <option value="Derecho">Derecho</option>
@@ -130,7 +130,6 @@
                             
                             <input type="submit" class="button button-block" value="Guardar" onclick="saveCookies()">
                             <input type="button" class="button button-block" value="Show" onclick="alertCookie()";>
-                            <input type="button" class="button button-block" value="1" onclick="deleteCookie()";>
                             <input type="reset" class="button button-block" value="Borrar">
                         </form>
                     </div>
@@ -146,6 +145,7 @@
                                 <input type="password" id="passLogin" required autocomplete="off" placeholder="Contraseña*"/>
                             </div>
                             <input type="button" class="button button-block" value="Iniciar sesión" onclick="checkCookie()">
+                            <input type="button" class="button button-block" value="Show" onclick="alert(getCookie('usrname'))";>
                         </form>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                         <h1 class="title">Interfaces de Usuario</h1>
                         <div class="login">
                             <img src="images/perfil2.jpg" alt="logo" class="logo2">
-                            <p class="userName" id="loginUserName"></p>
+                            <p id="userNameComputer"></p>
                         </div>
                     </div>
 
@@ -170,7 +170,7 @@
                         <h1 class="title">Curso IU</h1>
                         <div class="login">
                             <img src="images/perfil2.jpg" alt="logo" class="logo2">
-                            <p class="userName"></p>
+                            <p id="userNameTablet"></p>
                         </div>
                     </div>
                 </header>
@@ -447,7 +447,7 @@
 
                 <section class="column mid" id="column_mid_subjectsList">
                     <h1 class="tituloListado">Listado de Asignaturas</h1>
-                    <div class="listaS">
+                    <div>
                         <ul>
                             <li>
                                 <p class="datosS">Interfaces de usuario (MAGISTRAL)</p>
@@ -556,8 +556,6 @@
                         <div>
                             <h1 class="subtitulo">Comentarios</h1>
                             <form> 
-                                <p class="datosForm">Nombre*</p>
-                                <input class="cuadroTxt" type="text" id="name1">
                                 <p class="datosForm">Comentario*</p>
                                 <textarea class="cuadroTxt" id="comment1"></textarea>
                                 <div>
@@ -621,8 +619,6 @@
                         <div>
                             <h1 class="subtitulo">Comentarios</h1>
                             <form> 
-                                <p class="datosForm">Nombre*</p>
-                                <input class="cuadroTxt" type="text" id="name2">
                                 <p class="datosForm">Comentario*</p>
                                 <textarea class="cuadroTxt" id="comment2"></textarea>
                                 <div>
@@ -678,8 +674,6 @@
                         <div>
                             <h1 class="subtitulo">Comentarios</h1>
                             <form> 
-                                <p class="datosForm">Nombre*</p>
-                                <input class="cuadroTxt" type="text" id="name3">
                                 <p class="datosForm">Comentario*</p>
                                 <textarea class="cuadroTxt" id="comment3"></textarea>
                                 <div>
@@ -759,8 +753,6 @@
                         <div>
                             <h1 class="subtitulo">Comentarios</h1>
                             <form> 
-                                <p class="datosForm">Nombre*</p>
-                                <input class="cuadroTxt" type="text" id="name4">
                                 <p class="datosForm">Comentario*</p>
                                 <textarea class="cuadroTxt" id="comment4"></textarea>
                                 <div>
@@ -832,8 +824,6 @@
                         <div>
                             <h1 class="subtitulo">Comentarios</h1>
                             <form> 
-                                <p class="datosForm">Nombre*</p>
-                                <input class="cuadroTxt" type="text" id="name5">
                                 <p class="datosForm">Comentario*</p>
                                 <textarea class="cuadroTxt" id="comment5"></textarea>
                                 <div>

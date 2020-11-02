@@ -65,10 +65,6 @@ function showStudent(){
     document.getElementById("columnLeftComputer").style.display = "none";
 }
 
-function creatUserName(){
-    document.getElementById("userName").innerHTML = getCookie('usrname').value;
-}
-
 function showGrade(){
     if(document.getElementById("rol").value == "Estudiante"){
         document.getElementById("divGrade").style.display = "block";
@@ -80,7 +76,8 @@ function showGrade(){
 function changeWeb(){
     document.getElementById("pagInicio").style.display = "none";
     document.getElementById("pagWeb").style.display = "block";
-    window.onload = creatUserName();
+    document.getElementById("userNameComputer").innerHTML = getCookie('usrname');
+    document.getElementById("userNameTablet").innerHTML = getCookie('usrname');
 }
 
 function alertCookie() {

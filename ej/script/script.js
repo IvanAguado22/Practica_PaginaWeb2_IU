@@ -196,7 +196,7 @@ function showDropdown(){
 }
 
 function commentBox1(){
-	var name = document.getElementById("name1").value;
+	var name = getCookie("name") + " " + getCookie("surname");
     var comment = document.getElementById("comment1").value;
     var imagen = document.createElement("img"); 
     var today = new Date();
@@ -239,7 +239,7 @@ function commentBox1(){
 }
 
 function commentBox2(){
-	var name = document.getElementById("name2").value;
+	var name = getCookie("name") + " " + getCookie("surname");
     var comment = document.getElementById("comment2").value;
     var imagen = document.createElement("img"); 
     var today = new Date();
@@ -282,7 +282,7 @@ function commentBox2(){
 }
 
 function commentBox3(){
-	var name = document.getElementById("name3").value;
+	var name = getCookie("name") + " " + getCookie("surname");
     var comment = document.getElementById("comment3").value;
     var imagen = document.createElement("img"); 
     var today = new Date();
@@ -325,7 +325,7 @@ function commentBox3(){
 }
 
 function commentBox4(){
-	var name = document.getElementById("name4").value;
+	var name = getCookie("name") + " " + getCookie("surname");
     var comment = document.getElementById("comment4").value;
     var imagen = document.createElement("img"); 
     var today = new Date();
@@ -368,7 +368,7 @@ function commentBox4(){
 }
 
 function commentBox5(){
-	var name = document.getElementById("name5").value;
+	var name = getCookie("name") + " " + getCookie("surname");
     var comment = document.getElementById("comment5").value;
     var imagen = document.createElement("img"); 
     var today = new Date();
