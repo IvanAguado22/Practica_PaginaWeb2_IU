@@ -194,8 +194,11 @@
 
             <!-------------------------------------------- MAIN ----------------------------------------------------->
             <div id="main">
+                <div id="holder" style="display: none;">
+                    <div id="calendar"></div>
+                </div>
                 <!-------------------------------------------- COLUMNA IZQUIERDA ----------------------------------------------------->
-                <aside class="column side I">
+                <aside class="column side I" id="leftColumn">
                     <div id="columnLeftComputer">
                         <h1 class="titulo1 n"> <a href="#" onclick="showIni()">Curso IU</a></h1>
                         <nav class="leftList">
@@ -869,7 +872,7 @@
                     </div>
                 </section>
                 <!-------------------------------------------- COLUMNA DERECHA ----------------------------------------------------->
-                <aside class="column side D">
+                <aside class="column side D" id="rightColumn">
                     <h1 class="titulo1"><a href="#">Últimas Novedades</a></h1>
                     <ul>
                         <li><time datetime="2020-09-10"> 10/09 - Agregados nuevos videos</time></li>
@@ -879,19 +882,41 @@
 
                     <h1 class="titulo1"><a href="#" id="pop">Próximos Eventos</a></h1>
                     <ul>
-                        <li><time datetime="2020-09-20"> 20/09 - Fecha límite práctica 2</time></li>
-                        <li><time datetime="2020-09-15"> 15/09 - Clase de laboratorio</time></li>
+                        <li><time datetime="2020-09-20"> 03/11 - Fecha límite práctica 2</time></li>
+                        <li><time datetime="2020-09-15"> 05/11 - Problema Evaluable Heurística</time></li>
                     </ul>
-
-                    <div id="holder" style="display: none;">
-                        <div id="calendar"></div>
-                    </div>
 
                     <script>
                         $(document).ready(function() {
-                            $('#calendar').evoCalendar()
-                                $("#pop").click(function(){
-                                    $("#holder").toggle("slow");
+                            $('#calendar').evoCalendar({
+                                calendarEvents: [
+                                    {
+                                        id: 'bHay68s', // Event's ID (required)
+                                        name: "Fecha Limite Practica 2", // Event name (required)
+                                        date: "November/03/2020", // Event date (required)
+                                        type: "holiday", // Event type (required)
+                                    },
+                                    {
+                                        type: "event",
+                                        color: "#63d867" // Event custom color (optional)
+                                    },
+                                    {
+                                        id: 'bHay78s', // Event's ID (required)
+                                        name: "Problema Evaluable Heurística", // Event name (required)
+                                        date: "November/05/2020", // Event date (required)
+                                        type: "holiday", // Event type (required)
+                                    },
+                                    {
+                                        type: "event",
+                                        color: "#63d867" // Event custom color (optional)
+                                    }
+                                ]
+                            })
+                            $("#pop").click(function(){
+                                $("#holder").toggle("slow");
+                                $("#leftColumn").toggle("slow");
+                                $("#column_mid_ini").toggle("slow");
+
                             });
                         })
                     </script>
