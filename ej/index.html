@@ -32,20 +32,20 @@
                         <form method="post">
                             <div class="top-row">
                                 <div class="field-wrap">
-                                    <input type="text" required autocomplete="off" placeholder="Nombre*"/>
+                                    <input type="text" id="name" required autocomplete="off" placeholder="Nombre*"/>
                                 </div>
                                 <div class="field-wrap">
-                                    <input type="text" required autocomplete="off" placeholder="Apellido*"/>
+                                    <input type="text" id="surname" required autocomplete="off" placeholder="Apellido*"/>
                                 </div>
                             </div>
 
                             <div class="top-row">
                                 <div class="field-wrap">
-                                    <input type="text" name="usrname" required autocomplete="off" placeholder="Nombre usuario*"/>
+                                    <input type="text" id="usrname" required autocomplete="off" placeholder="Nombre usuario*"/>
                                 </div>
 
                                 <div class="field-wrap">
-                                    <input type="text" required autocomplete="off" placeholder="NIA*"/>
+                                    <input type="text" id="nia" required autocomplete="off" placeholder="NIA*"/>
                                 </div>
                             </div>
 
@@ -54,14 +54,14 @@
                                     <label>
                                         Fecha nacimiento*
                                     </label>
-                                    <input type="date" required autocomplete="off"/>
+                                    <input type="date" id="bornDate" required autocomplete="off"/>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label>
                                         DNI*
                                     </label>
-                                    <input type="text" required autocomplete="off" placeholder="DNI*"/>
+                                    <input type="text" id="dni" required autocomplete="off" placeholder="DNI*"/>
                                 </div>
                             </div>
 
@@ -70,7 +70,7 @@
                                     <label>
                                         Rol*
                                     </label>
-                                    <select name="rol" required>
+                                    <select name="rol" id="rol" required>
                                         <option value="" selected>Elige una opción</option>
                                         <option value="Administrador">Administrador</option>
                                         <option value="Profesor">Profesor</option>
@@ -82,7 +82,7 @@
                                     <label>
                                         Grado*
                                     </label>
-                                    <select name="grado" required>
+                                    <select name="grado" id="grade" required>
                                         <option value="" selected>Elige una opción</option>
                                         <option value="Ingeniería Informática">Ingeniería Informática</option>
                                         <option value="Derecho">Derecho</option>
@@ -103,7 +103,7 @@
                                     <label>
                                         Idioma
                                     </label>
-                                    <select name="idioma" required>
+                                    <select name="idioma" id="lenguage" required>
                                         <option value="" selected>Elige una opción</option>
                                         <option value="Español">Español</option>
                                         <option value="Inglés">Inglés</option>
@@ -114,7 +114,7 @@
                             </div>
 
                             <div class="field-wrap">
-                                <input type="email" required autocomplete="off" placeholder="Email*"/>
+                                <input type="email" id="email" required autocomplete="off" placeholder="Email*"/>
                             </div>
                             
                             <div class="field-wrap">
@@ -128,14 +128,14 @@
                                 <input type="radio" required>
                             </div>
                             
-                            <input type="submit" class="button button-block" value="Guardar" onclick="verificarPassword()";>
+                            <input type="submit" class="button button-block" value="Guardar" onclick="saveCookies()";>
                             <input type="button" class="button button-block" value="Show" onclick="alertCookie()";>
-                            <input type="button" class="button button-block" value="1" onclick="saveCookie()";>
+                            <input type="button" class="button button-block" value="1" onclick="deleteCookie()";>
                             <input type="reset" class="button button-block" value="Borrar">
 
                             <script>
                                 function saveCookie(){
-                                    document.cookie = "name=lol";
+                                    document.cookie = "email=yo@gmail.com";
                                 }
                             </script>
                         </form>
@@ -145,13 +145,13 @@
                         <h1 class="tituloInicio">¡Bienvenido de vuelta!</h1>
                         <form method="post">
                             <div class="field-wrap">
-                                <input type="email" required autocomplete="off" placeholder="Email*"/>
+                                <input type="email" id="emailLogin" required autocomplete="off" placeholder="Email*"/>
                             </div>
                             
                             <div class="field-wrap">
-                                <input type="password" required autocomplete="off" placeholder="Contraseña*"/>
+                                <input type="password" id="passLogin" required autocomplete="off" placeholder="Contraseña*"/>
                             </div>
-                            <button class="button button-block">Iniciar sesión</button>
+                            <input type="button" class="button button-block" value="Iniciar sesión" onclick="checkCookie()">
                         </form>
                     </div>
                 </div>
