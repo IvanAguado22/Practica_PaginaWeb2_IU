@@ -79,7 +79,7 @@ a:hover {
 	color: white;
 }
 
-.tituloInicio{
+.logInTitle{
 	text-align: center;
 	color: #fff;
 	font-weight: 300;
@@ -336,23 +336,23 @@ input:focus, select:focus {
     margin-top: 20px;
 }
 
-.videoArticulo{
+.articleVideo{
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
     border-radius: 4px;
 }
 
-.tituloArticulo{
+.articleTitle{
     padding: 20px 0;
     font-size: 20px;
 }
 
-.tituloArticulo.n{
+.articleTitle.n{
     display: none;
 }
 
-.parrafoArticulo{
+.articleParagraph{
     padding: 20px;
     font-size: 17px;
 }
@@ -379,13 +379,13 @@ input:focus, select:focus {
     cursor: pointer;
 }
 
-.listaEstudiantes{
+.studentsList{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.listaEstudiantes li{
+.studentsList li{
     list-style: none;
 }
 
@@ -393,7 +393,7 @@ input:focus, select:focus {
     padding-top: 20px;
 }
 
-.subject{
+.subjectsList{
     margin-left: 15px;
 }
 
@@ -402,19 +402,19 @@ input:focus, select:focus {
  *
  * -------------------------------------------------------------------
  */
-.listaForo li{
+.forumList li{
     list-style: none;
     text-align: left;
     display: block;
 }
 
-.listaForo li::after{
+.forumList li::after{
     content: "";
     clear: both;
     display: table;
 }
 
-.tituloListado{
+.listTitle{
     padding-bottom: 20px;
     font-size: 30px;
     color: #1ab188;
@@ -477,7 +477,7 @@ input:focus, select:focus {
  *
  * -------------------------------------------------------------------
  */
-.tituloCalificaciones{
+.gradeTitle{
     padding-bottom: 20px;
     font-size: 30px;
     color: #1ab188;
@@ -576,15 +576,15 @@ tr:nth-child(1) {
         display: block;
     }
 
-    .tituloArticulo.n{
+    .articleTitle.n{
         display: inline;
     }
 
-    .tituloArticulo{
+    .articleTitle{
         display: none;
     }
 
-    .videoArticulo{
+    .articleVideo{
         width: 100%;
     }
 
@@ -670,7 +670,7 @@ tr:nth-child(1) {
         display: none;
     }
 
-    .parrafoArticulo{
+    .articleParagraph{
         display: none;
     }
 
