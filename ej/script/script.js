@@ -177,12 +177,19 @@ function showGradesStudent(){
 function showStudent(){
     document.getElementById("columnLeftComputerStudent").style.display = "block";
     document.getElementById("columnLeftComputer").style.display = "none";
-    if (window.matchMedia("(max-width: 600px)").matches) {
-        document.getElementById("columnLeftPhoneStudent").style.display = "block";
-        document.getElementById("columnLeftComputerStudent").style.display = "none";
-        document.getElementById("columnLeftPhone").style.display = "none";
+}
+
+function showStudentPhone(){
+    if(getCookie("rol") == "Estudiante"){
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            document.getElementById("columnLeftPhoneStudent").style.display = "block";
+            document.getElementById("columnLeftComputerStudent").style.display = "none";
+            document.getElementById("columnLeftPhone").style.display = "none";
+        } else{
+            document.getElementById("columnLeftPhoneStudent").style.display = "none";
+            document.getElementById("columnLeftComputerStudent").style.display = "block";
+        }
     }
-    
 }
 
 function showGrade(){
@@ -252,9 +259,9 @@ function commentBox(id_comment, result){
         parent.appendChild(date_element);
 
         image_element.setAttribute("src", "images/perfil.jpg"); 
-        image_element.setAttribute("class", "perfilForo"); 
-        name_element.setAttribute("class", "datosS");
-        message_element.setAttribute("class", "parrafoForo");
+        image_element.setAttribute("class", "forumProfile"); 
+        name_element.setAttribute("class", "data");
+        message_element.setAttribute("class", "forumMessage");
         
 		document.getElementById(result).appendChild(parent);
 	}
@@ -327,3 +334,5 @@ function saveCookies(){
         setCookie("pass", document.getElementById("pass").value, 30);
     }
 }
+
+window.addEventListener('resize', showStudentPhone);

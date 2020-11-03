@@ -209,7 +209,6 @@ input:focus, select:focus {
     float: left;
     width: 50px;
     margin: 15px;
-    margin-right: 0px;
 }
 
 .login{
@@ -232,7 +231,6 @@ input:focus, select:focus {
   
 .menu a {
     display: block;
-	text-decoration: none;
 	padding: 15px;
 	background: rgba(19, 35, 47, .9);
 	color: #a0b3b0;
@@ -240,7 +238,6 @@ input:focus, select:focus {
 	float: left;
 	text-align: center;
 	cursor: pointer;
-	transition: 0.5s ease;
 }
   
 .menu a:hover {
@@ -286,9 +283,8 @@ input:focus, select:focus {
 }
 
 .column.side a{
-    list-style: none;
     display: block;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 .leftList a:nth-last-child(2){
@@ -323,7 +319,6 @@ input:focus, select:focus {
 }
 
 .topicTitle{
-    padding: 0 20px;
     font-size: 30px;
     text-decoration: underline;
     color: #1ab188;
@@ -364,8 +359,6 @@ input:focus, select:focus {
 
 .titulo1{
     font-size: 35px;
-    padding-bottom: 10px;
-    color: #1ab188;
 }
 
 /**
@@ -396,7 +389,7 @@ input:focus, select:focus {
     list-style: none;
 }
 
-.datosS{
+.data{
     padding-top: 20px;
 }
 
@@ -427,18 +420,18 @@ input:focus, select:focus {
     color: #1ab188;
 }
 
-.subtitulo{
+.forumSubtitle{
     font-size: 20px;
     padding: 10px 0;
 }
 
-.tituloForo{
+.forumTitle{
     padding-bottom: 20px;
     font-size: 30px;
     color: #1ab188;
 }
 
-.perfilForo{
+.forumProfile{
     width: 70px;
     float: left;
     margin-top: 20px;  
@@ -446,12 +439,12 @@ input:focus, select:focus {
     margin-bottom: 20px;
 }
 
-.parrafoForo{
+.forumMessage{
     font-size: 15px;
     padding: 10px;
 }
 
-.datosForm{
+.forumComment{
     margin: 10px;
 }
 
@@ -467,7 +460,6 @@ input:focus, select:focus {
 }
 
 .boton{
-    margin-top: 10px;
     margin: 3px;
     padding: 15px;
     font-size: 15px;
@@ -538,15 +530,12 @@ tr:nth-child(1) {
     clear: both;
     text-align: center;
     padding: 20px;
-    margin: 0px;
-    margin-top: 20px;
     background: rgba(19, 35, 47, .9);
     border-radius: 4px;
 }
 
 .footer li{
     list-style: none;
-    text-align: center;
     display: inline-block;
     border-right: 3px solid white;
     padding: 0px 7px;
@@ -619,25 +608,32 @@ tr:nth-child(1) {
         flex-direction: column;
     }
 
-    .header{
+    .header {
         display: none;
     }
 
-    .titulo1.n{
+    .titulo1.n {
         display: none;
     }
 
-    #columnLeftComputer{
+    #columnLeftComputer {
         display: none;
     }
 
-    #columnLeftPhone{
+    #columnLeftPhone {
         display: block;
+    }
+
+    .botonDropdown {
+        margin: 10px;
+        padding: 10px;
+        background: #1ab188;
+        cursor: pointer;
     }
 
     .dropdown {
         float: left;
-        position: relative;
+        margin: auto;
     }
       
     .dropdown-content {
@@ -668,10 +664,6 @@ tr:nth-child(1) {
 
     .titulo1{
         float: left;
-        text-align: left;
-        padding: 5px;
-        padding-left: 20px;
-        color: #1ab188;
     }
 
     .topicParagraph{
