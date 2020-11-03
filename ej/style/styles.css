@@ -566,25 +566,25 @@ tr:nth-child(1) {
 @media screen and (max-width: 768px) {
     .headerComputer{
         display: none;
+    }  
+    
+    .headerTablet{
+        display: block;
     }
 
     .titulo1.n{
         display: none;
     }
 
-    .headerTablet{
-        display: block;
-    }
-
     .column.side.D{
         display: none;
     }
 
-    .column.side li:nth-last-child(2){
+    .column.side a:nth-last-child(2){
         display: block;
     }
     
-    .column.side li:nth-last-child(1){
+    .column.side a:nth-last-child(1){
         display: block;
     }
 
@@ -621,10 +621,6 @@ tr:nth-child(1) {
     }
 
     .header{
-        display: none;
-    }
-
-    .menu{
         display: none;
     }
 

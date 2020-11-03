@@ -1,3 +1,17 @@
+function cambiarLogIn(){
+    document.getElementById("signup").style.display = "none";
+    document.getElementById("login").style.display = "block";
+    document.getElementById("logIn").className = "active";
+    document.getElementById("signUp").className = "";
+}
+
+function cambiarSignIn(){
+    document.getElementById("signup").style.display = "block";
+    document.getElementById("login").style.display = "none";
+    document.getElementById("logIn").className = "";
+    document.getElementById("signUp").className = "active";
+}
+
 function showIni() {
     document.getElementById("column_mid_ini").style.display = "block";
     document.getElementById("column_mid_studentsList").style.display = "none";
@@ -40,35 +54,6 @@ function showForum() {
     document.getElementById("column_mid_subjectsList").style.display = "none";
     document.getElementById("column_mid_grades_student").style.display = "none";
 
-}
-
-function showGrades() {
-    document.getElementById("column_mid_ini").style.display = "none";
-    document.getElementById("column_mid_studentsList").style.display = "none";
-    document.getElementById("column_mid_forum").style.display = "none";
-    document.getElementById("column_mid_grades").style.display = "block";
-    document.getElementById("column_mid_forum1").style.display = "none";
-    document.getElementById("column_mid_forum2").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum4").style.display = "none";
-    document.getElementById("column_mid_forum5").style.display = "none";
-    document.getElementById("column_mid_subjectsList").style.display = "none";
-    document.getElementById("column_mid_grades_student").style.display = "none";
-
-}
-
-function showGradesStudent(){
-    document.getElementById("column_mid_ini").style.display = "none";
-    document.getElementById("column_mid_studentsList").style.display = "none";
-    document.getElementById("column_mid_forum").style.display = "none";
-    document.getElementById("column_mid_grades").style.display = "none";
-    document.getElementById("column_mid_forum1").style.display = "none";
-    document.getElementById("column_mid_forum2").style.display = "none";
-    document.getElementById("column_mid_forum3").style.display = "none";
-    document.getElementById("column_mid_forum4").style.display = "none";
-    document.getElementById("column_mid_forum5").style.display = "none";
-    document.getElementById("column_mid_subjectsList").style.display = "none";
-    document.getElementById("column_mid_grades_student").style.display = "block";
 }
 
 function showForum1() {
@@ -160,14 +145,64 @@ function showSubjectsList() {
     document.getElementById("column_mid_grades_student").style.display = "none";
 }
 
+function showGrades() {
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "block";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "none";
+
+}
+
+function showGradesStudent(){
+    document.getElementById("column_mid_ini").style.display = "none";
+    document.getElementById("column_mid_studentsList").style.display = "none";
+    document.getElementById("column_mid_forum").style.display = "none";
+    document.getElementById("column_mid_grades").style.display = "none";
+    document.getElementById("column_mid_forum1").style.display = "none";
+    document.getElementById("column_mid_forum2").style.display = "none";
+    document.getElementById("column_mid_forum3").style.display = "none";
+    document.getElementById("column_mid_forum4").style.display = "none";
+    document.getElementById("column_mid_forum5").style.display = "none";
+    document.getElementById("column_mid_subjectsList").style.display = "none";
+    document.getElementById("column_mid_grades_student").style.display = "block";
+}
+
+function showStudent(){
+    document.getElementById("columnLeftComputerStudent").style.display = "block";
+    document.getElementById("columnLeftComputer").style.display = "none";
+    if(screen.innerWidth < 600){
+        document.getElementById("columnLeftPhoneStudent").style.display = "block";
+        document.getElementById("columnLeftPhone").style.display = "none";
+    }
+    
+}
+
+function showGrade(){
+    if(document.getElementById("rol").value == "Estudiante"){
+        document.getElementById("divGrade").style.display = "block";
+    } else{
+        document.getElementById("divGrade").style.display = "none";
+    }
+}
+
+function changeWeb(){
+    document.getElementById("pagInicio").style.display = "none";
+    document.getElementById("pagWeb").style.display = "block";
+    document.getElementById("userNameComputer").innerHTML = getCookie('usrname');
+    document.getElementById("userNameTablet").innerHTML = getCookie('usrname');
+}
 
 function cerrarSesion() {
-    var txt;
     if (confirm("Seguro que quieres cerrar sesión?")) {
         document.getElementById("pagWeb").style.display = "none";
         document.getElementById("pagInicio").style.display = "block";
-    } else {
-      txt = "You pressed Cancel!";
     }
 }
 
@@ -175,237 +210,119 @@ function enviarEmail(){
     window.open('mailto:test@example.com');
 }
 
-function descargarExcel1(){
+function descargarExcel(id_tabla){
     var tmpElemento = document.createElement('a');
     var data_type = 'data:application/vnd.ms-excel';
-    var tabla_div = document.getElementById('table1');
+    var tabla_div = document.getElementById(id_tabla);
     var tabla_html = tabla_div.outerHTML.replace(/ /g, '%20');
     tmpElemento.href = data_type + ', ' + tabla_html;
     tmpElemento.download = 'calificaciones.xls';
     tmpElemento.click();
 }
 
-function descargarExcel2(){
-    var tmpElemento = document.createElement('a');
-    var data_type = 'data:application/vnd.ms-excel';
-    var tabla_div = document.getElementById('table2');
-    var tabla_html = tabla_div.outerHTML.replace(/ /g, '%20');
-    tmpElemento.href = data_type + ', ' + tabla_html;
-    tmpElemento.download = 'mis_calificaciones.xls';
-    tmpElemento.click();
-}
-
-function commentBox1(){
+function commentBox(id_comment, result){
 	var name = getCookie("name") + " " + getCookie("surname");
-    var comment = document.getElementById("comment1").value;
-    var imagen = document.createElement("img"); 
-    var today = new Date();
-    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    if(today.getMinutes < 10){
-        var time = today.getHours() + ":" + "0" + today.getMinutes();
-    }
-    else{
-        var time = today.getHours() + ":" + today.getMinutes();
-    }
-    var dateTime = date + " - " + time;
+    var comment = document.getElementById(id_comment).value;
 
 	if(name == "" || comment == ""){
 		alert("Los campos marcados con * son obligatorios!");
 	}else{
         var parent=document.createElement("li");
-		var el_name=document.createElement("p");
-        var el_message=document.createElement("p");
-        var la_date=document.createElement("p");
+        var image_element = document.createElement("img");
+		var name_element=document.createElement("p");
+        var message_element=document.createElement("p");
+        var date_element=document.createElement("p");
+        
 		var txt_name=document.createTextNode(name);
-		var txt_message=document.createTextNode(comment);
-        var hoy = document.createTextNode(dateTime);
+        var txt_message=document.createTextNode(comment);
+        var today = new Date();
+        var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes();
+        var dateTime = date + " - " + time;
+        var txt_date = document.createTextNode(dateTime);
 
-        el_name.appendChild(txt_name);
-		el_message.appendChild(txt_message);
-        la_date.appendChild(hoy);
+        name_element.appendChild(txt_name);
+		message_element.appendChild(txt_message);
+        date_element.appendChild(txt_date);
 
-        parent.appendChild(imagen);
-        parent.appendChild(el_name);
-        parent.appendChild(el_message);
-        parent.appendChild(la_date);
+        parent.appendChild(image_element);
+        parent.appendChild(name_element);
+        parent.appendChild(message_element);
+        parent.appendChild(date_element);
 
-        el_name.setAttribute("class", "datosS");
-        el_message.setAttribute("class", "parrafoForo");
-        imagen.setAttribute("src", "images/perfil.jpg"); 
-        imagen.setAttribute("class", "perfilForo"); 
-
-		document.getElementById("result1").appendChild(parent);
+        image_element.setAttribute("src", "images/perfil.jpg"); 
+        image_element.setAttribute("class", "perfilForo"); 
+        name_element.setAttribute("class", "datosS");
+        message_element.setAttribute("class", "parrafoForo");
+        
+		document.getElementById(result).appendChild(parent);
 	}
 }
 
-function commentBox2(){
-	var name = getCookie("name") + " " + getCookie("surname");
-    var comment = document.getElementById("comment2").value;
-    var imagen = document.createElement("img"); 
-    var today = new Date();
-    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    if(today.getMinutes < 10){
-        var time = today.getHours() + ":" + "0" + today.getMinutes();
+function checkCookie(){
+    var inputEmail = document.getElementById("emailLogin").value;
+    var cookieEmail = getCookie("email");
+    var inputPass = document.getElementById("passLogin").value;
+    var cookiePass = getCookie("pass");
+    if(inputEmail == cookieEmail){
+        if(inputPass == cookiePass){
+            if(getCookie("rol") == "Estudiante"){
+                changeWeb();
+                showStudent();
+            } else{
+                changeWeb();
+            }
+        } else{
+            alert("La contraseña es incorrecta");
+        }
+    } else{
+        alert("Este correo electrónico no está dado de alta");
     }
-    else{
-        var time = today.getHours() + ":" + today.getMinutes();
-    }
-    var dateTime = date + " - " + time;
-
-	if(name == "" || comment == ""){
-		alert("Los campos marcados con * son obligatorios!");
-	}else{
-        var parent=document.createElement("li");
-		var el_name=document.createElement("p");
-        var el_message=document.createElement("p");
-        var la_date=document.createElement("p");
-		var txt_name=document.createTextNode(name);
-		var txt_message=document.createTextNode(comment);
-        var hoy = document.createTextNode(dateTime);
-
-        parent.appendChild(imagen);
-        el_name.appendChild(txt_name);
-		el_message.appendChild(txt_message);
-        la_date.appendChild(hoy);
-
-        parent.appendChild(el_name);
-        parent.appendChild(el_message);
-        parent.appendChild(la_date);
-
-        el_name.setAttribute("class", "datosS");
-        el_message.setAttribute("class", "parrafoForo");
-        imagen.setAttribute("src", "images/perfil.jpg"); 
-        imagen.setAttribute("class", "perfilForo"); 
-
-		document.getElementById("result2").appendChild(parent);
-	}
 }
 
-function commentBox3(){
-	var name = getCookie("name") + " " + getCookie("surname");
-    var comment = document.getElementById("comment3").value;
-    var imagen = document.createElement("img"); 
-    var today = new Date();
-    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    if(today.getMinutes < 10){
-        var time = today.getHours() + ":" + "0" + today.getMinutes();
-    }
-    else{
-        var time = today.getHours() + ":" + today.getMinutes();
-    }
-    var dateTime = date + " - " + time;
-
-	if(name == "" || comment == ""){
-		alert("Los campos marcados con * son obligatorios!");
-	}else{
-        var parent=document.createElement("li");
-		var el_name=document.createElement("p");
-        var el_message=document.createElement("p");
-        var la_date=document.createElement("p");
-		var txt_name=document.createTextNode(name);
-		var txt_message=document.createTextNode(comment);
-        var hoy = document.createTextNode(dateTime);
-
-        parent.appendChild(imagen);
-        el_name.appendChild(txt_name);
-		el_message.appendChild(txt_message);
-        la_date.appendChild(hoy);
-
-        parent.appendChild(el_name);
-        parent.appendChild(el_message);
-        parent.appendChild(la_date);
-
-        el_name.setAttribute("class", "datosS");
-        el_message.setAttribute("class", "parrafoForo");
-        imagen.setAttribute("src", "images/perfil.jpg"); 
-        imagen.setAttribute("class", "perfilForo"); 
-
-		document.getElementById("result3").appendChild(parent);
-	}
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function commentBox4(){
-	var name = getCookie("name") + " " + getCookie("surname");
-    var comment = document.getElementById("comment4").value;
-    var imagen = document.createElement("img"); 
-    var today = new Date();
-    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    if(today.getMinutes < 10){
-        var time = today.getHours() + ":" + "0" + today.getMinutes();
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
-    else{
-        var time = today.getHours() + ":" + today.getMinutes();
-    }
-    var dateTime = date + " - " + time;
-
-	if(name == "" || comment == ""){
-		alert("Los campos marcados con * son obligatorios!");
-	}else{
-        var parent=document.createElement("li");
-		var el_name=document.createElement("p");
-        var el_message=document.createElement("p");
-        var la_date=document.createElement("p");
-		var txt_name=document.createTextNode(name);
-		var txt_message=document.createTextNode(comment);
-        var hoy = document.createTextNode(dateTime);
-
-        parent.appendChild(imagen);
-        el_name.appendChild(txt_name);
-		el_message.appendChild(txt_message);
-        la_date.appendChild(hoy);
-
-        parent.appendChild(el_name);
-        parent.appendChild(el_message);
-        parent.appendChild(la_date);
-
-        el_name.setAttribute("class", "datosS");
-        el_message.setAttribute("class", "parrafoForo");
-        imagen.setAttribute("src", "images/perfil.jpg"); 
-        imagen.setAttribute("class", "perfilForo"); 
-
-		document.getElementById("result4").appendChild(parent);
-	}
+    return "";
 }
 
-function commentBox5(){
-	var name = getCookie("name") + " " + getCookie("surname");
-    var comment = document.getElementById("comment5").value;
-    var imagen = document.createElement("img"); 
-    var today = new Date();
-    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-    if(today.getMinutes < 10){
-        var time = today.getHours() + ":" + "0" + today.getMinutes();
+function saveCookies(){
+    if(document.getElementById("name").value == "" || document.getElementById("surname").value == "" || document.getElementById("usrname").value == "" 
+    || document.getElementById("nia").value == "" || document.getElementById("bornDate").value == "" || document.getElementById("dni").value == "" 
+    || document.getElementById("rol").value == "" || document.getElementById("lenguage").value == "" 
+    || document.getElementById("email").value == "" || document.getElementById("pass").value == ""){
+        alert("¡Debe rellenar todos los campos!");
+    } else{
+        setCookie("name", document.getElementById("name").value, 30);
+        setCookie("surname", document.getElementById("surname").value, 30);
+        setCookie("usrname", document.getElementById("usrname").value, 30);
+        setCookie("nia", document.getElementById("nia").value, 30);
+        setCookie("bornDate", document.getElementById("bornDate").value, 30);
+        setCookie("dni", document.getElementById("dni").value, 30);
+        setCookie("rol", document.getElementById("rol").value, 30);
+        setCookie("grade", document.getElementById("grade").value, 30);
+        setCookie("lenguage", document.getElementById("lenguage").value, 30);
+        if(document.getElementById("email").value == getCookie("email")){
+            alert("Ya existe una cuenta asociada al correo electrónico introducido, por favor introduzca uno válido");
+        } else{
+            setCookie("email", document.getElementById("email").value, 30);
+        }
+        setCookie("pass", document.getElementById("pass").value, 30);
     }
-    else{
-        var time = today.getHours() + ":" + today.getMinutes();
-    }
-    var dateTime = date + " - " + time;
-
-	if(name == "" || comment == ""){
-		alert("Los campos marcados con * son obligatorios!");
-	}else{
-        var parent=document.createElement("li");
-		var el_name=document.createElement("p");
-        var el_message=document.createElement("p");
-        var la_date=document.createElement("p");
-		var txt_name=document.createTextNode(name);
-		var txt_message=document.createTextNode(comment);
-        var hoy = document.createTextNode(dateTime);
-
-        parent.appendChild(imagen);
-        el_name.appendChild(txt_name);
-		el_message.appendChild(txt_message);
-        la_date.appendChild(hoy);
-
-        parent.appendChild(el_name);
-        parent.appendChild(el_message);
-        parent.appendChild(la_date);
-
-        el_name.setAttribute("class", "datosS");
-        el_message.setAttribute("class", "parrafoForo");
-        imagen.setAttribute("src", "images/perfil.jpg"); 
-        imagen.setAttribute("class", "perfilForo"); 
-
-		document.getElementById("result5").appendChild(parent);
-	}
 }
