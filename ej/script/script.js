@@ -177,8 +177,9 @@ function showGradesStudent(){
 function showStudent(){
     document.getElementById("columnLeftComputerStudent").style.display = "block";
     document.getElementById("columnLeftComputer").style.display = "none";
-    if(screen.innerWidth < 600){
+    if (window.matchMedia("(max-width: 600px)").matches) {
         document.getElementById("columnLeftPhoneStudent").style.display = "block";
+        document.getElementById("columnLeftComputerStudent").style.display = "none";
         document.getElementById("columnLeftPhone").style.display = "none";
     }
     
